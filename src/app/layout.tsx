@@ -1,6 +1,6 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Inter } from 'next/font/google';
+import { Geist, Geist_Mono } from 'next/font/google';
 import { ReactNode } from 'react';
 import Footer from '@/components/organisms/footer';
 import Header from '@/components/organisms/header';
@@ -9,13 +9,6 @@ import { GA_ID } from '@/constants/site';
 import { ThemeProvider } from '@/providers';
 import { cn } from '@/utils/shadcn';
 import './globals.css';
-
-const inter = Inter({
-    subsets: ['latin'],
-    display: 'swap',
-    preload: true,
-    adjustFontFallback: true,
-});
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -45,7 +38,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="zh-TW" suppressHydrationWarning>
-            <body className={cn(inter.className, geistSans.variable, geistMono.variable, 'antialiased')}>
+            <body className={cn(geistSans.variable, geistMono.variable, 'antialiased')}>
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
                     <div className="flex min-h-screen flex-col">
                         <Header />
