@@ -38,7 +38,12 @@ const AboutPage = () => {
                     /> */}
                 </div>
                 {/* 簡短介紹卡片 */}
-                <IntroCard className="mx-auto max-w-3xl" list={ABOUT_INTRO_LIST} />
+                {/* <IntroCard className="mx-auto max-w-3xl" list={ABOUT_INTRO_LIST} /> */}
+                <div className="mx-auto max-w-2xl font-semibold">
+                    {ABOUT_INTRO_LIST?.map((text) => (
+                        <p key={text}>{text}</p>
+                    ))}
+                </div>
             </section>
             <section className="space-y-4 md:space-y-8">
                 <SectionTitle id="experience" className="text-center">
