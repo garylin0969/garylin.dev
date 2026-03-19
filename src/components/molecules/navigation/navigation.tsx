@@ -64,7 +64,7 @@ const Navigation = ({ menuClassName, listClassName, itemClassName, linkClassName
                                     'font-bold',
                                     'hover:text-primary hover:bg-transparent',
                                     'focus:bg-transparent',
-                                    'data-[active=true]:text-primary data-[active=true]:bg-transparent data-[active=true]:focus:bg-transparent',
+                                    'data-[active=true]:text-primary data-[active=true]:bg-transparent data-[active=true]:hover:bg-transparent data-[active=true]:focus:bg-transparent',
                                     linkClassName
                                 )}
                                 data-active={isActive(route.href)}
