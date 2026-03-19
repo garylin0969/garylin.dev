@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear();
  */
 const Footer = () => {
     return (
-        <footer className="border-t py-4 text-center text-sm tracking-wide">
+        <footer className="py-4 text-center text-sm tracking-wide">
             <p>
                 &copy;{' '}
                 {FOOTER_CONFIG.startYear === currentYear ? currentYear : `${FOOTER_CONFIG.startYear}-${currentYear}`}
