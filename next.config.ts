@@ -3,13 +3,12 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
     /* config options here */
     reactCompiler: true,
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'github-readme-stats.vercel.app',
-            },
-        ],
+    logging: {
+        browserToTerminal: true,
+        // 'error' — errors only (default)
+        // 'warn'  — warnings and errors
+        // true    — all console output
+        // false   — disabled
     },
 };
 
