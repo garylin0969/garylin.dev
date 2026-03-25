@@ -23,27 +23,10 @@ const AboutPage = () => {
     return (
         <div className="mx-auto max-w-6xl space-y-4 md:space-y-8">
             <section className="space-y-4 md:space-y-8">
-                <div className="flex flex-wrap items-center justify-center gap-4">
-                    {/* 作者卡片 */}
-                    <AuthorCard />
-                    {/* Github Stats Card - Top Languages */}
-                    {/* <GithubStatsCard
-                        useCard={false}
-                        type="top-langs"
-                        params={DEFAULT_TOP_LANGS_CONFIG}
-                        width={350}
-                        height={300}
-                        loading="eager"
-                        alt="top languages"
-                    /> */}
-                </div>
+                {/* 作者卡片 */}
+                <AuthorCard className="mx-auto" />
                 {/* 簡短介紹卡片 */}
-                {/* <IntroCard className="mx-auto max-w-3xl" list={ABOUT_INTRO_LIST} /> */}
-                <div className="mx-auto max-w-2xl font-semibold">
-                    {ABOUT_INTRO_LIST?.map((text) => (
-                        <p key={text}>{text}</p>
-                    ))}
-                </div>
+                <IntroCard className="mx-auto max-w-3xl" list={ABOUT_INTRO_LIST} />
             </section>
             <section className="space-y-4 md:space-y-8">
                 <SectionTitle id="experience" className="text-center">
