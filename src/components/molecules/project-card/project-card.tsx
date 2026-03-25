@@ -1,5 +1,4 @@
 import BaseImage from '@/components/atoms/base-image';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { PROJECT_LIST } from '@/constants/project';
