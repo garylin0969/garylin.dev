@@ -1,6 +1,6 @@
 import { type Post } from '@velite';
+import Image from 'next/image';
 import Link from 'next/link';
-import BaseImage from '@/components/atoms/base-image';
 import { PostMeta } from '@/components/atoms/post-meta';
 import { TagList } from '@/components/atoms/tag-list';
 import { cn } from '@/utils/shadcn';
@@ -49,7 +49,7 @@ const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
                     {/* 圖片區域 */}
                     {post?.image && (
                         <div className="relative hidden h-28 w-28 shrink-0 overflow-hidden sm:block">
-                            <BaseImage
+                            <Image
                                 src={post?.image}
                                 alt={post?.title}
                                 fill

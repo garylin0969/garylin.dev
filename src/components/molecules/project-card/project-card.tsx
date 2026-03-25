@@ -1,4 +1,4 @@
-import BaseImage from '@/components/atoms/base-image';
+import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { PROJECT_LIST } from '@/constants/project';
@@ -49,7 +49,7 @@ const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, proj
             <Card className="gap-0 p-0">
                 <div className="w-full overflow-hidden">
                     {/* width={0}、height={0} 與 sizes="100vw"，這是 next/image 支援的另一種寫法，代表不預設固定尺寸。 */}
-                    <BaseImage
+                    <Image
                         className="h-auto w-full transition-transform duration-300 group-hover:scale-110"
                         src={project.image}
                         alt={project.name}

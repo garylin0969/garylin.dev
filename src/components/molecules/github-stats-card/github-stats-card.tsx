@@ -1,8 +1,8 @@
 'use client';
 
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 import { useMemo, useEffect, useState } from 'react';
-import BaseImage from '@/components/atoms/base-image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { DEFAULT_GITHUB_USERNAME } from '@/constants/github-stats';
@@ -150,7 +150,7 @@ const GithubStatsCard = ({
     const ImageComponent = useMemo(
         () => (
             <div className={cn('relative overflow-hidden', imageContainerClassName)} style={{ width, height }}>
-                <BaseImage
+                <Image
                     className="object-cover"
                     src={currentUrl}
                     fill
