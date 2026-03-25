@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import SectionTitle from '@/components/atoms/section-title';
 import AuthorCard from '@/components/molecules/author-card';
-// import GithubStatsCard from '@/components/molecules/github-stats-card/github-stats-card';
 import IntroCard from '@/components/molecules/intro-card';
+import MasonryGrid from '@/components/molecules/masonry-grid';
 import ProjectCard from '@/components/molecules/project-card';
 import SkillCard from '@/components/molecules/skill-card';
 import ExperienceTimeline from '@/components/organisms/experience-timeline';
-// import { DEFAULT_TOP_LANGS_CONFIG } from '@/constants/github-stats';
 import { ABOUT_INTRO_LIST } from '@/constants/intro';
 import { generateAboutMetadata } from '@/constants/metadatas';
 import { PROJECT_LIST } from '@/constants/project';
@@ -51,11 +50,11 @@ const AboutPage = () => {
                     Projects
                 </SectionTitle>
                 {/* 專案卡片 */}
-                <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+                <MasonryGrid cols={{ default: 1, md: 2, lg: 3 }}>
                     {PROJECT_LIST.map((project) => (
-                        <ProjectCard key={project.id} project={project} className="h-full" />
+                        <ProjectCard key={project.id} project={project} />
                     ))}
-                </div>
+                </MasonryGrid>
             </section>
         </div>
     );

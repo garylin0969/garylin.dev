@@ -61,7 +61,7 @@ const Navigation = ({ menuClassName, listClassName, itemClassName, linkClassName
                                 href={route.href}
                                 className={cn(
                                     navigationMenuTriggerStyle(),
-                                    'font-bold',
+                                    'bg-transparent font-bold',
                                     'hover:text-primary hover:bg-transparent',
                                     'focus:bg-transparent',
                                     'data-[active=true]:text-primary data-[active=true]:bg-transparent data-[active=true]:hover:bg-transparent data-[active=true]:focus:bg-transparent',

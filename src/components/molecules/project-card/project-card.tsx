@@ -47,7 +47,7 @@ const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, proj
             rel="noreferrer noopener"
         >
             {badge && <Badge className="absolute -top-2 -right-2 z-10 px-2 py-1">{badge}</Badge>}
-            <Card className="flex h-full flex-col gap-0 overflow-hidden p-0">
+            <Card className="gap-0 overflow-hidden p-0">
                 <AspectRatio ratio={16 / 9} className="overflow-hidden">
                     <BaseImage
                         className="object-cover transition-transform duration-300 group-hover:scale-110"
@@ -57,7 +57,7 @@ const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, proj
                         fill
                     />
                 </AspectRatio>
-                <CardContent className="flex flex-1 flex-col space-y-6 p-6">
+                <CardContent className="space-y-6 p-6">
                     <CardTitle className="group-hover:text-primary">{project.name}</CardTitle>
                     <div className="flex flex-wrap items-center gap-2">
                         {visibleTags?.map((tag) => (
