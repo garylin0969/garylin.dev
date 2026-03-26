@@ -45,7 +45,7 @@ const TableOfContents = ({ headings, className }: TableOfContentsProps) => {
                                 title={heading?.text}
                                 href={`#${heading?.text}`}
                                 className={cn(
-                                    'hover:bg-muted hover:text-foreground text-muted-foreground block rounded px-2 py-1 text-sm transition-all duration-200',
+                                    'hover:bg-muted hover:text-foreground text-muted-foreground block rounded px-2 py-1 text-sm no-underline! transition-all duration-200',
                                     // 根據標題層級調整縮排
                                     heading?.level === 1 && 'pl-4',
                                     heading?.level === 2 && 'pl-8',

@@ -71,11 +71,11 @@ const PostPage = async ({ params }: PostPageProps) => {
     }
 
     return (
-        <div className="grid grid-cols-4">
+        <div className="mx-auto grid max-w-6xl grid-cols-4">
             {/* 文章 */}
-            <article className="col-span-4 min-w-0 lg:px-8 xl:col-span-3">
+            <article className="col-span-4 lg:px-8 xl:col-span-3">
                 <header className="mb-4 space-y-3 border-b pb-4">
-                    <h1 className="text-[42px] font-bold">{post?.title}</h1>
+                    <h1 className="text-4xl font-bold">{post?.title}</h1>
                     <PostMeta date={post?.date} updateDate={post?.updateDate} category={post?.category} />
                     <TagList tags={post?.tags ?? []} />
                 </header>
@@ -89,7 +89,7 @@ const PostPage = async ({ params }: PostPageProps) => {
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
-                <div className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert md:prose-lg max-w-none">
+                <div className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
                     <MDXContent code={post?.code} />
                 </div>
                 <div className="mt-10">
