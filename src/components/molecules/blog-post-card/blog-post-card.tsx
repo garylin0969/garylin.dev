@@ -2,7 +2,6 @@ import { type Post } from '@velite';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PostMeta } from '@/components/atoms/post-meta';
-import { TagList } from '@/components/atoms/tag-list';
 import { cn } from '@/utils/shadcn';
 
 /**
@@ -35,15 +34,9 @@ const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
                             <PostMeta useLink={false} date={post?.date} category={post?.category} />
                         </div>
 
-                        <h2 className="group-hover:text-primary mb-2 line-clamp-1 text-xl leading-tight font-bold md:text-2xl">
+                        <h2 className="group-hover:text-primary text-xl leading-tight font-bold md:line-clamp-1 md:text-xl">
                             {post?.title}
                         </h2>
-
-                        <p className="text-muted-foreground mb-4 line-clamp-2 text-base leading-relaxed">
-                            {post?.description}
-                        </p>
-
-                        <TagList tags={post?.tags || []} maxVisible={3} />
                     </div>
 
                     {/* 圖片區域 */}

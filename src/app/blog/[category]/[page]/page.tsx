@@ -103,11 +103,11 @@ const BlogPage = async ({ params }: BlogPageProps) => {
     const getPageUrl = (pageNumber: number) => `/blog/${category}/${pageNumber}`;
 
     return (
-        <div className="space-y-4 lg:px-8">
+        <div className="mx-auto max-w-3xl space-y-4">
             {/* 文章列表 */}
             <div>
                 {posts.map((post) => (
-                    <BlogPostCard key={post?.slug} className="border-b" post={post} />
+                    <BlogPostCard key={post?.slug} post={post} />
                 ))}
             </div>
 

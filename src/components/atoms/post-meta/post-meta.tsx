@@ -38,7 +38,7 @@ export const PostMeta = ({ className, date, updateDate, category, useLink = true
     return (
         <div className={cn('text-muted-foreground text-sm', className)}>
             <div className="flex items-center gap-x-3">
-                <span>發布日期：{formattedDate}</span>
+                <span>{formattedDate}</span>
                 {category && (
                     <>
                         <span>•</span>
