@@ -1,17 +1,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import BlogCategoryTabs from '@/components/molecules/blog-category-tabs';
 import BlogPostCard from '@/components/molecules/blog-post-card';
 import { PaginationControls } from '@/components/molecules/pagination-controls';
 import { generateBlogMetadata } from '@/constants/metadatas';
 import { POSTS_PER_PAGE } from '@/constants/site';
 import { calculatePaginationState, validatePageNumber } from '@/utils/pagination';
-import {
-    getAllCategories,
-    getPaginatedPosts,
-    getPublishedPosts,
-    isCategoryExists,
-} from '@/utils/post';
-import BlogCategoryTabs from '@/components/molecules/blog-category-tabs';
+import { getAllCategories, getPaginatedPosts, getPublishedPosts, isCategoryExists } from '@/utils/post';
 
 /**
  * 生成靜態路由參數。
@@ -110,6 +105,7 @@ const BlogPage = async ({ params }: BlogPageProps) => {
 
     return (
         <div className="mx-auto max-w-3xl space-y-4">
+            {/* 分類標籤 */}
             <BlogCategoryTabs currentCategory={category} />
             {/* 文章列表 */}
             <div>

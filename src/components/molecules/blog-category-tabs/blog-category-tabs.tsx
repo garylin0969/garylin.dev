@@ -25,8 +25,8 @@ const BlogCategoryTabs = ({ currentCategory }: BlogCategoryTabsProps) => {
     ];
 
     return (
-        <div className="w-full overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <div className="mx-auto flex w-max justify-center gap-4 px-4 pb-2">
+        <div className="w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="mx-auto flex w-max justify-center gap-4 px-4">
                 {formattedCategories?.map((item) => (
                     <Link
                         key={item?.category}
