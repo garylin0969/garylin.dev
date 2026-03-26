@@ -5,7 +5,13 @@ import { PaginationControls } from '@/components/molecules/pagination-controls';
 import { generateBlogMetadata } from '@/constants/metadatas';
 import { POSTS_PER_PAGE } from '@/constants/site';
 import { calculatePaginationState, validatePageNumber } from '@/utils/pagination';
-import { getAllCategories, getPaginatedPosts, getPublishedPosts, isCategoryExists } from '@/utils/post';
+import {
+    getAllCategories,
+    getPaginatedPosts,
+    getPublishedPosts,
+    isCategoryExists,
+} from '@/utils/post';
+import BlogCategoryTabs from '@/components/molecules/blog-category-tabs';
 
 /**
  * 生成靜態路由參數。
@@ -104,6 +110,7 @@ const BlogPage = async ({ params }: BlogPageProps) => {
 
     return (
         <div className="mx-auto max-w-3xl space-y-4">
+            <BlogCategoryTabs currentCategory={category} />
             {/* 文章列表 */}
             <div>
                 {posts.map((post) => (

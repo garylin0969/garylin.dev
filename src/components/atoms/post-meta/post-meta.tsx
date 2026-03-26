@@ -41,7 +41,6 @@ export const PostMeta = ({ className, date, updateDate, category, useLink = true
                 <span>{formattedDate}</span>
                 {category && (
                     <>
-                        <span>•</span>
                         {useLink ? (
                             <Link href={`/blog/${category}/1`}>
                                 <Badge variant="outline" className="px-2 py-1">

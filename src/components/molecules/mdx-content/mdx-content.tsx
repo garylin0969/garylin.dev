@@ -84,15 +84,27 @@ const sharedComponents: Record<string, ComponentType<any>> = {
  * @param code - MDX 代碼字串。
  * @returns React 元件。
  */
+const mdxCache = new Map<string, ComponentType<any>>();
+
 /**
  * 將 Velite 生成的 MDX 代碼解析為 React 元件。
+ * 加入全域 Cache 避免 React 19 嚴格模式下報錯 "Cannot create components during render"
  *
  * @param code - MDX 代碼字串。
  * @returns React 元件。
  */
 const getMDXComponent = (code: string) => {
+    // 1. 如果已經解析過這個字串，直接拿快取裡的 Component 給它
+    if (mdxCache.has(code)) {
+        return mdxCache.get(code)!;
+    }
+    // 2. 透過 new Function() 動態執行 code 字串，並把 runtime 傳進去
     const fn = new Function(code);
-    return fn({ ...runtime }).default;
+    // 3. 執行後會得到一個物件，取 .default 就是 React Component
+    const Component = fn({ ...runtime }).default;
+    // 4. 存進快取
+    mdxCache.set(code, Component);
+    return Component;
 };
 
 interface MDXProps {

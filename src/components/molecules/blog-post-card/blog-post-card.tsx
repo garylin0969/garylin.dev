@@ -26,7 +26,7 @@ interface BlogPostCardProps {
 const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
     return (
         <Link href={post?.permalink} className="group">
-            <article className={cn('p-4', className)}>
+            <article className={cn('py-3 md:py-4', className)}>
                 <div className="flex items-center gap-x-8">
                     {/* 內容區域 */}
                     <div className="flex-1">
@@ -34,7 +34,7 @@ const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
                             <PostMeta useLink={false} date={post?.date} category={post?.category} />
                         </div>
 
-                        <h2 className="group-hover:text-primary text-xl leading-tight font-bold md:line-clamp-1 md:text-xl">
+                        <h2 className="group-hover:text-primary text-[18px] leading-tight font-bold md:line-clamp-1 md:text-xl">
                             {post?.title}
                         </h2>
                     </div>
