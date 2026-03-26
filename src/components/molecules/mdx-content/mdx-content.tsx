@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as runtime from 'react/jsx-runtime';
-import React, { ComponentType } from 'react';
+import { ComponentType, useMemo } from 'react';
 import DocsHeading from '@/components/atoms/docs-heading';
 import CodeBlock from '@/components/molecules/code-block';
 import { Badge } from '@/components/ui/badge';
@@ -110,7 +110,7 @@ interface MDXProps {
  * @param components - 自定義元件映射表 {@link MDXProps.components}。
  */
 const MDXContent = ({ code, components, ...props }: MDXProps) => {
-    const Component = React.useMemo(() => getMDXComponent(code), [code]);
+    const Component = useMemo(() => getMDXComponent(code), [code]);
     // eslint-disable-next-line
     return <Component components={{ ...sharedComponents, ...components }} {...props} />;
 };
