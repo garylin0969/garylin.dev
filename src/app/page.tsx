@@ -30,16 +30,6 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {homePage.intro.length > 0 && (
-                <section className="space-y-3 rounded-2xl border px-5 py-4">
-                    {homePage.intro.map((item) => (
-                        <p key={item} className="text-base font-medium sm:text-lg">
-                            {item}
-                        </p>
-                    ))}
-                </section>
-            )}
-
             <section className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
                 <MDXContent code={homePage.code} />
             </section>

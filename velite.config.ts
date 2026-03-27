@@ -45,7 +45,6 @@ export default defineConfig({
             schema: s.object({
                 title: s.string(),
                 description: s.string(),
-                intro: s.array(s.string()),
                 code: s.mdx(),
             }),
         },
