@@ -4,6 +4,8 @@ import { getAllCategories, getAllPosts } from '@/utils/post';
 
 type SitemapEntry = MetadataRoute.Sitemap[0];
 
+const SITE_LAUNCHED_AT = new Date('2024-10-01T00:00:00.000Z');
+
 /**
  * 生成網站地圖 (sitemap.xml)。
  *
@@ -16,8 +18,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const posts = getAllPosts();
     const categories = getAllCategories();
 
-    // 獲取最新文章日期作為動態內容的 lastModified
-    const latestPostDate = posts.length > 0 ? new Date(posts[0]?.date || '') : new Date();
+    // 使用最新內容時間作為列表型頁面的 lastModified
+    const latestContentDate =
+        posts?.length > 0 ? new Date(posts[0]?.updateDate || posts[0]?.date || SITE_LAUNCHED_AT) : SITE_LAUNCHED_AT;
 
     // 預計算每個分類的文章數量，避免重複篩選
     const categoryPostCounts = new Map<string, number>([
@@ -32,15 +35,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const staticRoutes: SitemapEntry[] = [
         {
             url: DOMAIN,
-            lastModified: latestPostDate, // 使用最新文章日期
+            lastModified: latestContentDate,
             changeFrequency: 'monthly',
             priority: 1.0,
         },
         {
             url: `${DOMAIN}/about`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
+            lastModified: SITE_LAUNCHED_AT,
+            changeFrequency: 'monthly',
             priority: 0.8,
+        },
+        {
+            url: `${DOMAIN}/blog`,
+            lastModified: latestContentDate,
+            changeFrequency: 'daily',
+            priority: 0.9,
         },
     ];
 
@@ -51,7 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             const page = index + 1;
             return {
                 url: `${DOMAIN}/blog/${category}/${page}`,
-                lastModified: latestPostDate,
+                lastModified: latestContentDate,
                 changeFrequency: 'daily',
                 priority: page === 1 ? 0.9 : 0.8, // 第一頁優先級較高
             };
@@ -62,7 +71,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const postRoutes: SitemapEntry[] = posts.map(
         (post): SitemapEntry => ({
             url: `${DOMAIN}${post?.permalink}`,
-            lastModified: new Date(post.date || ''),
+            lastModified: new Date(post?.updateDate || post?.date || SITE_LAUNCHED_AT),
             changeFrequency: 'weekly',
             priority: 0.7,
         })
