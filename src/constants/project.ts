@@ -76,10 +76,10 @@ export const PROJECT_LIST = [
         tags: ['2025', 'Gemini', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'React Query'],
     },
     {
-        id: 'blog',
-        image: '/projects/blog.jpg',
-        url: 'https://github.com/garylin0969/blog',
-        name: 'Blog - garylin.dev',
+        id: 'garylin-dev',
+        image: '/projects/garylin-dev.jpg',
+        url: 'https://github.com/garylin0969/garylin.dev',
+        name: 'personal website - garylin.dev',
         tags: ['2024', 'Next.js', 'TypeScript', 'Google Analytics', 'Velite', 'Tailwind CSS', 'next-themes', 'Giscus'],
     },
     {
