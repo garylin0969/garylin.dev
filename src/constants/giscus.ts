@@ -3,7 +3,7 @@ import type { GiscusProps } from '@giscus/react';
 /** Giscus 評論系統設定。 */
 export const GISCUS_CONFIG: GiscusProps = {
     /** GitHub 儲存庫名稱 (擁有者/儲存庫)。 */
-    repo: 'garylin0969/blog',
+    repo: 'garylin0969/garylin.dev',
     /** GitHub 儲存庫 ID。 */
     repoId: 'R_kgDONFDN5Q',
     /** GitHub Discussions 分類名稱。 */
