@@ -14,7 +14,7 @@ const Giscus = dynamic(() => import('@giscus/react'), {
  * 使用 Giscus 載入 GitHub Discussions 作為評論系統。
  * 會根據當前主題自動切換 Giscus 的主題。
  */
-export default function Comments() {
+const Comments = () => {
     const { resolvedTheme } = useTheme();
 
     return (
@@ -33,4 +33,6 @@ export default function Comments() {
             loading="lazy"
         />
     );
-}
+};
+
+export default Comments;
