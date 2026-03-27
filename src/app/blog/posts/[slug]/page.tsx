@@ -1,10 +1,9 @@
 import { notFound } from 'next/navigation';
-import { PostMeta } from '@/components/atoms/post-meta/post-meta';
-import { TagList } from '@/components/atoms/tag-list';
 import Comments from '@/components/molecules/comments';
 import MDXContent from '@/components/molecules/mdx-content';
+import MobileTableOfContents from '@/components/molecules/mobile-table-of-contents';
 import TableOfContents from '@/components/molecules/table-of-contents';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import BlogPostHeader from '@/components/organisms/blog-post-header';
 import { generatePostMetadata, generatePostNotFoundMetadata } from '@/constants/metadatas';
 import { NOTICE_BAR_MESSAGE } from '@/constants/site';
 import { getPostBySlug, getPublishedPosts } from '@/utils/post';
@@ -71,27 +70,25 @@ const PostPage = async ({ params }: PostPageProps) => {
     }
 
     return (
-        <div className="grid grid-cols-4">
+        <div className="mx-auto grid max-w-6xl grid-cols-4">
             {/* 文章 */}
-            <article className="col-span-4 min-w-0 lg:px-8 xl:col-span-3">
-                <header className="mb-4 space-y-3 border-b pb-4">
-                    <h1 className="text-[42px] font-bold">{post?.title}</h1>
-                    <PostMeta date={post?.date} updateDate={post?.updateDate} category={post?.category} />
-                    <TagList tags={post?.tags ?? []} />
-                </header>
-                <Accordion type="single" collapsible className="mb-4 xl:hidden">
-                    <AccordionItem value="table-of-contents">
-                        <AccordionTrigger className="bg-primary/10 text-primary items-center rounded-xs p-1 text-lg font-semibold">
-                            目錄
-                        </AccordionTrigger>
-                        <AccordionContent className="p-4">
-                            <TableOfContents headings={post?.headings ?? []} />
-                        </AccordionContent>
-                    </AccordionItem>
-                </Accordion>
-                <div className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert md:prose-lg max-w-none">
+            <article className="col-span-4 lg:px-8 xl:col-span-3">
+                {/* 標題與元數據 */}
+                <BlogPostHeader
+                    className="mb-4"
+                    title={post?.title}
+                    date={post?.date}
+                    updateDate={post?.updateDate}
+                    category={post?.category}
+                    tags={post?.tags ?? []}
+                />
+                {/* 行動版目錄 */}
+                <MobileTableOfContents className="mb-4 xl:hidden" headings={post?.headings ?? []} />
+                {/* MDX 內容 */}
+                <div className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
                     <MDXContent code={post?.code} />
                 </div>
+                {/* 評論 */}
                 <div className="mt-10">
                     <Comments />
                 </div>

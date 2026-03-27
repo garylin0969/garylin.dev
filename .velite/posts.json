@@ -12,35 +12,43 @@
     "headings": [
       {
         "level": 2,
-        "text": "基本格式"
+        "text": "基本格式",
+        "id": "基本格式"
       },
       {
         "level": 2,
-        "text": "為什麼要這樣寫？"
+        "text": "為什麼要這樣寫？",
+        "id": "為什麼要這樣寫"
       },
       {
         "level": 2,
-        "text": "標題怎麼寫"
+        "text": "標題怎麼寫",
+        "id": "標題怎麼寫"
       },
       {
         "level": 2,
-        "text": "Type 類型對照表"
+        "text": "Type 類型對照表",
+        "id": "type-類型對照表"
       },
       {
         "level": 2,
-        "text": "實際範例"
+        "text": "實際範例",
+        "id": "實際範例"
       },
       {
         "level": 3,
-        "text": "標題寫法"
+        "text": "標題寫法",
+        "id": "標題寫法"
       },
       {
         "level": 3,
-        "text": "正文什麼時候寫"
+        "text": "正文什麼時候寫",
+        "id": "正文什麼時候寫"
       },
       {
         "level": 3,
-        "text": "尾注的用途"
+        "text": "尾注的用途",
+        "id": "尾注的用途"
       }
     ],
     "slug": "git-commit-message",
@@ -64,99 +72,123 @@
     "headings": [
       {
         "level": 2,
-        "text": "為什麼要發布自己的 NPM 套件？"
+        "text": "為什麼要發布自己的 NPM 套件？",
+        "id": "為什麼要發布自己的-npm-套件"
       },
       {
         "level": 2,
-        "text": "初始化專案"
+        "text": "初始化專案",
+        "id": "初始化專案"
       },
       {
         "level": 2,
-        "text": "package.json 的關鍵設定"
+        "text": "package.json 的關鍵設定",
+        "id": "packagejson-的關鍵設定"
       },
       {
         "level": 3,
-        "text": "重要欄位說明"
+        "text": "重要欄位說明",
+        "id": "重要欄位說明"
       },
       {
         "level": 2,
-        "text": "使用 TypeScript 開發"
+        "text": "使用 TypeScript 開發",
+        "id": "使用-typescript-開發"
       },
       {
         "level": 2,
-        "text": "實際開發套件"
+        "text": "實際開發套件",
+        "id": "實際開發套件"
       },
       {
         "level": 2,
-        "text": "測試很重要"
+        "text": "測試很重要",
+        "id": "測試很重要"
       },
       {
         "level": 2,
-        "text": "建置套件"
+        "text": "建置套件",
+        "id": "建置套件"
       },
       {
         "level": 2,
-        "text": "發布前的檢查"
+        "text": "發布前的檢查",
+        "id": "發布前的檢查"
       },
       {
         "level": 3,
-        "text": "1. 測試本地安裝"
+        "text": "1. 測試本地安裝",
+        "id": "1-測試本地安裝"
       },
       {
         "level": 3,
-        "text": "2. 確認檔案內容"
+        "text": "2. 確認檔案內容",
+        "id": "2-確認檔案內容"
       },
       {
         "level": 2,
-        "text": "註冊 NPM 帳號並發布"
+        "text": "註冊 NPM 帳號並發布",
+        "id": "註冊-npm-帳號並發布"
       },
       {
         "level": 3,
-        "text": "1. 註冊帳號"
+        "text": "1. 註冊帳號",
+        "id": "1-註冊帳號"
       },
       {
         "level": 3,
-        "text": "2. 本地登入"
+        "text": "2. 本地登入",
+        "id": "2-本地登入"
       },
       {
         "level": 3,
-        "text": "3. 發布套件"
+        "text": "3. 發布套件",
+        "id": "3-發布套件"
       },
       {
         "level": 2,
-        "text": "我踩過的坑 (v2.0 更新版)"
+        "text": "我踩過的坑 (v2.0 更新版)",
+        "id": "我踩過的坑-v20-更新版"
       },
       {
         "level": 3,
-        "text": "1. CJS 與 ESM 的地獄"
+        "text": "1. CJS 與 ESM 的地獄",
+        "id": "1-cjs-與-esm-的地獄"
       },
       {
         "level": 3,
-        "text": "2. 型別定義檔的路徑"
+        "text": "2. 型別定義檔的路徑",
+        "id": "2-型別定義檔的路徑"
       },
       {
         "level": 3,
-        "text": "3. .gitignore 和 .npmignore 搞混"
+        "text": "3. .gitignore 和 .npmignore 搞混",
+        "id": "3-gitignore-和-npmignore-搞混"
       },
       {
         "level": 3,
-        "text": "4. 版本號忘記更新"
+        "text": "4. 版本號忘記更新",
+        "id": "4-版本號忘記更新"
       },
       {
         "level": 2,
-        "text": "維護和更新"
+        "text": "維護和更新",
+        "id": "維護和更新"
       },
       {
         "level": 3,
-        "text": "發布新版本"
+        "text": "發布新版本",
+        "id": "發布新版本"
       },
       {
         "level": 2,
-        "text": "最佳實踐"
+        "text": "最佳實踐",
+        "id": "最佳實踐"
       },
       {
         "level": 2,
-        "text": "推廣你的套件"
+        "text": "推廣你的套件",
+        "id": "推廣你的套件"
       }
     ],
     "slug": "publish-npm-package-guide",
@@ -178,67 +210,83 @@
     "headings": [
       {
         "level": 2,
-        "text": "為什麼我選擇 Perplexity？"
+        "text": "為什麼我選擇 Perplexity？",
+        "id": "為什麼我選擇-perplexity"
       },
       {
         "level": 2,
-        "text": "什麼是 Perplexity？"
+        "text": "什麼是 Perplexity？",
+        "id": "什麼是-perplexity"
       },
       {
         "level": 2,
-        "text": "開始前的準備工作"
+        "text": "開始前的準備工作",
+        "id": "開始前的準備工作"
       },
       {
         "level": 3,
-        "text": "1. 註冊帳號"
+        "text": "1. 註冊帳號",
+        "id": "1-註冊帳號"
       },
       {
         "level": 3,
-        "text": "2. 綁定信用卡"
+        "text": "2. 綁定信用卡",
+        "id": "2-綁定信用卡"
       },
       {
         "level": 3,
-        "text": "3. 生成 API Key"
+        "text": "3. 生成 API Key",
+        "id": "3-生成-api-key"
       },
       {
         "level": 2,
-        "text": "API 基本使用"
+        "text": "API 基本使用",
+        "id": "api-基本使用"
       },
       {
         "level": 3,
-        "text": "基本呼叫方式"
+        "text": "基本呼叫方式",
+        "id": "基本呼叫方式"
       },
       {
         "level": 2,
-        "text": "實際整合到專案"
+        "text": "實際整合到專案",
+        "id": "實際整合到專案"
       },
       {
         "level": 3,
-        "text": "React 元件範例"
+        "text": "React 元件範例",
+        "id": "react-元件範例"
       },
       {
         "level": 3,
-        "text": "Next.js API Route"
+        "text": "Next.js API Route",
+        "id": "nextjs-api-route"
       },
       {
         "level": 2,
-        "text": "參數調整技巧"
+        "text": "參數調整技巧",
+        "id": "參數調整技巧"
       },
       {
         "level": 3,
-        "text": "temperature (創造性)"
+        "text": "temperature (創造性)",
+        "id": "temperature-創造性"
       },
       {
         "level": 3,
-        "text": "max_tokens (回應長度)"
+        "text": "max_tokens (回應長度)",
+        "id": "maxtokens-回應長度"
       },
       {
         "level": 3,
-        "text": "search_recency_filter (時效性)"
+        "text": "search_recency_filter (時效性)",
+        "id": "searchrecencyfilter-時效性"
       },
       {
         "level": 2,
-        "text": "我做的測試工具"
+        "text": "我做的測試工具",
+        "id": "我做的測試工具"
       }
     ],
     "slug": "ai-integration-guide-perplexity-api",
@@ -260,99 +308,123 @@
     "headings": [
       {
         "level": 2,
-        "text": "為什麼我需要做國際化？"
+        "text": "為什麼我需要做國際化？",
+        "id": "為什麼我需要做國際化"
       },
       {
         "level": 2,
-        "text": "什麼是 next-intl？"
+        "text": "什麼是 next-intl？",
+        "id": "什麼是-next-intl"
       },
       {
         "level": 2,
-        "text": "開始設定 next-intl"
+        "text": "開始設定 next-intl",
+        "id": "開始設定-next-intl"
       },
       {
         "level": 3,
-        "text": "1. 安裝套件"
+        "text": "1. 安裝套件",
+        "id": "1-安裝套件"
       },
       {
         "level": 3,
-        "text": "2. 建立檔案結構"
+        "text": "2. 建立檔案結構",
+        "id": "2-建立檔案結構"
       },
       {
         "level": 3,
-        "text": "3. 建立翻譯檔案"
+        "text": "3. 建立翻譯檔案",
+        "id": "3-建立翻譯檔案"
       },
       {
         "level": 3,
-        "text": "4. 設定路由配置"
+        "text": "4. 設定路由配置",
+        "id": "4-設定路由配置"
       },
       {
         "level": 3,
-        "text": "5. 設定中間件"
+        "text": "5. 設定中間件",
+        "id": "5-設定中間件"
       },
       {
         "level": 3,
-        "text": "6. 設定請求配置"
+        "text": "6. 設定請求配置",
+        "id": "6-設定請求配置"
       },
       {
         "level": 2,
-        "text": "修改 Next.js 設定"
+        "text": "修改 Next.js 設定",
+        "id": "修改-nextjs-設定"
       },
       {
         "level": 2,
-        "text": "建立多語言頁面"
+        "text": "建立多語言頁面",
+        "id": "建立多語言頁面"
       },
       {
         "level": 3,
-        "text": "Layout 設定"
+        "text": "Layout 設定",
+        "id": "layout-設定"
       },
       {
         "level": 3,
-        "text": "主頁面"
+        "text": "主頁面",
+        "id": "主頁面"
       },
       {
         "level": 2,
-        "text": "建立語言切換器"
+        "text": "建立語言切換器",
+        "id": "建立語言切換器"
       },
       {
         "level": 2,
-        "text": "進階功能"
+        "text": "進階功能",
+        "id": "進階功能"
       },
       {
         "level": 3,
-        "text": "日期時間格式化"
+        "text": "日期時間格式化",
+        "id": "日期時間格式化"
       },
       {
         "level": 3,
-        "text": "數字格式化"
+        "text": "數字格式化",
+        "id": "數字格式化"
       },
       {
         "level": 3,
-        "text": "帶變數的翻譯"
+        "text": "帶變數的翻譯",
+        "id": "帶變數的翻譯"
       },
       {
         "level": 2,
-        "text": "部署注意事項"
+        "text": "部署注意事項",
+        "id": "部署注意事項"
       },
       {
         "level": 3,
-        "text": "Vercel 部署"
+        "text": "Vercel 部署",
+        "id": "vercel-部署"
       },
       {
         "level": 3,
-        "text": "環境變數"
+        "text": "環境變數",
+        "id": "環境變數"
       },
       {
         "level": 2,
-        "text": "SEO 優化"
+        "text": "SEO 優化",
+        "id": "seo-優化"
       },
       {
         "level": 2,
-        "text": "維護建議"
+        "text": "維護建議",
+        "id": "維護建議"
       },
       {
         "level": 3,
-        "text": "翻譯文件管理"
+        "text": "翻譯文件管理",
+        "id": "翻譯文件管理"
       }
     ],
     "slug": "nextjs-internationalization-guide-next-intl",
@@ -371,23 +443,28 @@
     "headings": [
       {
         "level": 2,
-        "text": "標題二"
+        "text": "標題二",
+        "id": "標題二"
       },
       {
         "level": 3,
-        "text": "標題三"
+        "text": "標題三",
+        "id": "標題三"
       },
       {
         "level": 4,
-        "text": "標題四"
+        "text": "標題四",
+        "id": "標題四"
       },
       {
         "level": 5,
-        "text": "標題五"
+        "text": "標題五",
+        "id": "標題五"
       },
       {
         "level": 6,
-        "text": "標題六"
+        "text": "標題六",
+        "id": "標題六"
       }
     ],
     "slug": "test-remark-gfm-markdown-features",
@@ -412,79 +489,98 @@
     "headings": [
       {
         "level": 2,
-        "text": "為什麼要用 React Query？"
+        "text": "為什麼要用 React Query？",
+        "id": "為什麼要用-react-query"
       },
       {
         "level": 2,
-        "text": "什麼是 React Query？"
+        "text": "什麼是 React Query？",
+        "id": "什麼是-react-query"
       },
       {
         "level": 2,
-        "text": "安裝和基本設定"
+        "text": "安裝和基本設定",
+        "id": "安裝和基本設定"
       },
       {
         "level": 3,
-        "text": "安裝套件"
+        "text": "安裝套件",
+        "id": "安裝套件"
       },
       {
         "level": 3,
-        "text": "在 Next.js 中設定"
+        "text": "在 Next.js 中設定",
+        "id": "在-nextjs-中設定"
       },
       {
         "level": 2,
-        "text": "useQuery：抓取資料的神器"
+        "text": "useQuery：抓取資料的神器",
+        "id": "usequery抓取資料的神器"
       },
       {
         "level": 2,
-        "text": "在 Next.js 中的 Server 端預取"
+        "text": "在 Next.js 中的 Server 端預取",
+        "id": "在-nextjs-中的-server-端預取"
       },
       {
         "level": 2,
-        "text": "useMutation：處理資料更新"
+        "text": "useMutation：處理資料更新",
+        "id": "usemutation處理資料更新"
       },
       {
         "level": 2,
-        "text": "staleTime vs gcTime：我一直搞混的概念"
+        "text": "staleTime vs gcTime：我一直搞混的概念",
+        "id": "staletime-vs-gctime我一直搞混的概念"
       },
       {
         "level": 3,
-        "text": "staleTime（過期時間）"
+        "text": "staleTime（過期時間）",
+        "id": "staletime過期時間"
       },
       {
         "level": 3,
-        "text": "gcTime（垃圾回收時間，以前叫 cacheTime）"
+        "text": "gcTime（垃圾回收時間，以前叫 cacheTime）",
+        "id": "gctime垃圾回收時間以前叫-cachetime"
       },
       {
         "level": 2,
-        "text": "實戰技巧分享"
+        "text": "實戰技巧分享",
+        "id": "實戰技巧分享"
       },
       {
         "level": 3,
-        "text": "1. 條件性查詢"
+        "text": "1. 條件性查詢",
+        "id": "1-條件性查詢"
       },
       {
         "level": 3,
-        "text": "2. 分頁查詢"
+        "text": "2. 分頁查詢",
+        "id": "2-分頁查詢"
       },
       {
         "level": 3,
-        "text": "3. 樂觀更新"
+        "text": "3. 樂觀更新",
+        "id": "3-樂觀更新"
       },
       {
         "level": 2,
-        "text": "效能優化建議"
+        "text": "效能優化建議",
+        "id": "效能優化建議"
       },
       {
         "level": 3,
-        "text": "1. 適當設定 staleTime"
+        "text": "1. 適當設定 staleTime",
+        "id": "1-適當設定-staletime"
       },
       {
         "level": 3,
-        "text": "2. 使用 select 減少重新渲染"
+        "text": "2. 使用 select 減少重新渲染",
+        "id": "2-使用-select-減少重新渲染"
       },
       {
         "level": 3,
-        "text": "3. 分割大查詢"
+        "text": "3. 分割大查詢",
+        "id": "3-分割大查詢"
       }
     ],
     "slug": "react-query-practical-guide-nextjs-reactjs",
@@ -505,107 +601,207 @@
     "headings": [
       {
         "level": 2,
-        "text": "算法複雜度的重要性"
+        "text": "算法複雜度的重要性",
+        "id": "算法複雜度的重要性"
       },
       {
         "level": 2,
-        "text": "算法複雜度的基本概念"
+        "text": "算法複雜度的基本概念",
+        "id": "算法複雜度的基本概念"
       },
       {
         "level": 3,
-        "text": "O(1) - 常數時間複雜度"
+        "text": "O(1) - 常數時間複雜度",
+        "id": "o1-常數時間複雜度"
       },
       {
         "level": 3,
-        "text": "O(n) - 線性時間複雜度"
+        "text": "O(n) - 線性時間複雜度",
+        "id": "on-線性時間複雜度"
       },
       {
         "level": 3,
-        "text": "O(n²) - 平方時間複雜度"
+        "text": "O(n²) - 平方時間複雜度",
+        "id": "on-平方時間複雜度"
       },
       {
         "level": 3,
-        "text": "O(log n) - 對數時間複雜度"
+        "text": "O(log n) - 對數時間複雜度",
+        "id": "olog-n-對數時間複雜度"
       },
       {
         "level": 2,
-        "text": "實際開發中的應用案例"
+        "text": "實際開發中的應用案例",
+        "id": "實際開發中的應用案例"
       },
       {
         "level": 3,
-        "text": "案例一：用戶搜尋功能優化"
+        "text": "案例一：用戶搜尋功能優化",
+        "id": "案例一用戶搜尋功能優化"
       },
       {
         "level": 3,
-        "text": "案例二：重複資料檢測優化"
+        "text": "案例二：重複資料檢測優化",
+        "id": "案例二重複資料檢測優化"
       },
       {
         "level": 2,
-        "text": "常見複雜度比較表"
+        "text": "常見複雜度比較表",
+        "id": "常見複雜度比較表"
       },
       {
         "level": 2,
-        "text": "空間複雜度考量"
+        "text": "空間複雜度考量",
+        "id": "空間複雜度考量"
       },
       {
         "level": 2,
-        "text": "算法優化實務技巧"
+        "text": "算法優化實務技巧",
+        "id": "算法優化實務技巧"
       },
       {
         "level": 3,
-        "text": "1. 避免巢狀迴圈結構"
+        "text": "1. 避免巢狀迴圈結構",
+        "id": "1-避免巢狀迴圈結構"
       },
       {
         "level": 3,
-        "text": "2. 善用語言內建優化方法"
+        "text": "2. 善用語言內建優化方法",
+        "id": "2-善用語言內建優化方法"
       },
       {
         "level": 3,
-        "text": "3. 提前終止策略"
+        "text": "3. 提前終止策略",
+        "id": "3-提前終止策略"
       },
       {
         "level": 2,
-        "text": "常見的效能陷阱"
+        "text": "常見的效能陷阱",
+        "id": "常見的效能陷阱"
       },
       {
         "level": 3,
-        "text": "1. 字串拼接操作"
+        "text": "1. 字串拼接操作",
+        "id": "1-字串拼接操作"
       },
       {
         "level": 3,
-        "text": "2. 迴圈中的重複計算"
+        "text": "2. 迴圈中的重複計算",
+        "id": "2-迴圈中的重複計算"
       },
       {
         "level": 2,
-        "text": "複雜度分析的使用時機"
+        "text": "複雜度分析的使用時機",
+        "id": "複雜度分析的使用時機"
       },
       {
         "level": 3,
-        "text": "小規模資料（< 1000筆）"
+        "text": "小規模資料（< 1000筆）",
+        "id": "小規模資料-1000筆"
       },
       {
         "level": 3,
-        "text": "大規模資料（> 10000筆）"
+        "text": "大規模資料（> 10000筆）",
+        "id": "大規模資料-10000筆"
       },
       {
         "level": 3,
-        "text": "即時系統應用"
+        "text": "即時系統應用",
+        "id": "即時系統應用"
       },
       {
         "level": 2,
-        "text": "學習建議與總結"
+        "text": "學習建議與總結",
+        "id": "學習建議與總結"
       },
       {
         "level": 3,
-        "text": "學習策略"
+        "text": "學習策略",
+        "id": "學習策略"
       },
       {
         "level": 3,
-        "text": "核心要點總結"
+        "text": "核心要點總結",
+        "id": "核心要點總結"
       }
     ],
     "slug": "algorithm-complexity-beginner-guide",
     "code": "const{Fragment:l,jsx:n,jsxs:e}=arguments[0];function _createMdxContent(r){const c={blockquote:\"blockquote\",code:\"code\",figure:\"figure\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",span:\"span\",strong:\"strong\",table:\"table\",tbody:\"tbody\",td:\"td\",th:\"th\",thead:\"thead\",tr:\"tr\",ul:\"ul\",...r.components};return e(l,{children:[e(c.blockquote,{children:[\"\\n\",n(c.p,{children:n(c.strong,{children:\"備註：本文內容由AI生成，僅供學習參考使用。\"})}),\"\\n\"]}),\"\\n\",n(c.h2,{children:\"算法複雜度的重要性\"}),\"\\n\",n(c.p,{children:\"在程式設計領域中，算法複雜度是評估程式效能的核心概念。對於初學者而言，Big O記法（Big O Notation）可能顯得抽象且難以理解。然而，掌握此概念對於解決LeetCode題目以及實際開發工作都具有重要意義。\"}),\"\\n\",n(c.p,{children:\"本文將透過系統性的方式，結合實際例子和程式碼範例，幫助讀者建立對算法複雜度的清晰認知。\"}),\"\\n\",n(c.h2,{children:\"算法複雜度的基本概念\"}),\"\\n\",n(c.p,{children:\"算法複雜度主要用於描述當輸入資料量增加時，算法執行時間或空間需求的增長趨勢。Big O記法提供了一種標準化的方式來表達這種增長關係。\"}),\"\\n\",n(c.h3,{children:\"O(1) - 常數時間複雜度\"}),\"\\n\",n(c.p,{children:\"常數時間複雜度表示算法的執行時間與輸入資料量無關，無論資料量如何變化，執行時間都保持恆定。\"}),\"\\n\",e(c.p,{children:[n(c.strong,{children:\"實際例子：\"}),\" 從冰箱中取出特定飲料\\n無論冰箱內存放5瓶或50瓶飲料，取出單一瓶飲料的時間都是相同的。\"]}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 陣列索引存取為O(1)複雜度\\nfunction getArrayElement(arr, index) {\\n    return arr[index]; // 執行時間與陣列大小無關\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 陣列索引存取為O(1)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" getArrayElement\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\", \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"index\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"index\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"]; \"}),n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 執行時間與陣列大小無關\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.h3,{children:\"O(n) - 線性時間複雜度\"}),\"\\n\",n(c.p,{children:\"線性時間複雜度表示算法的執行時間與輸入資料量成正比關係。\"}),\"\\n\",e(c.p,{children:[n(c.strong,{children:\"實際例子：\"}),\" 班級點名程序\\n若班級有10名學生，則需要進行10次點名；若有100名學生，則需要進行100次點名。執行時間與學生人數成正比。\"]}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 線性搜尋為O(n)複雜度\\nfunction linearSearch(arr, target) {\\n    for (let i = 0; i < arr.length; i++) {\\n        if (arr[i] === target) {\\n            return i;\\n        }\\n    }\\n    return -1;\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 線性搜尋為O(n)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" linearSearch\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\", \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"target\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"        if\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"] \"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"===\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" target\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"            return\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" i\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"        }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    }\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" -\"}),n(c.span,{style:{color:\"#D19A66\"},children:\"1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.h3,{children:\"O(n²) - 平方時間複雜度\"}),\"\\n\",n(c.p,{children:\"平方時間複雜度表示算法的執行時間與輸入資料量的平方成正比，當資料量增加時，執行時間會急劇增長。\"}),\"\\n\",e(c.p,{children:[n(c.strong,{children:\"實際例子：\"}),\" 班級成員相互握手\\n假設班級有10名學生，每位學生需要與其他所有學生握手一次，總共需要進行45次握手。若學生人數增加到20人，則需要進行190次握手。人數增加一倍，握手次數增加四倍。\"]}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 泡沫排序為O(n²)複雜度\\nfunction bubbleSort(arr) {\\n    for (let i = 0; i < arr.length; i++) {\\n        for (let j = 0; j < arr.length - 1; j++) {\\n            if (arr[j] > arr[j + 1]) {\\n                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];\\n            }\\n        }\\n    }\\n    return arr;\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 泡沫排序為O(n²)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" bubbleSort\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"        for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" -\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"            if\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"] \"}),n(c.span,{style:{color:\"#56B6C2\"},children:\">\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" +\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"]) {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"                [\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"], \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" +\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"]] \"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"=\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" [\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" +\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"], \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"]];\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"            }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"        }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    }\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.h3,{children:\"O(log n) - 對數時間複雜度\"}),\"\\n\",n(c.p,{children:\"對數時間複雜度表示算法的執行時間與輸入資料量的對數成正比，當資料量增加時，執行時間增長相對緩慢。\"}),\"\\n\",e(c.p,{children:[n(c.strong,{children:\"實際例子：\"}),\" 二分猜數字遊戲\\n假設需要猜測1到100之間的數字，每次猜測後會得到「太大」或「太小」的提示。採用二分搜尋策略：\"]}),\"\\n\",e(c.ul,{children:[\"\\n\",n(c.li,{children:\"第一次猜測50\"}),\"\\n\",n(c.li,{children:\"若太大，下次猜測25\"}),\"\\n\",n(c.li,{children:\"若太小，下次猜測75\"}),\"\\n\"]}),\"\\n\",n(c.p,{children:\"此策略最多需要7次猜測即可找到答案（因為2⁷ = 128 > 100）。\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 二分搜尋為O(log n)複雜度\\nfunction binarySearch(arr, target) {\\n    let left = 0;\\n    let right = arr.length - 1;\\n\\n    while (left <= right) {\\n        let mid = Math.floor((left + right) / 2);\\n\\n        if (arr[mid] === target) {\\n            return mid;\\n        } else if (arr[mid] < target) {\\n            left = mid + 1;\\n        } else {\\n            right = mid - 1;\\n        }\\n    }\\n\\n    return -1;\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 二分搜尋為O(log n)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" binarySearch\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\", \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"target\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" left\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" right\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" -\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    while\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"left\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <=\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" right\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"        let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" mid\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" Math\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"floor\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"((\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"left\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" +\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" right\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") \"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"/\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 2\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\");\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"        if\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"mid\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"] \"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"===\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" target\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"            return\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" mid\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"        } \"}),n(c.span,{style:{color:\"#C678DD\"},children:\"else\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" if\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"mid\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"] \"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"<\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" target\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#E06C75\"},children:\"            left\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" mid\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" +\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"        } \"}),n(c.span,{style:{color:\"#C678DD\"},children:\"else\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#E06C75\"},children:\"            right\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" mid\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" -\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"        }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" -\"}),n(c.span,{style:{color:\"#D19A66\"},children:\"1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.h2,{children:\"實際開發中的應用案例\"}),\"\\n\",n(c.h3,{children:\"案例一：用戶搜尋功能優化\"}),\"\\n\",n(c.p,{children:\"在開發用戶搜尋功能時，初始實現可能採用簡單的線性搜尋：\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 初始實現 - O(n)複雜度\\nfunction searchUsers(users, keyword) {\\n    return users.filter((user) => user.name.toLowerCase().includes(keyword.toLowerCase()));\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 初始實現 - O(n)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" searchUsers\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"users\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\", \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"keyword\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" users\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"filter\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"((\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"user\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") \"}),n(c.span,{style:{color:\"#C678DD\"},children:\"=>\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" user\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"name\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"toLowerCase\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"().\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"includes\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"keyword\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"toLowerCase\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"()));\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.p,{children:\"當用戶數量達到10萬時，每次搜尋操作可能需要數秒鐘的執行時間。透過引入索引結構和更高效的搜尋算法，可以顯著提升搜尋效能。\"}),\"\\n\",n(c.h3,{children:\"案例二：重複資料檢測優化\"}),\"\\n\",n(c.p,{children:\"檢測陣列中是否存在重複元素的初始實現：\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 效能較差的實現 - O(n²)複雜度\\nfunction hasDuplicates(arr) {\\n    for (let i = 0; i < arr.length; i++) {\\n        for (let j = i + 1; j < arr.length; j++) {\\n            if (arr[i] === arr[j]) {\\n                return true;\\n            }\\n        }\\n    }\\n    return false;\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 效能較差的實現 - O(n²)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" hasDuplicates\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"        for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" +\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"            if\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"] \"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"===\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"]) {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"                return\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" true\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"            }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"        }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    }\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" false\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.p,{children:\"優化後的實現：\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 優化實現 - O(n)複雜度\\nfunction hasDuplicates(arr) {\\n    return new Set(arr).size !== arr.length;\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 優化實現 - O(n)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" hasDuplicates\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" new\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" Set\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\").\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"size\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" !==\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.p,{children:\"此優化將時間複雜度從O(n²)降低至O(n)，在處理大量資料時效能提升顯著。\"}),\"\\n\",n(c.h2,{children:\"常見複雜度比較表\"}),\"\\n\",e(c.table,{children:[n(c.thead,{children:e(c.tr,{children:[n(c.th,{children:\"複雜度\"}),n(c.th,{children:\"10筆資料\"}),n(c.th,{children:\"100筆資料\"}),n(c.th,{children:\"1000筆資料\"}),n(c.th,{children:\"實際應用\"})]})}),e(c.tbody,{children:[e(c.tr,{children:[n(c.td,{children:\"O(1)\"}),n(c.td,{children:\"1\"}),n(c.td,{children:\"1\"}),n(c.td,{children:\"1\"}),n(c.td,{children:\"陣列索引存取\"})]}),e(c.tr,{children:[n(c.td,{children:\"O(log n)\"}),n(c.td,{children:\"3\"}),n(c.td,{children:\"7\"}),n(c.td,{children:\"10\"}),n(c.td,{children:\"二分搜尋\"})]}),e(c.tr,{children:[n(c.td,{children:\"O(n)\"}),n(c.td,{children:\"10\"}),n(c.td,{children:\"100\"}),n(c.td,{children:\"1000\"}),n(c.td,{children:\"線性搜尋\"})]}),e(c.tr,{children:[n(c.td,{children:\"O(n log n)\"}),n(c.td,{children:\"33\"}),n(c.td,{children:\"664\"}),n(c.td,{children:\"9966\"}),n(c.td,{children:\"快速排序\"})]}),e(c.tr,{children:[n(c.td,{children:\"O(n²)\"}),n(c.td,{children:\"100\"}),n(c.td,{children:\"10000\"}),n(c.td,{children:\"1000000\"}),n(c.td,{children:\"泡沫排序\"})]})]})]}),\"\\n\",n(c.p,{children:\"從表格可以看出，當資料量增加時，O(n²)算法的執行次數呈現指數級增長，這在實際應用中是不可接受的。\"}),\"\\n\",n(c.h2,{children:\"空間複雜度考量\"}),\"\\n\",n(c.p,{children:\"除了時間複雜度，空間複雜度也是算法分析的重要面向：\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 空間複雜度O(1) - 僅使用固定數量的變數\\nfunction calculateSum(arr) {\\n    let total = 0;\\n    for (let num of arr) {\\n        total += num;\\n    }\\n    return total;\\n}\\n\\n// 空間複雜度O(n) - 建立新的陣列\\nfunction duplicateArray(arr) {\\n    return arr.map((x) => x * 2); // 建立與原陣列相同大小的新陣列\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 空間複雜度O(1) - 僅使用固定數量的變數\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" calculateSum\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" total\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" num\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" of\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#E06C75\"},children:\"        total\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" +=\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" num\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    }\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" total\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 空間複雜度O(n) - 建立新的陣列\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" duplicateArray\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"map\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"((\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"x\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") \"}),n(c.span,{style:{color:\"#C678DD\"},children:\"=>\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" x\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" *\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 2\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"); \"}),n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 建立與原陣列相同大小的新陣列\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.p,{children:\"在實際開發中，需要在時間複雜度和空間複雜度之間取得平衡，根據具體需求選擇合適的算法。\"}),\"\\n\",n(c.h2,{children:\"算法優化實務技巧\"}),\"\\n\",n(c.h3,{children:\"1. 避免巢狀迴圈結構\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 效能較差的實現 - O(n²)複雜度\\nfunction findCommonElements(arr1, arr2) {\\n    const result = [];\\n    for (let i = 0; i < arr1.length; i++) {\\n        for (let j = 0; j < arr2.length; j++) {\\n            if (arr1[i] === arr2[j]) {\\n                result.push(arr1[i]);\\n            }\\n        }\\n    }\\n    return result;\\n}\\n\\n// 優化實現 - O(n + m)複雜度\\nfunction findCommonElements(arr1, arr2) {\\n    const set2 = new Set(arr2);\\n    return arr1.filter(item => set2.has(item));\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 效能較差的實現 - O(n²)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" findCommonElements\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\", \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr2\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    const\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" result\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" [];\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"        for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr2\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"            if\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"] \"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"===\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" arr2\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"j\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"]) {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#E5C07B\"},children:\"                result\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"push\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"[\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"]);\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"            }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"        }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    }\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" result\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 優化實現 - O(n + m)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" findCommonElements\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\", \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr2\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    const\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" set2\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" new\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" Set\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"arr2\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\");\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"filter\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"item\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" =>\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" set2\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"has\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"item\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"));\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.h3,{children:\"2. 善用語言內建優化方法\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 自定義排序實現 - 可能為O(n²)複雜度\\nfunction customSort(arr) {\\n    // 實現泡沫排序或插入排序\\n}\\n\\n// 使用內建排序方法 - O(n log n)複雜度\\narr.sort((a, b) => a - b);\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 自定義排序實現 - 可能為O(n²)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" customSort\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"    // 實現泡沫排序或插入排序\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 使用內建排序方法 - O(n log n)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#E5C07B\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"sort\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"((\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"a\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\", \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"b\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") \"}),n(c.span,{style:{color:\"#C678DD\"},children:\"=>\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" a\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" -\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" b\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\");\"})]})]})})}),\"\\n\",n(c.h3,{children:\"3. 提前終止策略\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 找到第一個符合條件的元素即終止搜尋\\nfunction findFirstMatch(arr, condition) {\\n    for (let item of arr) {\\n        if (condition(item)) {\\n            return item; // 找到符合條件的元素即返回\\n        }\\n    }\\n    return null;\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 找到第一個符合條件的元素即終止搜尋\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" findFirstMatch\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\", \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"condition\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" item\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" of\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"        if\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"condition\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"item\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\")) {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"            return\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" item\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 找到符合條件的元素即返回\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"        }\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    }\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" null\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.h2,{children:\"常見的效能陷阱\"}),\"\\n\",n(c.h3,{children:\"1. 字串拼接操作\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 看似簡單但實際為O(n²)複雜度\\nfunction concatenateStrings(arr) {\\n    let result = '';\\n    for (let str of arr) {\\n        result += str; // 每次拼接都會重新建立字串\\n    }\\n    return result;\\n}\\n\\n// 優化實現 - O(n)複雜度\\nfunction concatenateStrings(arr) {\\n    return arr.join('');\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 看似簡單但實際為O(n²)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" concatenateStrings\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" result\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#98C379\"},children:\" ''\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" str\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" of\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#E06C75\"},children:\"        result\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" +=\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" str\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 每次拼接都會重新建立字串\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    }\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" result\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 優化實現 - O(n)複雜度\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" concatenateStrings\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"join\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#98C379\"},children:\"''\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\");\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.h3,{children:\"2. 迴圈中的重複計算\"}),\"\\n\",n(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"// 效能較差的實現\\nfor (let i = 0; i < arr.length; i++) {\\n    // 每次迴圈都重新計算length屬性\\n}\\n\\n// 優化實現\\nconst length = arr.length; // 預先計算\\nfor (let i = 0; i < length; i++) {\\n    // 迴圈邏輯\\n}\",\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",children:e(c.code,{\"data-language\":\"javascript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 效能較差的實現\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"    // 每次迴圈都重新計算length屬性\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 優化實現\"})}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"const\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" length\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" arr\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 預先計算\"})]}),\"\\n\",e(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"for\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"let\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 0\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" <\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" length\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"; \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"i\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"++\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") {\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"    // 迴圈邏輯\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})}),\"\\n\",n(c.h2,{children:\"複雜度分析的使用時機\"}),\"\\n\",n(c.h3,{children:\"小規模資料（< 1000筆）\"}),\"\\n\",n(c.p,{children:\"在此規模下，不同複雜度算法之間的效能差異可能不明顯。此時程式碼的可讀性和維護性比效能優化更為重要。\"}),\"\\n\",n(c.h3,{children:\"大規模資料（> 10000筆）\"}),\"\\n\",n(c.p,{children:\"當資料量較大時，複雜度差異會變得明顯。O(n²)算法可能導致用戶體驗嚴重下降，此時必須考慮算法優化。\"}),\"\\n\",n(c.h3,{children:\"即時系統應用\"}),\"\\n\",n(c.p,{children:\"在遊戲或即時通訊等對延遲敏感的系統中，即使資料量不大，也需要仔細考慮每個操作的執行時間。\"}),\"\\n\",n(c.h2,{children:\"學習建議與總結\"}),\"\\n\",n(c.h3,{children:\"學習策略\"}),\"\\n\",e(c.ol,{children:[\"\\n\",e(c.li,{children:[n(c.strong,{children:\"概念優先於記憶\"}),\"：理解算法複雜度的原理比背誦公式更為重要\"]}),\"\\n\",e(c.li,{children:[n(c.strong,{children:\"實例導向學習\"}),\"：透過實際問題分析來加深理解\"]}),\"\\n\",e(c.li,{children:[n(c.strong,{children:\"工具輔助\"}),\"：善用瀏覽器開發者工具進行效能分析\"]}),\"\\n\",e(c.li,{children:[n(c.strong,{children:\"漸進優化\"}),\"：先確保功能正確性，再進行效能優化\"]}),\"\\n\"]}),\"\\n\",n(c.h3,{children:\"核心要點總結\"}),\"\\n\",n(c.p,{children:\"算法複雜度分析的核心在於預測程式執行時間的增長趨勢：\"}),\"\\n\",e(c.ul,{children:[\"\\n\",e(c.li,{children:[n(c.strong,{children:\"O(1)\"}),\"：執行時間與資料量無關\"]}),\"\\n\",e(c.li,{children:[n(c.strong,{children:\"O(log n)\"}),\"：資料量增加時，執行時間增長緩慢\"]}),\"\\n\",e(c.li,{children:[n(c.strong,{children:\"O(n)\"}),\"：執行時間與資料量成正比\"]}),\"\\n\",e(c.li,{children:[n(c.strong,{children:\"O(n²)\"}),\"：資料量增加一倍，執行時間增加四倍\"]}),\"\\n\"]}),\"\\n\",n(c.p,{children:\"在實際開發中，通常追求O(1)或O(log n)的查詢操作，O(n)的遍歷操作，以及O(n log n)的排序操作。避免使用O(n²)算法可以解決大部分效能問題。\"}),\"\\n\",n(c.p,{children:\"掌握算法複雜度分析不僅有助於解決LeetCode題目，更能提升實際開發中的程式品質和用戶體驗。\"})]})}return{default:function(l={}){const{wrapper:e}=l.components||{};return e?n(e,{...l,children:n(_createMdxContent,{...l})}):_createMdxContent(l)}};",
     "permalink": "/blog/posts/algorithm-complexity-beginner-guide"
+  },
+  {
+    "title": "Next.js 16.2：AI 開發體驗改進",
+    "date": "2026-03-18T00:00:00.000Z",
+    "description": "Next.js 16.2 帶來多項針對 AI 輔助開發的更新，包含 create-next-app 內建 AGENTS.md、瀏覽器日誌轉送、開發伺服器鎖定檔，以及 next-browser 除錯工具。",
+    "rawContent": "這次 `Next.js 16.2` 帶來了幾個專門為 **AI 輔助開發** 設計的更新。這些改進讓 AI agent 更容易理解專案、在終端機裡除錯問題，甚至在不開瀏覽器的情況下檢查執行中的應用程式。\n\n## 原文資訊\n\n- 原文標題：`Next.js 16.2: AI Improvements`\n- 原文連結：[https://nextjs.org/blog/next-16-2-ai](https://nextjs.org/blog/next-16-2-ai)\n- 原文發布日期：March 18th 2026\n- 原文作者：Jude Gao、Tim Neutkens\n\n## 這次更新包含什麼？\n\n- [**可直接給 Agent 使用的 `create-next-app`**](#可直接給-agent-使用的-create-next-app)：開箱即用建立 AI-ready 專案\n- [**瀏覽器日誌轉送到終端機**](#瀏覽器日誌轉送到終端機)：把瀏覽器錯誤轉送到終端機，方便 agent 協助除錯\n- [**開發伺服器鎖定檔**](#開發伺服器鎖定檔)：當第二個 dev server 啟動時，提供更可操作的錯誤訊息\n- [**實驗性 Agent DevTools**](#實驗性-agent-devtools)：讓 AI agent 能從終端機存取 React DevTools 與 Next.js 診斷資訊\n\n## 可直接給 Agent 使用的 `create-next-app`\n\n現在 `create-next-app` 預設會包含 `AGENTS.md`，讓 AI coding agents 從專案建立一開始，就能拿到與版本相符的 `Next.js` 文件。\n\n這建立在 Vercel 對 [`AGENTS.md`](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals) 的研究之上。研究結果顯示，當 agent 能直接存取隨套件一起提供的文件時，在 Next.js evals 中可以達到 **100% 通過率**；相較之下，採用 skill-based 的方式最高只有 **79%**。\n\n其中最重要的洞察是：**隨時可用的上下文，比按需查詢更有效**。因為很多 agent 其實無法正確判斷自己什麼時候應該去搜尋文件。\n\n> [!NOTE]\n> `AGENTS.md` 是一份很短的指示檔，會告訴 agent 在開始寫任何程式碼前，先去讀 `node_modules/next/dist/docs/` 裡面隨套件附帶的文件。現在 `Next.js` 的 npm 套件已經內建完整的 Markdown 文件，讓 agent 能在本地直接取得與目前版本相符的參考資料，而不需要額外抓遠端內容。\n\n如果是既有專案，設定方式會依照你的 `Next.js` 版本而不同。\n\n### 在 16.2 或更新版本上\n\n如果你使用的是 `16.2` 或之後的版本，文件已經直接內建在 `next` 套件裡。你只需要在專案根目錄加上這兩個檔案：\n\n```md title=\"AGENTS.md\"\n<!-- BEGIN:nextjs-agent-rules -->\n\n# Next.js：開始寫程式前一定要先讀文件\n\n在處理任何 Next.js 相關工作前，先去 `node_modules/next/dist/docs/` 找並閱讀對應的文件。你的訓練資料可能已經過時，文件才是最新版本的依據。\n\n<!-- END:nextjs-agent-rules -->\n```\n\n這些註解標記用來界定由 Next.js 管理的區段。你可以在標記外面加入自己專案特有的規則，未來更新時只會覆蓋標記之間的內容。\n\n`CLAUDE.md` 是 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 使用的指示檔，裡面的 `@` 指令會讓它把 `AGENTS.md` 一起帶進上下文：\n\n```md title=\"CLAUDE.md\"\n@AGENTS.md\n```\n\n### 在較舊版本上\n\n如果你還在較舊版本，可以透過 codemod 自動產生這些檔案：\n\n```bash title=\"terminal\"\nnpx @next/codemod@latest agents-md\n```\n\n更多細節可以參考官方的 [AI agents setup guide](/docs/app/guides/ai-agents#existing-projects)。\n\n## 瀏覽器日誌轉送到終端機\n\n`Next.js` 現在在開發模式下，會預設把瀏覽器錯誤轉送到終端機。這代表你不用切到瀏覽器 console，也能直接在 terminal 看到 client-side error。\n\n這對主要透過終端機操作、無法直接使用瀏覽器 console 的 AI agents 特別有幫助。\n\n預設情況下，只有 `error` 會被轉送到終端機。你也可以透過 `next.config.ts` 裡的 `logging.browserToTerminal` 來調整等級：\n\n```typescript title=\"next.config.ts\"\nconst nextConfig = {\n    logging: {\n        browserToTerminal: true,\n        // 'error' — 只轉送錯誤（預設）\n        // 'warn'  — 轉送警告與錯誤\n        // true    — 所有 console 輸出都轉送\n        // false   — 關閉此功能\n    },\n};\n\nexport default nextConfig;\n```\n\n## 開發伺服器鎖定檔\n\n`Next.js` 現在會把目前執行中的 dev server `PID`、port 與 URL 寫進 `.next/dev/lock`。\n\n當第二個 `next dev` 在同一個專案目錄中啟動時，Next.js 會讀取這個 lock file，並輸出具體可操作的錯誤訊息：\n\n```bash title=\"terminal\"\nError: Another next dev server is already running.\n\n- Local:        http://localhost:3000\n- PID:          12345\n- Dir:          /path/to/project\n- Log:          .next/dev/logs/next-development.log\n\nRun kill 12345 to stop it.\n```\n\n這對 AI coding agents 很有幫助，因為它們常常會在不知道已經有 server 正在跑的情況下，再次嘗試啟動 `next dev`。\n\n現在這個結構化錯誤訊息會直接提供：\n\n- 現有 process 的 `PID`\n- 可以連線的本機 URL\n- 對應的 log 檔位置\n\nagent 因此可以自己決定要連到既有 server，還是先把舊 process 關掉，而不需要人工介入。\n\n此外，這個 lock file 也能避免兩個 `next build` 同時執行，否則可能會導致 build artifacts 損壞。\n\n## 實驗性 Agent DevTools\n\n前面幾個功能，主要是在幫助 agent 更理解你的專案並協助除錯。而 [`@vercel/next-browser`](https://github.com/vercel-labs/next-browser) 則更進一步，讓 agent 可以直接檢查正在執行的 `Next.js` 應用。\n\n`next-browser` 是一個實驗性的 CLI，能把瀏覽器層級的資訊（例如截圖、network requests、console logs）以及框架層級的資訊（來自 React DevTools 與 Next.js dev overlay）轉成結構化文字，讓 agent 透過 shell 指令取得。\n\n它能提供像是：\n\n- component tree\n- props\n- hooks\n- [Partial Prerendering (PPR)](/docs/app/getting-started/cache-components) shell\n- runtime errors\n\n對 LLM 來說，直接讀 DevTools 面板很困難；但如果它可以執行 `next-browser tree`，解析輸出的文字，再決定下一步要看什麼，就完全不一樣了。\n\n每一個指令都是針對同一個持續存在的瀏覽器 session 發送一次請求，所以 agent 不需要自己管理瀏覽器狀態，也能反覆查詢應用程式。\n\n這讓瀏覽器從「agent 看不到的 UI」，變成「agent 可以推理的資料來源」。\n\n### 目前能做到什麼？\n\n`next-browser` 目前的功能仍在快速演進中，但在這個版本裡，它已經支援：\n\n- **檢查 React component tree**：可查看 props、hooks、state 與 source-mapped file 位置\n- **分析 PPR shell**：辨識哪些區塊是 static、哪些是 dynamic，以及哪些 [Suspense boundary](/docs/app/glossary#suspense-boundary) 被卡住\n- **存取錯誤與日誌**：從 dev server 讀取 build 與 runtime 問題\n- **監控 network activity**：追蹤導頁後的請求，包含 server actions\n- **擷取視覺資訊**：拍截圖或記錄 loading filmstrip\n\n### 如何開始使用\n\n你可以把它安裝成一個 [skill](https://skills.sh)（給 AI agent 重複使用的能力模組）：\n\n```bash title=\"terminal\"\nnpx skills add vercel-labs/next-browser\n```\n\n接著在 Claude Code、Cursor，或任何支援 skills 的 AI agent 裡輸入 `/next-browser`。\n\nCLI 會自動啟動一個已經預載 React DevTools 的 Chromium 實例，不需要額外手動設定瀏覽器。\n\n### 實例：讓 static shell 變大\n\n在使用 [Partial Prerendering (PPR)](/docs/app/getting-started/cache-components) 時，Next.js 可以先從 edge 立即送出 [static shell](/docs/app/glossary#static-shell) —— 也就是那些不依賴 request-time data 的頁面部分 —— 然後再把剩下的內容以 stream 的方式補上。\n\n**能放進 static shell 的內容越多，使用者就越快看到有意義的畫面。**\n\n但在實務上，一個 request-time fetch 很容易不小心讓整頁都變成 dynamic。舉例來說，這是一篇帶有訪客計數器的 blog post：\n\n```tsx title=\"app/blog/[slug]/page.tsx\"\nexport async function generateStaticParams() {\n    const posts = await getAllPosts();\n    return posts.map((post) => ({ slug: post.slug }));\n}\n\nexport default async function BlogPost({ params }) {\n    const post = await getPost(params.slug);\n    const views = await getVisitorCount(params.slug); // 每次 request 都會執行\n\n    return (\n        <article>\n            <h1>{post.title}</h1>\n            <span>{views} views</span>\n            <div>{post.content}</div>\n        </article>\n    );\n}\n```\n\n由於所有 slug 都已經在 `generateStaticParams` 裡列出，理論上文章內容本來可以在 build time 就先 prerender。\n\n但 `getVisitorCount` 會在每次 request 時執行，而且它又放在元件最上層，結果就讓**整頁**都變成 dynamic。\n\n最後的結果是：整個頁面都卡在 loading skeleton 後面，而不是能夠逐步 streaming 出來。\n\nagent 可以透過 `next-browser` 診斷這個問題。當它鎖定 PPR 模式時，畫面只會顯示 static shell —— 在這個例子裡，實際上你只會看到 `app/blog/[slug]/loading.tsx` 的 skeleton，因為沒有任何內容成功進入 shell。\n\n```bash title=\"terminal\"\nnext-browser ppr lock          # 進入 PPR 模式\nnext-browser goto /blog/hello  # 整頁只剩 loading skeleton\n```\n\n接著 agent 會執行 `ppr unlock` 來找出原因：\n\n```bash title=\"terminal\"\nnext-browser ppr unlock\n```\n\n```bash title=\"terminal\"\n# PPR Shell Analysis\n# 1 dynamic hole, 1 static\n\nblocked by:\n  - getVisitorCount (server-fetch)\n    owner: BlogPost at app/blog/[slug]/page.tsx:5\n    next step: Push the fetch into a smaller Suspense leaf\n```\n\n這份報告會很直接地告訴 agent：\n\n- 問題出在 `getVisitorCount`\n- 它位於 `BlogPost`\n- 修正方式是把這個 fetch 推進更小的 [Suspense boundary](/docs/app/glossary#suspense-boundary)\n\n所以 agent 只把 visitor counter 包進自己的 Suspense：\n\n```tsx title=\"app/blog/[slug]/page.tsx\"\nexport default async function BlogPost({ params }) {\n    const post = await getPost(params.slug);\n\n    return (\n        <article>\n            <h1>{post.title}</h1>\n            <Suspense fallback={<span>— views</span>}>\n                <VisitorCount slug={params.slug} />\n            </Suspense>\n            <div>{post.content}</div>\n        </article>\n    );\n}\n```\n\n再重新執行 `ppr lock` 後，就能確認 static shell 變大了：文章內容現在可以立刻 prerender 出來，只有 visitor count 會顯示 fallback。\n\n雖然 `next-browser` 還在持續演進中，但它已經很明確地指向一個方向：**未來 agent 可以用接近真人開發者的可視能力，來除錯與優化應用程式。**\n\n## 回饋與社群\n\n如果你想提供回饋，或參與 Next.js 未來的發展，可以到以下地方：\n\n- [GitHub Discussions](https://github.com/vercel/next.js/discussions)\n- [GitHub Issues](https://github.com/vercel/next.js/issues)\n- [Discord Community](https://nextjs.org/discord)",
+    "category": "Tech-Update",
+    "tags": [
+      "Next.js"
+    ],
+    "headings": [
+      {
+        "level": 2,
+        "text": "原文資訊",
+        "id": "原文資訊"
+      },
+      {
+        "level": 2,
+        "text": "這次更新包含什麼？",
+        "id": "這次更新包含什麼"
+      },
+      {
+        "level": 2,
+        "text": "可直接給 Agent 使用的 `create-next-app`",
+        "id": "可直接給-agent-使用的-create-next-app"
+      },
+      {
+        "level": 3,
+        "text": "在 16.2 或更新版本上",
+        "id": "在-162-或更新版本上"
+      },
+      {
+        "level": 3,
+        "text": "在較舊版本上",
+        "id": "在較舊版本上"
+      },
+      {
+        "level": 2,
+        "text": "瀏覽器日誌轉送到終端機",
+        "id": "瀏覽器日誌轉送到終端機"
+      },
+      {
+        "level": 2,
+        "text": "開發伺服器鎖定檔",
+        "id": "開發伺服器鎖定檔"
+      },
+      {
+        "level": 2,
+        "text": "實驗性 Agent DevTools",
+        "id": "實驗性-agent-devtools"
+      },
+      {
+        "level": 3,
+        "text": "目前能做到什麼？",
+        "id": "目前能做到什麼"
+      },
+      {
+        "level": 3,
+        "text": "如何開始使用",
+        "id": "如何開始使用"
+      },
+      {
+        "level": 3,
+        "text": "實例：讓 static shell 變大",
+        "id": "實例讓-static-shell-變大"
+      },
+      {
+        "level": 2,
+        "text": "回饋與社群",
+        "id": "回饋與社群"
+      }
+    ],
+    "slug": "nextjs-16-2-ai-improvements",
+    "code": "const{Fragment:e,jsx:n,jsxs:l}=arguments[0];function _createMdxContent(r){const c={a:\"a\",blockquote:\"blockquote\",code:\"code\",figcaption:\"figcaption\",figure:\"figure\",h2:\"h2\",h3:\"h3\",li:\"li\",p:\"p\",pre:\"pre\",span:\"span\",strong:\"strong\",ul:\"ul\",...r.components};return l(e,{children:[l(c.p,{children:[\"這次 \",n(c.code,{children:\"Next.js 16.2\"}),\" 帶來了幾個專門為 \",n(c.strong,{children:\"AI 輔助開發\"}),\" 設計的更新。這些改進讓 AI agent 更容易理解專案、在終端機裡除錯問題，甚至在不開瀏覽器的情況下檢查執行中的應用程式。\"]}),\"\\n\",n(c.h2,{children:\"原文資訊\"}),\"\\n\",l(c.ul,{children:[\"\\n\",l(c.li,{children:[\"原文標題：\",n(c.code,{children:\"Next.js 16.2: AI Improvements\"})]}),\"\\n\",l(c.li,{children:[\"原文連結：\",n(c.a,{href:\"https://nextjs.org/blog/next-16-2-ai\",children:\"https://nextjs.org/blog/next-16-2-ai\"})]}),\"\\n\",n(c.li,{children:\"原文發布日期：March 18th 2026\"}),\"\\n\",n(c.li,{children:\"原文作者：Jude Gao、Tim Neutkens\"}),\"\\n\"]}),\"\\n\",n(c.h2,{children:\"這次更新包含什麼？\"}),\"\\n\",l(c.ul,{children:[\"\\n\",l(c.li,{children:[n(c.a,{href:\"#%E5%8F%AF%E7%9B%B4%E6%8E%A5%E7%B5%A6-agent-%E4%BD%BF%E7%94%A8%E7%9A%84-create-next-app\",children:l(c.strong,{children:[\"可直接給 Agent 使用的 \",n(c.code,{children:\"create-next-app\"})]})}),\"：開箱即用建立 AI-ready 專案\"]}),\"\\n\",l(c.li,{children:[n(c.a,{href:\"#%E7%80%8F%E8%A6%BD%E5%99%A8%E6%97%A5%E8%AA%8C%E8%BD%89%E9%80%81%E5%88%B0%E7%B5%82%E7%AB%AF%E6%A9%9F\",children:n(c.strong,{children:\"瀏覽器日誌轉送到終端機\"})}),\"：把瀏覽器錯誤轉送到終端機，方便 agent 協助除錯\"]}),\"\\n\",l(c.li,{children:[n(c.a,{href:\"#%E9%96%8B%E7%99%BC%E4%BC%BA%E6%9C%8D%E5%99%A8%E9%8E%96%E5%AE%9A%E6%AA%94\",children:n(c.strong,{children:\"開發伺服器鎖定檔\"})}),\"：當第二個 dev server 啟動時，提供更可操作的錯誤訊息\"]}),\"\\n\",l(c.li,{children:[n(c.a,{href:\"#%E5%AF%A6%E9%A9%97%E6%80%A7-agent-devtools\",children:n(c.strong,{children:\"實驗性 Agent DevTools\"})}),\"：讓 AI agent 能從終端機存取 React DevTools 與 Next.js 診斷資訊\"]}),\"\\n\"]}),\"\\n\",l(c.h2,{children:[\"可直接給 Agent 使用的 \",n(c.code,{children:\"create-next-app\"})]}),\"\\n\",l(c.p,{children:[\"現在 \",n(c.code,{children:\"create-next-app\"}),\" 預設會包含 \",n(c.code,{children:\"AGENTS.md\"}),\"，讓 AI coding agents 從專案建立一開始，就能拿到與版本相符的 \",n(c.code,{children:\"Next.js\"}),\" 文件。\"]}),\"\\n\",l(c.p,{children:[\"這建立在 Vercel 對 \",n(c.a,{href:\"https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals\",children:n(c.code,{children:\"AGENTS.md\"})}),\" 的研究之上。研究結果顯示，當 agent 能直接存取隨套件一起提供的文件時，在 Next.js evals 中可以達到 \",n(c.strong,{children:\"100% 通過率\"}),\"；相較之下，採用 skill-based 的方式最高只有 \",n(c.strong,{children:\"79%\"}),\"。\"]}),\"\\n\",l(c.p,{children:[\"其中最重要的洞察是：\",n(c.strong,{children:\"隨時可用的上下文，比按需查詢更有效\"}),\"。因為很多 agent 其實無法正確判斷自己什麼時候應該去搜尋文件。\"]}),\"\\n\",l(c.blockquote,{children:[\"\\n\",l(c.p,{children:[\"[!NOTE]\\n\",n(c.code,{children:\"AGENTS.md\"}),\" 是一份很短的指示檔，會告訴 agent 在開始寫任何程式碼前，先去讀 \",n(c.code,{children:\"node_modules/next/dist/docs/\"}),\" 裡面隨套件附帶的文件。現在 \",n(c.code,{children:\"Next.js\"}),\" 的 npm 套件已經內建完整的 Markdown 文件，讓 agent 能在本地直接取得與目前版本相符的參考資料，而不需要額外抓遠端內容。\"]}),\"\\n\"]}),\"\\n\",l(c.p,{children:[\"如果是既有專案，設定方式會依照你的 \",n(c.code,{children:\"Next.js\"}),\" 版本而不同。\"]}),\"\\n\",n(c.h3,{children:\"在 16.2 或更新版本上\"}),\"\\n\",l(c.p,{children:[\"如果你使用的是 \",n(c.code,{children:\"16.2\"}),\" 或之後的版本，文件已經直接內建在 \",n(c.code,{children:\"next\"}),\" 套件裡。你只需要在專案根目錄加上這兩個檔案：\"]}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"md\",\"data-theme\":\"one-dark-pro\",children:\"AGENTS.md\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"\\x3c!-- BEGIN:nextjs-agent-rules --\\x3e\\n\\n# Next.js：開始寫程式前一定要先讀文件\\n\\n在處理任何 Next.js 相關工作前，先去 `node_modules/next/dist/docs/` 找並閱讀對應的文件。你的訓練資料可能已經過時，文件才是最新版本的依據。\\n\\n\\x3c!-- END:nextjs-agent-rules --\\x3e\",\"data-language\":\"md\",\"data-theme\":\"one-dark-pro\",children:l(c.code,{\"data-language\":\"md\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"\\x3c!-- BEGIN:nextjs-agent-rules --\\x3e\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#E06C75\"},children:\"# Next.js：開始寫程式前一定要先讀文件\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"在處理任何 Next.js 相關工作前，先去 \"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"`\"}),n(c.span,{style:{color:\"#98C379\"},children:\"node_modules/next/dist/docs/\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"`\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" 找並閱讀對應的文件。你的訓練資料可能已經過時，文件才是最新版本的依據。\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"\\x3c!-- END:nextjs-agent-rules --\\x3e\"})})]})})]}),\"\\n\",n(c.p,{children:\"這些註解標記用來界定由 Next.js 管理的區段。你可以在標記外面加入自己專案特有的規則，未來更新時只會覆蓋標記之間的內容。\"}),\"\\n\",l(c.p,{children:[n(c.code,{children:\"CLAUDE.md\"}),\" 是 \",n(c.a,{href:\"https://docs.anthropic.com/en/docs/claude-code\",children:\"Claude Code\"}),\" 使用的指示檔，裡面的 \",n(c.code,{children:\"@\"}),\" 指令會讓它把 \",n(c.code,{children:\"AGENTS.md\"}),\" 一起帶進上下文：\"]}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"md\",\"data-theme\":\"one-dark-pro\",children:\"CLAUDE.md\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"@AGENTS.md\",\"data-language\":\"md\",\"data-theme\":\"one-dark-pro\",children:n(c.code,{\"data-language\":\"md\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"@AGENTS.md\"})})})})]}),\"\\n\",n(c.h3,{children:\"在較舊版本上\"}),\"\\n\",n(c.p,{children:\"如果你還在較舊版本，可以透過 codemod 自動產生這些檔案：\"}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:\"terminal\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"npx @next/codemod@latest agents-md\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:n(c.code,{\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"npx\"}),n(c.span,{style:{color:\"#98C379\"},children:\" @next/codemod@latest\"}),n(c.span,{style:{color:\"#98C379\"},children:\" agents-md\"})]})})})]}),\"\\n\",l(c.p,{children:[\"更多細節可以參考官方的 \",n(c.a,{href:\"/docs/app/guides/ai-agents#existing-projects\",children:\"AI agents setup guide\"}),\"。\"]}),\"\\n\",n(c.h2,{children:\"瀏覽器日誌轉送到終端機\"}),\"\\n\",l(c.p,{children:[n(c.code,{children:\"Next.js\"}),\" 現在在開發模式下，會預設把瀏覽器錯誤轉送到終端機。這代表你不用切到瀏覽器 console，也能直接在 terminal 看到 client-side error。\"]}),\"\\n\",n(c.p,{children:\"這對主要透過終端機操作、無法直接使用瀏覽器 console 的 AI agents 特別有幫助。\"}),\"\\n\",l(c.p,{children:[\"預設情況下，只有 \",n(c.code,{children:\"error\"}),\" 會被轉送到終端機。你也可以透過 \",n(c.code,{children:\"next.config.ts\"}),\" 裡的 \",n(c.code,{children:\"logging.browserToTerminal\"}),\" 來調整等級：\"]}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"typescript\",\"data-theme\":\"one-dark-pro\",children:\"next.config.ts\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"const nextConfig = {\\n    logging: {\\n        browserToTerminal: true,\\n        // 'error' — 只轉送錯誤（預設）\\n        // 'warn'  — 轉送警告與錯誤\\n        // true    — 所有 console 輸出都轉送\\n        // false   — 關閉此功能\\n    },\\n};\\n\\nexport default nextConfig;\",\"data-language\":\"typescript\",\"data-theme\":\"one-dark-pro\",children:l(c.code,{\"data-language\":\"typescript\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"const\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" nextConfig\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" {\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#E06C75\"},children:\"    logging\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\": {\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#E06C75\"},children:\"        browserToTerminal\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\": \"}),n(c.span,{style:{color:\"#D19A66\"},children:\"true\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\",\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"        // 'error' — 只轉送錯誤（預設）\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"        // 'warn'  — 轉送警告與錯誤\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"        // true    — 所有 console 輸出都轉送\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"        // false   — 關閉此功能\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    },\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"};\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"export\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" default\"}),n(c.span,{style:{color:\"#E06C75\"},children:\" nextConfig\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\";\"})]})]})})]}),\"\\n\",n(c.h2,{children:\"開發伺服器鎖定檔\"}),\"\\n\",l(c.p,{children:[n(c.code,{children:\"Next.js\"}),\" 現在會把目前執行中的 dev server \",n(c.code,{children:\"PID\"}),\"、port 與 URL 寫進 \",n(c.code,{children:\".next/dev/lock\"}),\"。\"]}),\"\\n\",l(c.p,{children:[\"當第二個 \",n(c.code,{children:\"next dev\"}),\" 在同一個專案目錄中啟動時，Next.js 會讀取這個 lock file，並輸出具體可操作的錯誤訊息：\"]}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:\"terminal\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"Error: Another next dev server is already running.\\n\\n- Local:        http://localhost:3000\\n- PID:          12345\\n- Dir:          /path/to/project\\n- Log:          .next/dev/logs/next-development.log\\n\\nRun kill 12345 to stop it.\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:l(c.code,{\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"Error:\"}),n(c.span,{style:{color:\"#98C379\"},children:\" Another\"}),n(c.span,{style:{color:\"#98C379\"},children:\" next\"}),n(c.span,{style:{color:\"#98C379\"},children:\" dev\"}),n(c.span,{style:{color:\"#98C379\"},children:\" server\"}),n(c.span,{style:{color:\"#98C379\"},children:\" is\"}),n(c.span,{style:{color:\"#98C379\"},children:\" already\"}),n(c.span,{style:{color:\"#98C379\"},children:\" running.\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"-\"}),n(c.span,{style:{color:\"#98C379\"},children:\" Local:\"}),n(c.span,{style:{color:\"#98C379\"},children:\"        http://localhost:3000\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"-\"}),n(c.span,{style:{color:\"#98C379\"},children:\" PID:\"}),n(c.span,{style:{color:\"#D19A66\"},children:\"          12345\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"-\"}),n(c.span,{style:{color:\"#98C379\"},children:\" Dir:\"}),n(c.span,{style:{color:\"#98C379\"},children:\"          /path/to/project\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"-\"}),n(c.span,{style:{color:\"#98C379\"},children:\" Log:\"}),n(c.span,{style:{color:\"#98C379\"},children:\"          .next/dev/logs/next-development.log\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"Run\"}),n(c.span,{style:{color:\"#98C379\"},children:\" kill\"}),n(c.span,{style:{color:\"#D19A66\"},children:\" 12345\"}),n(c.span,{style:{color:\"#98C379\"},children:\" to\"}),n(c.span,{style:{color:\"#98C379\"},children:\" stop\"}),n(c.span,{style:{color:\"#98C379\"},children:\" it.\"})]})]})})]}),\"\\n\",l(c.p,{children:[\"這對 AI coding agents 很有幫助，因為它們常常會在不知道已經有 server 正在跑的情況下，再次嘗試啟動 \",n(c.code,{children:\"next dev\"}),\"。\"]}),\"\\n\",n(c.p,{children:\"現在這個結構化錯誤訊息會直接提供：\"}),\"\\n\",l(c.ul,{children:[\"\\n\",l(c.li,{children:[\"現有 process 的 \",n(c.code,{children:\"PID\"})]}),\"\\n\",n(c.li,{children:\"可以連線的本機 URL\"}),\"\\n\",n(c.li,{children:\"對應的 log 檔位置\"}),\"\\n\"]}),\"\\n\",n(c.p,{children:\"agent 因此可以自己決定要連到既有 server，還是先把舊 process 關掉，而不需要人工介入。\"}),\"\\n\",l(c.p,{children:[\"此外，這個 lock file 也能避免兩個 \",n(c.code,{children:\"next build\"}),\" 同時執行，否則可能會導致 build artifacts 損壞。\"]}),\"\\n\",n(c.h2,{children:\"實驗性 Agent DevTools\"}),\"\\n\",l(c.p,{children:[\"前面幾個功能，主要是在幫助 agent 更理解你的專案並協助除錯。而 \",n(c.a,{href:\"https://github.com/vercel-labs/next-browser\",children:n(c.code,{children:\"@vercel/next-browser\"})}),\" 則更進一步，讓 agent 可以直接檢查正在執行的 \",n(c.code,{children:\"Next.js\"}),\" 應用。\"]}),\"\\n\",l(c.p,{children:[n(c.code,{children:\"next-browser\"}),\" 是一個實驗性的 CLI，能把瀏覽器層級的資訊（例如截圖、network requests、console logs）以及框架層級的資訊（來自 React DevTools 與 Next.js dev overlay）轉成結構化文字，讓 agent 透過 shell 指令取得。\"]}),\"\\n\",n(c.p,{children:\"它能提供像是：\"}),\"\\n\",l(c.ul,{children:[\"\\n\",n(c.li,{children:\"component tree\"}),\"\\n\",n(c.li,{children:\"props\"}),\"\\n\",n(c.li,{children:\"hooks\"}),\"\\n\",l(c.li,{children:[n(c.a,{href:\"/docs/app/getting-started/cache-components\",children:\"Partial Prerendering (PPR)\"}),\" shell\"]}),\"\\n\",n(c.li,{children:\"runtime errors\"}),\"\\n\"]}),\"\\n\",l(c.p,{children:[\"對 LLM 來說，直接讀 DevTools 面板很困難；但如果它可以執行 \",n(c.code,{children:\"next-browser tree\"}),\"，解析輸出的文字，再決定下一步要看什麼，就完全不一樣了。\"]}),\"\\n\",n(c.p,{children:\"每一個指令都是針對同一個持續存在的瀏覽器 session 發送一次請求，所以 agent 不需要自己管理瀏覽器狀態，也能反覆查詢應用程式。\"}),\"\\n\",n(c.p,{children:\"這讓瀏覽器從「agent 看不到的 UI」，變成「agent 可以推理的資料來源」。\"}),\"\\n\",n(c.h3,{children:\"目前能做到什麼？\"}),\"\\n\",l(c.p,{children:[n(c.code,{children:\"next-browser\"}),\" 目前的功能仍在快速演進中，但在這個版本裡，它已經支援：\"]}),\"\\n\",l(c.ul,{children:[\"\\n\",l(c.li,{children:[n(c.strong,{children:\"檢查 React component tree\"}),\"：可查看 props、hooks、state 與 source-mapped file 位置\"]}),\"\\n\",l(c.li,{children:[n(c.strong,{children:\"分析 PPR shell\"}),\"：辨識哪些區塊是 static、哪些是 dynamic，以及哪些 \",n(c.a,{href:\"/docs/app/glossary#suspense-boundary\",children:\"Suspense boundary\"}),\" 被卡住\"]}),\"\\n\",l(c.li,{children:[n(c.strong,{children:\"存取錯誤與日誌\"}),\"：從 dev server 讀取 build 與 runtime 問題\"]}),\"\\n\",l(c.li,{children:[n(c.strong,{children:\"監控 network activity\"}),\"：追蹤導頁後的請求，包含 server actions\"]}),\"\\n\",l(c.li,{children:[n(c.strong,{children:\"擷取視覺資訊\"}),\"：拍截圖或記錄 loading filmstrip\"]}),\"\\n\"]}),\"\\n\",n(c.h3,{children:\"如何開始使用\"}),\"\\n\",l(c.p,{children:[\"你可以把它安裝成一個 \",n(c.a,{href:\"https://skills.sh\",children:\"skill\"}),\"（給 AI agent 重複使用的能力模組）：\"]}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:\"terminal\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"npx skills add vercel-labs/next-browser\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:n(c.code,{\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"npx\"}),n(c.span,{style:{color:\"#98C379\"},children:\" skills\"}),n(c.span,{style:{color:\"#98C379\"},children:\" add\"}),n(c.span,{style:{color:\"#98C379\"},children:\" vercel-labs/next-browser\"})]})})})]}),\"\\n\",l(c.p,{children:[\"接著在 Claude Code、Cursor，或任何支援 skills 的 AI agent 裡輸入 \",n(c.code,{children:\"/next-browser\"}),\"。\"]}),\"\\n\",n(c.p,{children:\"CLI 會自動啟動一個已經預載 React DevTools 的 Chromium 實例，不需要額外手動設定瀏覽器。\"}),\"\\n\",n(c.h3,{children:\"實例：讓 static shell 變大\"}),\"\\n\",l(c.p,{children:[\"在使用 \",n(c.a,{href:\"/docs/app/getting-started/cache-components\",children:\"Partial Prerendering (PPR)\"}),\" 時，Next.js 可以先從 edge 立即送出 \",n(c.a,{href:\"/docs/app/glossary#static-shell\",children:\"static shell\"}),\" —— 也就是那些不依賴 request-time data 的頁面部分 —— 然後再把剩下的內容以 stream 的方式補上。\"]}),\"\\n\",n(c.p,{children:n(c.strong,{children:\"能放進 static shell 的內容越多，使用者就越快看到有意義的畫面。\"})}),\"\\n\",n(c.p,{children:\"但在實務上，一個 request-time fetch 很容易不小心讓整頁都變成 dynamic。舉例來說，這是一篇帶有訪客計數器的 blog post：\"}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"tsx\",\"data-theme\":\"one-dark-pro\",children:\"app/blog/[slug]/page.tsx\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"export async function generateStaticParams() {\\n    const posts = await getAllPosts();\\n    return posts.map((post) => ({ slug: post.slug }));\\n}\\n\\nexport default async function BlogPost({ params }) {\\n    const post = await getPost(params.slug);\\n    const views = await getVisitorCount(params.slug); // 每次 request 都會執行\\n\\n    return (\\n        <article>\\n            <h1>{post.title}</h1>\\n            <span>{views} views</span>\\n            <div>{post.content}</div>\\n        </article>\\n    );\\n}\",\"data-language\":\"tsx\",\"data-theme\":\"one-dark-pro\",children:l(c.code,{\"data-language\":\"tsx\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"export\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" async\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" generateStaticParams\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"() {\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    const\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" posts\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" await\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" getAllPosts\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"();\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" posts\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\"map\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"((\"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"post\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\") \"}),n(c.span,{style:{color:\"#C678DD\"},children:\"=>\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" ({ \"}),n(c.span,{style:{color:\"#E06C75\"},children:\"slug\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\": \"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"post\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"slug\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" }));\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"export\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" default\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" async\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" BlogPost\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"({ \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"params\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" }) {\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    const\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" post\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" await\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" getPost\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"params\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"slug\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\");\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    const\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" views\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" await\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" getVisitorCount\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"params\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"slug\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"); \"}),n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"// 每次 request 都會執行\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"        <\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"article\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"            <\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"h1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"{\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"post\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"title\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"}\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"</\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"h1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"            <\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"span\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"{\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"views\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"}\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" views</\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"span\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"            <\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"div\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"{\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"post\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"content\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"}\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"</\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"div\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"        </\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"article\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    );\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})]}),\"\\n\",l(c.p,{children:[\"由於所有 slug 都已經在 \",n(c.code,{children:\"generateStaticParams\"}),\" 裡列出，理論上文章內容本來可以在 build time 就先 prerender。\"]}),\"\\n\",l(c.p,{children:[\"但 \",n(c.code,{children:\"getVisitorCount\"}),\" 會在每次 request 時執行，而且它又放在元件最上層，結果就讓\",n(c.strong,{children:\"整頁\"}),\"都變成 dynamic。\"]}),\"\\n\",n(c.p,{children:\"最後的結果是：整個頁面都卡在 loading skeleton 後面，而不是能夠逐步 streaming 出來。\"}),\"\\n\",l(c.p,{children:[\"agent 可以透過 \",n(c.code,{children:\"next-browser\"}),\" 診斷這個問題。當它鎖定 PPR 模式時，畫面只會顯示 static shell —— 在這個例子裡，實際上你只會看到 \",n(c.code,{children:\"app/blog/[slug]/loading.tsx\"}),\" 的 skeleton，因為沒有任何內容成功進入 shell。\"]}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:\"terminal\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"next-browser ppr lock          # 進入 PPR 模式\\nnext-browser goto /blog/hello  # 整頁只剩 loading skeleton\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:l(c.code,{\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"next-browser\"}),n(c.span,{style:{color:\"#98C379\"},children:\" ppr\"}),n(c.span,{style:{color:\"#98C379\"},children:\" lock\"}),n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"          # 進入 PPR 模式\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"next-browser\"}),n(c.span,{style:{color:\"#98C379\"},children:\" goto\"}),n(c.span,{style:{color:\"#98C379\"},children:\" /blog/hello\"}),n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"  # 整頁只剩 loading skeleton\"})]})]})})]}),\"\\n\",l(c.p,{children:[\"接著 agent 會執行 \",n(c.code,{children:\"ppr unlock\"}),\" 來找出原因：\"]}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:\"terminal\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"next-browser ppr unlock\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:n(c.code,{\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"next-browser\"}),n(c.span,{style:{color:\"#98C379\"},children:\" ppr\"}),n(c.span,{style:{color:\"#98C379\"},children:\" unlock\"})]})})})]}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:\"terminal\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"# PPR Shell Analysis\\n# 1 dynamic hole, 1 static\\n\\nblocked by:\\n  - getVisitorCount (server-fetch)\\n    owner: BlogPost at app/blog/[slug]/page.tsx:5\\n    next step: Push the fetch into a smaller Suspense leaf\",\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",children:l(c.code,{\"data-language\":\"bash\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"# PPR Shell Analysis\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#7F848E\",fontStyle:\"italic\"},children:\"# 1 dynamic hole, 1 static\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"blocked\"}),n(c.span,{style:{color:\"#98C379\"},children:\" by:\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"  -\"}),n(c.span,{style:{color:\"#98C379\"},children:\" getVisitorCount\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (server-fetch)\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"    owner:\"}),n(c.span,{style:{color:\"#98C379\"},children:\" BlogPost\"}),n(c.span,{style:{color:\"#98C379\"},children:\" at\"}),n(c.span,{style:{color:\"#98C379\"},children:\" app/blog/[slug]/page.tsx:5\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#61AFEF\"},children:\"    next\"}),n(c.span,{style:{color:\"#98C379\"},children:\" step:\"}),n(c.span,{style:{color:\"#98C379\"},children:\" Push\"}),n(c.span,{style:{color:\"#98C379\"},children:\" the\"}),n(c.span,{style:{color:\"#98C379\"},children:\" fetch\"}),n(c.span,{style:{color:\"#98C379\"},children:\" into\"}),n(c.span,{style:{color:\"#98C379\"},children:\" a\"}),n(c.span,{style:{color:\"#98C379\"},children:\" smaller\"}),n(c.span,{style:{color:\"#98C379\"},children:\" Suspense\"}),n(c.span,{style:{color:\"#98C379\"},children:\" leaf\"})]})]})})]}),\"\\n\",n(c.p,{children:\"這份報告會很直接地告訴 agent：\"}),\"\\n\",l(c.ul,{children:[\"\\n\",l(c.li,{children:[\"問題出在 \",n(c.code,{children:\"getVisitorCount\"})]}),\"\\n\",l(c.li,{children:[\"它位於 \",n(c.code,{children:\"BlogPost\"})]}),\"\\n\",l(c.li,{children:[\"修正方式是把這個 fetch 推進更小的 \",n(c.a,{href:\"/docs/app/glossary#suspense-boundary\",children:\"Suspense boundary\"})]}),\"\\n\"]}),\"\\n\",n(c.p,{children:\"所以 agent 只把 visitor counter 包進自己的 Suspense：\"}),\"\\n\",l(c.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[n(c.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"tsx\",\"data-theme\":\"one-dark-pro\",children:\"app/blog/[slug]/page.tsx\"}),n(c.pre,{style:{backgroundColor:\"#282c34\",color:\"#abb2bf\"},tabIndex:\"0\",rawcontent:\"export default async function BlogPost({ params }) {\\n    const post = await getPost(params.slug);\\n\\n    return (\\n        <article>\\n            <h1>{post.title}</h1>\\n            <Suspense fallback={<span>— views</span>}>\\n                <VisitorCount slug={params.slug} />\\n            </Suspense>\\n            <div>{post.content}</div>\\n        </article>\\n    );\\n}\",\"data-language\":\"tsx\",\"data-theme\":\"one-dark-pro\",children:l(c.code,{\"data-language\":\"tsx\",\"data-theme\":\"one-dark-pro\",style:{display:\"grid\"},children:[l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"export\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" default\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" async\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" function\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" BlogPost\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"({ \"}),n(c.span,{style:{color:\"#E06C75\",fontStyle:\"italic\"},children:\"params\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" }) {\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    const\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\" post\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\" =\"}),n(c.span,{style:{color:\"#C678DD\"},children:\" await\"}),n(c.span,{style:{color:\"#61AFEF\"},children:\" getPost\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"(\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"params\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"slug\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\");\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:\" \"}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#C678DD\"},children:\"    return\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" (\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"        <\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"article\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"            <\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"h1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"{\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"post\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"title\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"}\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"</\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"h1\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"            <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"Suspense\"}),n(c.span,{style:{color:\"#D19A66\",fontStyle:\"italic\"},children:\" fallback\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"=\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"{\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"<\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"span\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">— views</\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"span\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"}\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"                <\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"VisitorCount\"}),n(c.span,{style:{color:\"#D19A66\",fontStyle:\"italic\"},children:\" slug\"}),n(c.span,{style:{color:\"#56B6C2\"},children:\"=\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"{\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"params\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"slug\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"}\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\" />\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"            </\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"Suspense\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"            <\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"div\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"{\"}),n(c.span,{style:{color:\"#E5C07B\"},children:\"post\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\".\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"content\"}),n(c.span,{style:{color:\"#C678DD\"},children:\"}\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\"</\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"div\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",l(c.span,{\"data-line\":\"\",children:[n(c.span,{style:{color:\"#ABB2BF\"},children:\"        </\"}),n(c.span,{style:{color:\"#E06C75\"},children:\"article\"}),n(c.span,{style:{color:\"#ABB2BF\"},children:\">\"})]}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"    );\"})}),\"\\n\",n(c.span,{\"data-line\":\"\",children:n(c.span,{style:{color:\"#ABB2BF\"},children:\"}\"})})]})})]}),\"\\n\",l(c.p,{children:[\"再重新執行 \",n(c.code,{children:\"ppr lock\"}),\" 後，就能確認 static shell 變大了：文章內容現在可以立刻 prerender 出來，只有 visitor count 會顯示 fallback。\"]}),\"\\n\",l(c.p,{children:[\"雖然 \",n(c.code,{children:\"next-browser\"}),\" 還在持續演進中，但它已經很明確地指向一個方向：\",n(c.strong,{children:\"未來 agent 可以用接近真人開發者的可視能力，來除錯與優化應用程式。\"})]}),\"\\n\",n(c.h2,{children:\"回饋與社群\"}),\"\\n\",n(c.p,{children:\"如果你想提供回饋，或參與 Next.js 未來的發展，可以到以下地方：\"}),\"\\n\",l(c.ul,{children:[\"\\n\",n(c.li,{children:n(c.a,{href:\"https://github.com/vercel/next.js/discussions\",children:\"GitHub Discussions\"})}),\"\\n\",n(c.li,{children:n(c.a,{href:\"https://github.com/vercel/next.js/issues\",children:\"GitHub Issues\"})}),\"\\n\",n(c.li,{children:n(c.a,{href:\"https://nextjs.org/discord\",children:\"Discord Community\"})}),\"\\n\"]})]})}return{default:function(e={}){const{wrapper:l}=e.components||{};return l?n(l,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "permalink": "/blog/posts/nextjs-16-2-ai-improvements"
   }
 ]

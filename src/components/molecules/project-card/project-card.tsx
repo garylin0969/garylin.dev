@@ -1,4 +1,4 @@
-import BaseImage from '@/components/atoms/base-image';
+import Image from 'next/image';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
@@ -47,17 +47,19 @@ const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, proj
             rel="noreferrer noopener"
         >
             {badge && <Badge className="absolute -top-2 -right-2 z-10 px-2 py-1">{badge}</Badge>}
-            <Card className="flex h-full flex-col gap-0 overflow-hidden p-0">
-                <AspectRatio ratio={16 / 9} className="overflow-hidden">
-                    <BaseImage
-                        className="object-cover transition-transform duration-300 group-hover:scale-110"
-                        src={project.image}
-                        alt={project.name}
-                        loading={imageLoading}
-                        fill
-                    />
-                </AspectRatio>
-                <CardContent className="flex flex-1 flex-col space-y-6 p-6">
+            <Card className="h-full gap-0 p-0">
+                <div className="w-full overflow-hidden">
+                    <AspectRatio ratio={16 / 9} className="overflow-hidden">
+                        <Image
+                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            src={project.image}
+                            alt={project.name}
+                            loading={imageLoading}
+                            fill
+                        />
+                    </AspectRatio>
+                </div>
+                <CardContent className="space-y-6 p-6">
                     <CardTitle className="group-hover:text-primary">{project.name}</CardTitle>
                     <div className="flex flex-wrap items-center gap-2">
                         {visibleTags?.map((tag) => (

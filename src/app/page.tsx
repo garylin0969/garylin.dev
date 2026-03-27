@@ -1,64 +1,40 @@
-import Link from 'next/link';
-import AuthorCard from '@/components/molecules/author-card';
-import BlogPostCard from '@/components/molecules/blog-post-card';
-import IntroCard from '@/components/molecules/intro-card';
-import ProjectCard from '@/components/molecules/project-card';
-import { Button } from '@/components/ui/button';
-import { HOME_INTRO_LIST } from '@/constants/intro';
-import { PROJECT_LIST } from '@/constants/project';
-import { getLatestPosts } from '@/utils/post';
-import { cn } from '@/utils/shadcn';
-
-const latestPosts = getLatestPosts(1);
+import HomeHero from '@/components/molecules/home-hero';
+import MDXContent from '@/components/molecules/mdx-content';
+import SocialLinks from '@/components/molecules/social-links';
+import { getHomePagePost } from '@/utils/home';
 
 /**
  * 首頁元件。
  *
- * 顯示網站的首頁內容，包含作者介紹、最新專案和最新文章。
+ * 顯示網站的首頁內容，包含 Hero 區塊與 MDX 內文。
  */
 const HomePage = () => {
+    // 取得首頁內容
+    const homePagePost = getHomePagePost();
+
+    if (!homePagePost) {
+        return (
+            <div className="mx-auto flex min-h-[50vh] w-full max-w-3xl items-center justify-center px-6 py-16">
+                <div className="space-y-3 text-center">
+                    <h1 className="text-3xl font-semibold">Home content not found</h1>
+                    <p className="text-muted-foreground">Please add `content/home/index.mdx` and rebuild Velite.</p>
+                </div>
+            </div>
+        );
+    }
+
     return (
-        <div className="grid flex-1 place-content-center">
-            <div className="mx-auto max-w-6xl space-y-4 md:space-y-8">
-                <section className="space-y-4 md:space-y-8">
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <div className="flex justify-center">
-                            {/* 作者卡片 */}
-                            <AuthorCard />
-                        </div>
-                        <div className="hidden md:flex md:justify-center">
-                            {/* 最新專案卡片 */}
-                            <ProjectCard
-                                className="w-74"
-                                imageLoading="eager"
-                                badge="New Project"
-                                maxVisible={4}
-                                project={PROJECT_LIST[0]}
-                            />
-                        </div>
-                    </div>
-                    {/* 簡短介紹卡片 */}
-                    <IntroCard
-                        className="mx-auto max-w-3xl"
-                        list={HOME_INTRO_LIST}
-                        listClassName="text-center text-xl"
-                    />
-                </section>
-                {/* 最新文章 */}
-                <section className="flex flex-1 flex-col items-center justify-center gap-y-2">
-                    <div>
-                        {latestPosts?.map((post) => (
-                            <BlogPostCard
-                                key={post?.slug}
-                                className={cn(latestPosts?.length > 1 && 'border-b')}
-                                post={post}
-                            />
-                        ))}
-                    </div>
-                    <Link href="/blog/all/1">
-                        <Button variant="outline">View All</Button>
-                    </Link>
-                </section>
+        <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center gap-8 px-6">
+            {/* Hero 區塊 */}
+            <HomeHero label="Home" title={homePagePost?.title} description={homePagePost?.description} />
+            {/* MDX 內文 */}
+            <section className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
+                <MDXContent code={homePagePost?.code} />
+            </section>
+            {/* 社交連結 */}
+            <div>
+                <p className="mb-4">Find me on</p>
+                <SocialLinks iconClassName="size-5" />
             </div>
         </div>
     );

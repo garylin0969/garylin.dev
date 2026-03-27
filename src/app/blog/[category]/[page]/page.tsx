@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import BlogCategoryTabs from '@/components/molecules/blog-category-tabs';
 import BlogPostCard from '@/components/molecules/blog-post-card';
 import { PaginationControls } from '@/components/molecules/pagination-controls';
 import { generateBlogMetadata } from '@/constants/metadatas';
@@ -103,11 +104,13 @@ const BlogPage = async ({ params }: BlogPageProps) => {
     const getPageUrl = (pageNumber: number) => `/blog/${category}/${pageNumber}`;
 
     return (
-        <div className="space-y-4 lg:px-8">
+        <div className="mx-auto max-w-3xl space-y-4">
+            {/* 分類標籤 */}
+            <BlogCategoryTabs currentCategory={category} />
             {/* 文章列表 */}
             <div>
                 {posts.map((post) => (
-                    <BlogPostCard key={post?.slug} className="border-b" post={post} />
+                    <BlogPostCard key={post?.slug} post={post} />
                 ))}
             </div>
 

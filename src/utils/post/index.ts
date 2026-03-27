@@ -19,7 +19,7 @@ interface Options {
  * @returns 排序後的文章列表。
  */
 export const sortPosts = (posts: Post[], sort: 'asc' | 'desc' = 'desc') => {
-    return posts.sort((a, b) => {
+    return [...posts].sort((a, b) => {
         if (sort === 'asc') {
             return new Date(a.date).getTime() - new Date(b.date).getTime();
         }

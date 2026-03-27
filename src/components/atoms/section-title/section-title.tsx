@@ -33,12 +33,12 @@ const SectionTitle = ({ id, className, as: Component = 'h2', isHash = true, chil
         href: `#${id}`,
         target: '_self',
         rel: 'noreferrer',
-        className: 'block scroll-margin-top border-none outline-none',
+        className: 'block border-none outline-none',
     };
 
     return (
         <LinkComponent {...(id ? linkProps : {})}>
-            <Component id={id} className={cn('text-primary text-3xl font-bold tracking-tight lg:text-4xl', className)}>
+            <Component id={id} className={cn('scroll-margin-top text-primary text-3xl font-bold tracking-tight lg:text-4xl', className)}>
                 {isHash && <span className="mr-1">#</span>}
                 {children}
             </Component>

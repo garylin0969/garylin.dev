@@ -1,4 +1,4 @@
-import BaseImage from '@/components/atoms/base-image';
+import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -25,7 +25,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => (
         <CardHeader className="flex items-center gap-x-2 p-0">
             {/* 使用相對定位容器來保持圖片長寬比 */}
             <div className="relative h-16 w-16 overflow-hidden rounded-md bg-white">
-                <BaseImage src={experience.image} fill alt={experience.company} className="object-contain" />
+                <Image src={experience.image} fill alt={experience.company} className="object-contain" />
             </div>
             <div className="space-y-1">
                 <CardTitle>{experience.title}</CardTitle>

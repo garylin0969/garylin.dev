@@ -1,0 +1,35 @@
+import TableOfContents from '@/components/molecules/table-of-contents';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { cn } from '@/utils/shadcn';
+
+interface MobileTableOfContentsProps {
+    /** 額外 CSS 類別。 */
+    className?: string;
+    /** 文章標題列表。 */
+    headings: { level: number; text: string }[];
+}
+
+/**
+ * 行動版目錄元件。
+ *
+ * 以手風琴形式顯示文章目錄。
+ *
+ * @param className - 額外 CSS 類別 {@link MobileTableOfContentsProps.className}。
+ * @param headings - 文章標題列表 {@link MobileTableOfContentsProps.headings}。
+ */
+const MobileTableOfContents = ({ className, headings }: MobileTableOfContentsProps) => {
+    return (
+        <Accordion type="single" collapsible className={cn(className)}>
+            <AccordionItem value="table-of-contents">
+                <AccordionTrigger className="bg-primary/10 text-primary items-center rounded-xs p-1 text-lg font-semibold">
+                    目錄
+                </AccordionTrigger>
+                <AccordionContent className="p-4">
+                    <TableOfContents headings={headings} />
+                </AccordionContent>
+            </AccordionItem>
+        </Accordion>
+    );
+};
+
+export default MobileTableOfContents;

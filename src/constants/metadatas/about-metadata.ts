@@ -14,7 +14,7 @@ export const generateAboutMetadata = (): Metadata => {
             canonical: `${DOMAIN}/about`,
         },
         openGraph: {
-            title: 'About | GaryLin Dev',
+            title: 'About | Gary Lin',
             description: '了解更多關於 Gary Lin 的背景、工作經驗、技能和專案',
             url: `${DOMAIN}/about`,
             locale: 'zh_TW',
@@ -24,12 +24,12 @@ export const generateAboutMetadata = (): Metadata => {
                     url: '/favicons/android-chrome-512x512.png',
                     width: 512,
                     height: 512,
-                    alt: 'GaryLin Dev',
+                    alt: 'Gary Lin',
                 },
             ],
         },
         twitter: {
-            title: 'About | GaryLin Dev',
+            title: 'About | Gary Lin',
             description: '了解更多關於 Gary Lin 的背景、工作經驗、技能和專案',
             images: ['/favicons/android-chrome-512x512.png'],
         },

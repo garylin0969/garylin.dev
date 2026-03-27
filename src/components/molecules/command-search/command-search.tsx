@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
+    Command,
     CommandDialog,
     CommandEmpty,
     CommandGroup,
@@ -93,35 +94,44 @@ const CommandSearch = ({ open, onOpenChange }: CommandSearchProps) => {
             onOpenChange={onOpenChange}
             title="搜尋文章"
             description="搜尋文章標題、描述、分類或標籤"
-            className="sm:max-w-2xl md:max-w-3xl"
+            className="top-1/2 -translate-y-1/2 sm:max-w-2xl md:max-w-3xl"
         >
-            <CommandInput placeholder="輸入關鍵字搜尋文章..." value={searchValue} onValueChange={setSearchValue} />
-            <CommandList className="h-100 min-h-100">
-                <CommandEmpty>
-                    <div className="flex flex-wrap items-center justify-center gap-1">
-                        <span>無法找到相關結果</span>
-                        <span className="text-primary font-bold">&ldquo;{searchValue}&rdquo;</span>
-                    </div>
-                </CommandEmpty>
+            <Command>
+                <CommandInput
+                    wrapperClassName="p-2"
+                    placeholder="輸入關鍵字搜尋文章..."
+                    value={searchValue}
+                    onValueChange={setSearchValue}
+                />
+                <CommandList className="h-100">
+                    <CommandEmpty>
+                        <div className="flex flex-wrap items-center justify-center gap-1">
+                            <span>無法找到相關結果</span>
+                            &ldquo;
+                            <span className="text-primary font-bold">{searchValue}</span>
+                            &rdquo;
+                        </div>
+                    </CommandEmpty>
 
-                {Object?.entries(groupedPosts)?.map(([category, categoryPosts]) => (
-                    <CommandGroup key={category} heading={category}>
-                        {categoryPosts?.map((post) => (
-                            <CommandItem
-                                key={post?.slug}
-                                value={`${post?.title} ${post?.description} ${post?.category} ${post?.tags?.join(' ')}`}
-                                onSelect={() => handleSelectPost(post?.permalink)}
-                                className="flex flex-col items-start gap-2 p-4 hover:cursor-pointer"
-                            >
-                                <div className="flex w-full flex-col gap-1">
-                                    <div className="line-clamp-1 font-medium">{post?.title}</div>
-                                    <div className="line-clamp-2 text-sm opacity-70">{post?.description}</div>
-                                </div>
-                            </CommandItem>
-                        ))}
-                    </CommandGroup>
-                ))}
-            </CommandList>
+                    {Object?.entries(groupedPosts)?.map(([category, categoryPosts]) => (
+                        <CommandGroup key={category} heading={category}>
+                            {categoryPosts?.map((post) => (
+                                <CommandItem
+                                    key={post?.slug}
+                                    value={`${post?.title} ${post?.description} ${post?.category} ${post?.tags?.join(' ')}`}
+                                    onSelect={() => handleSelectPost(post?.permalink)}
+                                    className="p-4 hover:cursor-pointer"
+                                >
+                                    <div className="flex w-full flex-col gap-1">
+                                        <div className="line-clamp-1 font-medium">{post?.title}</div>
+                                        <div className="line-clamp-2 text-sm opacity-70">{post?.description}</div>
+                                    </div>
+                                </CommandItem>
+                            ))}
+                        </CommandGroup>
+                    ))}
+                </CommandList>
+            </Command>
         </CommandDialog>
     );
 };

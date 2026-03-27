@@ -11,6 +11,5 @@ export const HOME_INTRO_LIST = ['A Frontend Developer'];
  * 用於關於頁面 IntroCard 的輪播文字。
  */
 export const ABOUT_INTRO_LIST = [
-    'Hi there',
-    '我是 Gary Lin，目前於 鉅亨網 擔任前端工程師，主要使用 Next.js、React.js、TypeScript 和 Tailwind CSS。閒暇時喜愛看動漫、小說，經常在社群平台上衝浪的哥布林。',
+    '我是 Gary Lin，一名深耕 Next.js 與 React.js 生態系的前端工程師，擅長以 TypeScript 與 Tailwind CSS 打造網頁。程式碼之外，我沉浸於動漫、小說與影劇的世界，同時也是位熱衷在社群平台上衝浪的資深哥布林。',
 ];

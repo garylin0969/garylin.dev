@@ -1,5 +1,7 @@
 import { LinkIcon } from 'lucide-react';
 import Link from 'next/link';
+import { Children, isValidElement, ReactNode } from 'react';
+import { createHeadingId } from '@/utils/heading';
 import { cn } from '@/utils/shadcn';
 
 /**
@@ -13,8 +15,31 @@ interface DocsHeadingProps {
     /** 標題層級 (h1-h6)。 */
     as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     /** 標題文字。 */
-    title: string;
+    title: ReactNode;
 }
+
+/**
+ * 從 MDX 標題節點中提取可用於錨點與 title 屬性的純文字。
+ *
+ * @param node - 標題內容節點。
+ * @returns 轉換後的純文字內容。
+ */
+const extractHeadingText = (node: ReactNode): string => {
+    if (typeof node === 'string' || typeof node === 'number') {
+        return String(node);
+    }
+
+    if (Array.isArray(node)) {
+        return Children.toArray(node).map(extractHeadingText).join('');
+    }
+
+    if (isValidElement(node)) {
+        const props = node.props as { children?: ReactNode };
+        return extractHeadingText(props.children);
+    }
+
+    return '';
+};
 
 /**
  * 文件標題元件。
@@ -29,9 +54,16 @@ interface DocsHeadingProps {
  */
 const DocsHeading = ({ className, iconClassName, as, title }: DocsHeadingProps) => {
     const Component = as;
+    const normalizedTitle = extractHeadingText(title);
+    const headingId = createHeadingId(normalizedTitle);
+
     return (
-        <Component className={cn('scroll-mt-24', className)} id={title}>
-            <Link href={`#${title}`} title={title} className="group inline-flex items-center gap-x-1 no-underline">
+        <Component className={cn('scroll-mt-24', className)} id={headingId}>
+            <Link
+                href={`#${headingId}`}
+                title={normalizedTitle}
+                className="group inline-flex items-center gap-x-1 no-underline"
+            >
                 {title}
                 <LinkIcon
                     className={cn(

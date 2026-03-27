@@ -8,8 +8,8 @@ import { DOMAIN } from '@/constants/site';
  */
 export const baseMetadata: Metadata = {
     title: {
-        default: 'GaryLin Dev',
-        template: '%s | GaryLin Dev',
+        default: 'Gary Lin',
+        template: '%s | Gary Lin',
     },
     description: '嗨，我是 Gary Lin，專精於 React.js、Next.js 和現代網頁技術的前端工程師。',
     keywords: [
@@ -37,10 +37,10 @@ export const baseMetadata: Metadata = {
         canonical: '/',
     },
     openGraph: {
-        title: 'GaryLin Dev',
+        title: 'Gary Lin',
         description: '嗨，我是 Gary Lin，專精於 React.js、Next.js 和現代網頁技術的前端工程師。',
         url: DOMAIN,
-        siteName: 'GaryLin Dev',
+        siteName: 'Gary Lin',
         locale: 'zh_TW',
         type: 'website',
         images: [
@@ -48,13 +48,13 @@ export const baseMetadata: Metadata = {
                 url: '/favicons/android-chrome-512x512.png',
                 width: 512,
                 height: 512,
-                alt: 'GaryLin Dev',
+                alt: 'Gary Lin',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'GaryLin Dev',
+        title: 'Gary Lin',
         description: '嗨，我是 Gary Lin，專精於 React.js、Next.js 和現代網頁技術的前端工程師。',
         images: ['/favicons/android-chrome-512x512.png'],
         creator: '@garylin_dev',
@@ -95,9 +95,9 @@ export const baseMetadata: Metadata = {
     category: 'technology',
     referrer: 'origin-when-cross-origin',
     generator: 'Next.js',
-    applicationName: 'GaryLin Dev',
+    applicationName: 'Gary Lin',
     appleWebApp: {
-        title: 'GaryLin Dev',
+        title: 'Gary Lin',
         statusBarStyle: 'default',
         capable: true,
     },

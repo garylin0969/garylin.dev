@@ -38,10 +38,9 @@ export const PostMeta = ({ className, date, updateDate, category, useLink = true
     return (
         <div className={cn('text-muted-foreground text-sm', className)}>
             <div className="flex items-center gap-x-3">
-                <span>發布日期：{formattedDate}</span>
+                <time dateTime={date}>{formattedDate}</time>
                 {category && (
                     <>
-                        <span>•</span>
                         {useLink ? (
                             <Link href={`/blog/${category}/1`}>
                                 <Badge variant="outline" className="px-2 py-1">
@@ -56,7 +55,11 @@ export const PostMeta = ({ className, date, updateDate, category, useLink = true
                     </>
                 )}
             </div>
-            {updateDate && <span>最後更新日期：{formattedUpdateDate}</span>}
+            {updateDate && (
+                <span>
+                    最後更新日期：<time dateTime={updateDate}>{formattedUpdateDate}</time>
+                </span>
+            )}
         </div>
     );
 };

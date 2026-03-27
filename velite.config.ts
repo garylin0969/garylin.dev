@@ -3,6 +3,7 @@ import { Options } from 'rehype-pretty-code';
 import { createHighlighter } from 'shiki';
 import themeDark from 'shiki/dist/themes/one-dark-pro.mjs';
 import { defineConfig, s } from 'velite';
+import { createHeadingId } from './src/utils/heading';
 
 export default defineConfig({
     // 設定根目錄
@@ -39,6 +40,15 @@ export default defineConfig({
 
     // 定義collections
     collections: {
+        home: {
+            name: 'Home',
+            pattern: 'home/index.mdx',
+            schema: s.object({
+                title: s.string(),
+                description: s.string(),
+                code: s.mdx(),
+            }),
+        },
         posts: {
             name: 'Post',
             pattern: 'posts/**/*.{md,mdx}',
@@ -54,7 +64,7 @@ export default defineConfig({
                     image: s.string().optional(),
                     headings: s.raw().transform((rawContent) => {
                         // 從 rawContent 提取 headings
-                        const headings: { level: number; text: string }[] = [];
+                        const headings: { level: number; text: string; id: string }[] = [];
                         // 正規表達式
                         const headingRegex = /^(#{2,6})\s+(.+)/gm;
                         // 匹配結果
@@ -62,7 +72,9 @@ export default defineConfig({
                         // 如果 rawContent 是字串，則提取 headings
                         if (typeof rawContent === 'string') {
                             while ((match = headingRegex.exec(rawContent)) !== null) {
-                                headings.push({ level: match[1]?.length, text: match[2]?.trim() });
+                                const text = match[2]?.trim() ?? '';
+                                // 預先產生穩定 ID，提供文章標題、目錄與捲動定位共用。
+                                headings.push({ level: match[1]?.length, text, id: createHeadingId(text) });
                             }
                         }
                         return headings;
