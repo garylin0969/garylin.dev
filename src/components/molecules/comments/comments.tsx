@@ -2,6 +2,7 @@
 
 import { useTheme } from 'next-themes';
 import dynamic from 'next/dynamic';
+import { GISCUS_CONFIG, GISCUS_DARK_THEME, GISCUS_LIGHT_THEME } from '@/constants/giscus';
 
 // 動態導入 Giscus
 const Giscus = dynamic(() => import('@giscus/react'), {
@@ -19,18 +20,8 @@ const Comments = () => {
 
     return (
         <Giscus
-            repo="garylin0969/blog"
-            repoId="R_kgDONFDN5Q"
-            category="General"
-            categoryId="DIC_kwDONFDN5c4CnIE8"
-            mapping="og:title"
-            strict="0"
-            reactionsEnabled="1"
-            emitMetadata="0"
-            inputPosition="bottom"
-            theme={resolvedTheme === 'dark' ? 'dark_tritanopia' : 'light_tritanopia'}
-            lang="zh-TW"
-            loading="lazy"
+            {...GISCUS_CONFIG}
+            theme={resolvedTheme === 'dark' ? GISCUS_DARK_THEME : GISCUS_LIGHT_THEME}
         />
     );
 };
