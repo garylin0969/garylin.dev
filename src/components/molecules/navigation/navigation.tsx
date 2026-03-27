@@ -24,6 +24,8 @@ interface NavigationProps {
     itemClassName?: string;
     /** 導航連結的 CSS 類名。 */
     linkClassName?: string;
+    /** 點擊導航連結時觸發。 */
+    onNavigate?: (href: string) => void;
 }
 
 /**
@@ -34,7 +36,7 @@ interface NavigationProps {
  *
  * @param props - 元件屬性 {@link NavigationProps}。
  */
-const Navigation = ({ menuClassName, listClassName, itemClassName, linkClassName }: NavigationProps) => {
+const Navigation = ({ menuClassName, listClassName, itemClassName, linkClassName, onNavigate }: NavigationProps) => {
     const pathname = usePathname();
 
     // 判斷是否為當前頁面
@@ -59,6 +61,7 @@ const Navigation = ({ menuClassName, listClassName, itemClassName, linkClassName
                         <NavigationMenuLink asChild>
                             <Link
                                 href={route.href}
+                                onClick={() => onNavigate?.(route.href)}
                                 className={cn(
                                     navigationMenuTriggerStyle(),
                                     'bg-transparent font-bold',
