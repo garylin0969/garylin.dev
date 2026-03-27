@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useActiveHeadings } from '@/hooks';
+import { createHeadingId } from '@/utils/heading';
 import { cn } from '@/utils/shadcn';
 
 /**
@@ -12,6 +13,7 @@ interface TableOfContentsProps {
     className?: string;
     /** 標題列表。 */
     headings?: {
+        id?: string;
         level: number;
         text: string;
     }[];
@@ -37,13 +39,14 @@ const TableOfContents = ({ headings, className }: TableOfContentsProps) => {
         <nav className={cn(className)}>
             <ul>
                 {headings?.map((heading, index) => {
-                    const isActive = activeHeadings?.includes(heading?.text);
+                    const headingId = heading?.id ?? createHeadingId(heading?.text);
+                    const isActive = activeHeadings?.includes(headingId);
 
                     return (
                         <li key={index} className={cn('border-l pl-px', isActive && 'border-primary border-l-2 pl-0')}>
                             <Link
                                 title={heading?.text}
-                                href={`#${heading?.text}`}
+                                href={`#${headingId}`}
                                 className={cn(
                                     'hover:bg-muted hover:text-foreground text-muted-foreground block rounded px-2 py-1 text-sm no-underline! transition-all duration-200',
                                     // 根據標題層級調整縮排

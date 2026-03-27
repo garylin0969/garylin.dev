@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { HEADER_HIGHT } from '@/constants/site';
+import { createHeadingId } from '@/utils/heading';
 
 /**
  * 用於監聽滾動位置並檢測當前可見標題的 Hook。
@@ -9,7 +10,7 @@ import { HEADER_HIGHT } from '@/constants/site';
  * @param headings - 標題列表，包含層級和文字內容。
  * @returns 當前在視窗可見範圍內的標題文字陣列。
  */
-const useActiveHeadings = (headings: { level: number; text: string }[]) => {
+const useActiveHeadings = (headings: { level: number; text: string; id?: string }[]) => {
     const [activeHeadings, setActiveHeadings] = useState<string[]>([]);
 
     useEffect(() => {
@@ -18,10 +19,11 @@ const useActiveHeadings = (headings: { level: number; text: string }[]) => {
         // 獲取所有標題元素
         const headingElements = headings
             .map((heading) => {
-                const element = document.getElementById(heading?.text);
-                return element ? { element, text: heading.text, level: heading.level } : null;
+                const headingId = heading?.id ?? createHeadingId(heading?.text);
+                const element = document.getElementById(createHeadingId(heading?.text));
+                return element ? { element, text: heading.text, id: headingId, level: heading.level } : null;
             })
-            .filter(Boolean) as { element: HTMLElement; text: string; level: number }[];
+            .filter(Boolean) as { element: HTMLElement; text: string; id: string; level: number }[];
 
         if (headingElements.length === 0) return;
 
@@ -29,17 +31,17 @@ const useActiveHeadings = (headings: { level: number; text: string }[]) => {
         const visibleHeadings = new Set<string>();
 
         // 找到最接近視窗頂部的標題
-        const findNearestHeading = (elements: { element: HTMLElement; text: string; level: number }[]) => {
+        const findNearestHeading = (elements: { element: HTMLElement; text: string; id: string; level: number }[]) => {
             let closestHeading = '';
             let minDistance = Infinity;
 
-            elements.forEach(({ element, text }) => {
+            elements.forEach(({ element, id }) => {
                 const rect = element.getBoundingClientRect();
                 const distance = Math.abs(rect.top - HEADER_HIGHT);
 
                 if (rect.top <= HEADER_HIGHT && distance < minDistance) {
                     minDistance = distance;
-                    closestHeading = text;
+                    closestHeading = id;
                 }
             });
 
@@ -47,7 +49,7 @@ const useActiveHeadings = (headings: { level: number; text: string }[]) => {
                 setActiveHeadings([closestHeading]);
             } else if (elements.length > 0) {
                 // 如果都在視窗下方，選擇第一個標題
-                setActiveHeadings([elements[0].text]);
+                setActiveHeadings([elements[0].id]);
             }
         };
 
@@ -80,8 +82,8 @@ const useActiveHeadings = (headings: { level: number; text: string }[]) => {
                     } else {
                         // 按照文檔順序排序可見的標題
                         const sortedVisibleHeadings = headingElements
-                            .filter(({ text }) => visibleHeadings.has(text))
-                            .map(({ text }) => text);
+                            .filter(({ id }) => visibleHeadings.has(id))
+                            .map(({ id }) => id);
 
                         setActiveHeadings(sortedVisibleHeadings);
                     }

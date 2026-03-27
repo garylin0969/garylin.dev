@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getAllCategories } from '@/utils/post';
 import { cn } from '@/utils/shadcn';
 
@@ -29,15 +28,30 @@ const BlogCategoryTabs = ({ className, currentCategory }: BlogCategoryTabsProps)
 
     return (
         <div className={cn('w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden', className)}>
-            <Tabs value={currentCategory}>
-                <TabsList variant="line">
-                    {tabs?.map((tab) => (
-                        <Link key={tab?.value} href={`/blog/${tab?.value}/1`}>
-                            <TabsTrigger value={tab?.value}>{tab?.label}</TabsTrigger>
-                        </Link>
-                    ))}
-                </TabsList>
-            </Tabs>
+            <nav aria-label="Blog categories">
+                <ul className="border-border inline-flex min-w-max items-center gap-1 border-b">
+                    {tabs?.map((tab) => {
+                        const isActive = currentCategory === tab?.value;
+
+                        return (
+                            <li key={tab?.value}>
+                                <Link
+                                    href={`/blog/${tab?.value}/1`}
+                                    aria-current={isActive ? 'page' : undefined}
+                                    className={cn(
+                                        'text-muted-foreground inline-flex h-9 items-center justify-center border-b-2 border-transparent px-4 text-sm font-medium whitespace-nowrap transition-colors',
+                                        'hover:text-foreground',
+                                        'focus-visible:border-ring focus-visible:ring-ring/50 rounded-t-md outline-none focus-visible:ring-3',
+                                        isActive && 'text-foreground border-primary'
+                                    )}
+                                >
+                                    {tab?.label}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </nav>
         </div>
     );
 };

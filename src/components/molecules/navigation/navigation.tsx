@@ -70,6 +70,7 @@ const Navigation = ({ menuClassName, listClassName, itemClassName, linkClassName
                                     'data-[active=true]:text-primary data-[active=true]:bg-transparent data-[active=true]:hover:bg-transparent data-[active=true]:focus:bg-transparent',
                                     linkClassName
                                 )}
+                                aria-current={isActive(route.href) ? 'page' : undefined}
                                 data-active={isActive(route.href)}
                             >
                                 {route.label}

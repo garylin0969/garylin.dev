@@ -1,5 +1,6 @@
 import { LinkIcon } from 'lucide-react';
 import Link from 'next/link';
+import { createHeadingId } from '@/utils/heading';
 import { cn } from '@/utils/shadcn';
 
 /**
@@ -29,9 +30,11 @@ interface DocsHeadingProps {
  */
 const DocsHeading = ({ className, iconClassName, as, title }: DocsHeadingProps) => {
     const Component = as;
+    const headingId = createHeadingId(title);
+
     return (
-        <Component className={cn('scroll-mt-24', className)} id={title}>
-            <Link href={`#${title}`} title={title} className="group inline-flex items-center gap-x-1 no-underline">
+        <Component className={cn('scroll-mt-24', className)} id={headingId}>
+            <Link href={`#${headingId}`} title={title} className="group inline-flex items-center gap-x-1 no-underline">
                 {title}
                 <LinkIcon
                     className={cn(
