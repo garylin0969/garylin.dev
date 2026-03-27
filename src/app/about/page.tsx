@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import SectionTitle from '@/components/atoms/section-title';
 import AuthorCard from '@/components/molecules/author-card';
 import IntroCard from '@/components/molecules/intro-card';
-import MasonryGrid from '@/components/molecules/masonry-grid';
 import ProjectCard from '@/components/molecules/project-card';
 import SkillCard from '@/components/molecules/skill-card';
 import ExperienceTimeline from '@/components/organisms/experience-timeline';
@@ -50,11 +49,11 @@ const AboutPage = () => {
                     Projects
                 </SectionTitle>
                 {/* 專案卡片 */}
-                <MasonryGrid cols={{ default: 1, md: 2, lg: 3 }}>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {PROJECT_LIST.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
-                </MasonryGrid>
+                </div>
             </section>
         </div>
     );

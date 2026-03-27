@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { PROJECT_LIST } from '@/constants/project';
@@ -46,18 +47,17 @@ const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, proj
             rel="noreferrer noopener"
         >
             {badge && <Badge className="absolute -top-2 -right-2 z-10 px-2 py-1">{badge}</Badge>}
-            <Card className="gap-0 p-0">
+            <Card className="h-full gap-0 p-0">
                 <div className="w-full overflow-hidden">
-                    {/* width={0}、height={0} 與 sizes="100vw"，這是 next/image 支援的另一種寫法，代表不預設固定尺寸。 */}
-                    <Image
-                        className="h-auto w-full transition-transform duration-300 group-hover:scale-110"
-                        src={project.image}
-                        alt={project.name}
-                        loading={imageLoading}
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                    />
+                    <AspectRatio ratio={16 / 9} className="overflow-hidden">
+                        <Image
+                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            src={project.image}
+                            alt={project.name}
+                            loading={imageLoading}
+                            fill
+                        />
+                    </AspectRatio>
                 </div>
                 <CardContent className="space-y-6 p-6">
                     <CardTitle className="group-hover:text-primary">{project.name}</CardTitle>
