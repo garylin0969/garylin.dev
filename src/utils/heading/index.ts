@@ -4,7 +4,11 @@
  * 保留中文、英數與連字號，並將空白轉為連字號，
  * 讓文章標題、目錄連結與捲動定位使用同一套規則。
  */
-export const createHeadingId = (text: string) => {
+export const createHeadingId = (text: string | null | undefined) => {
+    if (!text) {
+        return '';
+    }
+
     return text
         .trim()
         .toLowerCase()

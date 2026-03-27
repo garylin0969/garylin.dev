@@ -1,0 +1,255 @@
+---
+category: Tech-Update
+title: Next.js 16.2：AI 開發體驗改進
+date: 2026-03-18
+description: Next.js 16.2 帶來多項針對 AI 輔助開發的更新，包含 create-next-app 內建 AGENTS.md、瀏覽器日誌轉送、開發伺服器鎖定檔，以及 next-browser 除錯工具。
+tags: ['Next.js']
+slug: nextjs-16-2-ai-improvements
+---
+
+這次 `Next.js 16.2` 帶來了幾個專門為 **AI 輔助開發** 設計的更新。這些改進讓 AI agent 更容易理解專案、在終端機裡除錯問題，甚至在不開瀏覽器的情況下檢查執行中的應用程式。
+
+## 原文資訊
+
+- 原文標題：`Next.js 16.2: AI Improvements`
+- 原文連結：[https://nextjs.org/blog/next-16-2-ai](https://nextjs.org/blog/next-16-2-ai)
+- 原文發布日期：March 18th 2026
+- 原文作者：Jude Gao、Tim Neutkens
+
+## 這次更新包含什麼？
+
+- [**可直接給 Agent 使用的 `create-next-app`**](#可直接給-agent-使用的-create-next-app)：開箱即用建立 AI-ready 專案
+- [**瀏覽器日誌轉送到終端機**](#瀏覽器日誌轉送到終端機)：把瀏覽器錯誤轉送到終端機，方便 agent 協助除錯
+- [**開發伺服器鎖定檔**](#開發伺服器鎖定檔)：當第二個 dev server 啟動時，提供更可操作的錯誤訊息
+- [**實驗性 Agent DevTools**](#實驗性-agent-devtools)：讓 AI agent 能從終端機存取 React DevTools 與 Next.js 診斷資訊
+
+## 可直接給 Agent 使用的 `create-next-app`
+
+現在 `create-next-app` 預設會包含 `AGENTS.md`，讓 AI coding agents 從專案建立一開始，就能拿到與版本相符的 `Next.js` 文件。
+
+這建立在 Vercel 對 [`AGENTS.md`](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals) 的研究之上。研究結果顯示，當 agent 能直接存取隨套件一起提供的文件時，在 Next.js evals 中可以達到 **100% 通過率**；相較之下，採用 skill-based 的方式最高只有 **79%**。
+
+其中最重要的洞察是：**隨時可用的上下文，比按需查詢更有效**。因為很多 agent 其實無法正確判斷自己什麼時候應該去搜尋文件。
+
+> [!NOTE]
+> `AGENTS.md` 是一份很短的指示檔，會告訴 agent 在開始寫任何程式碼前，先去讀 `node_modules/next/dist/docs/` 裡面隨套件附帶的文件。現在 `Next.js` 的 npm 套件已經內建完整的 Markdown 文件，讓 agent 能在本地直接取得與目前版本相符的參考資料，而不需要額外抓遠端內容。
+
+如果是既有專案，設定方式會依照你的 `Next.js` 版本而不同。
+
+### 在 16.2 或更新版本上
+
+如果你使用的是 `16.2` 或之後的版本，文件已經直接內建在 `next` 套件裡。你只需要在專案根目錄加上這兩個檔案：
+
+```md title="AGENTS.md"
+<!-- BEGIN:nextjs-agent-rules -->
+
+# Next.js：開始寫程式前一定要先讀文件
+
+在處理任何 Next.js 相關工作前，先去 `node_modules/next/dist/docs/` 找並閱讀對應的文件。你的訓練資料可能已經過時，文件才是最新版本的依據。
+
+<!-- END:nextjs-agent-rules -->
+```
+
+這些註解標記用來界定由 Next.js 管理的區段。你可以在標記外面加入自己專案特有的規則，未來更新時只會覆蓋標記之間的內容。
+
+`CLAUDE.md` 是 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 使用的指示檔，裡面的 `@` 指令會讓它把 `AGENTS.md` 一起帶進上下文：
+
+```md title="CLAUDE.md"
+@AGENTS.md
+```
+
+### 在較舊版本上
+
+如果你還在較舊版本，可以透過 codemod 自動產生這些檔案：
+
+```bash title="terminal"
+npx @next/codemod@latest agents-md
+```
+
+更多細節可以參考官方的 [AI agents setup guide](/docs/app/guides/ai-agents#existing-projects)。
+
+## 瀏覽器日誌轉送到終端機
+
+`Next.js` 現在在開發模式下，會預設把瀏覽器錯誤轉送到終端機。這代表你不用切到瀏覽器 console，也能直接在 terminal 看到 client-side error。
+
+這對主要透過終端機操作、無法直接使用瀏覽器 console 的 AI agents 特別有幫助。
+
+預設情況下，只有 `error` 會被轉送到終端機。你也可以透過 `next.config.ts` 裡的 `logging.browserToTerminal` 來調整等級：
+
+```typescript title="next.config.ts"
+const nextConfig = {
+    logging: {
+        browserToTerminal: true,
+        // 'error' — 只轉送錯誤（預設）
+        // 'warn'  — 轉送警告與錯誤
+        // true    — 所有 console 輸出都轉送
+        // false   — 關閉此功能
+    },
+};
+
+export default nextConfig;
+```
+
+## 開發伺服器鎖定檔
+
+`Next.js` 現在會把目前執行中的 dev server `PID`、port 與 URL 寫進 `.next/dev/lock`。
+
+當第二個 `next dev` 在同一個專案目錄中啟動時，Next.js 會讀取這個 lock file，並輸出具體可操作的錯誤訊息：
+
+```bash title="terminal"
+Error: Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          12345
+- Dir:          /path/to/project
+- Log:          .next/dev/logs/next-development.log
+
+Run kill 12345 to stop it.
+```
+
+這對 AI coding agents 很有幫助，因為它們常常會在不知道已經有 server 正在跑的情況下，再次嘗試啟動 `next dev`。
+
+現在這個結構化錯誤訊息會直接提供：
+
+- 現有 process 的 `PID`
+- 可以連線的本機 URL
+- 對應的 log 檔位置
+
+agent 因此可以自己決定要連到既有 server，還是先把舊 process 關掉，而不需要人工介入。
+
+此外，這個 lock file 也能避免兩個 `next build` 同時執行，否則可能會導致 build artifacts 損壞。
+
+## 實驗性 Agent DevTools
+
+前面幾個功能，主要是在幫助 agent 更理解你的專案並協助除錯。而 [`@vercel/next-browser`](https://github.com/vercel-labs/next-browser) 則更進一步，讓 agent 可以直接檢查正在執行的 `Next.js` 應用。
+
+`next-browser` 是一個實驗性的 CLI，能把瀏覽器層級的資訊（例如截圖、network requests、console logs）以及框架層級的資訊（來自 React DevTools 與 Next.js dev overlay）轉成結構化文字，讓 agent 透過 shell 指令取得。
+
+它能提供像是：
+
+- component tree
+- props
+- hooks
+- [Partial Prerendering (PPR)](/docs/app/getting-started/cache-components) shell
+- runtime errors
+
+對 LLM 來說，直接讀 DevTools 面板很困難；但如果它可以執行 `next-browser tree`，解析輸出的文字，再決定下一步要看什麼，就完全不一樣了。
+
+每一個指令都是針對同一個持續存在的瀏覽器 session 發送一次請求，所以 agent 不需要自己管理瀏覽器狀態，也能反覆查詢應用程式。
+
+這讓瀏覽器從「agent 看不到的 UI」，變成「agent 可以推理的資料來源」。
+
+### 目前能做到什麼？
+
+`next-browser` 目前的功能仍在快速演進中，但在這個版本裡，它已經支援：
+
+- **檢查 React component tree**：可查看 props、hooks、state 與 source-mapped file 位置
+- **分析 PPR shell**：辨識哪些區塊是 static、哪些是 dynamic，以及哪些 [Suspense boundary](/docs/app/glossary#suspense-boundary) 被卡住
+- **存取錯誤與日誌**：從 dev server 讀取 build 與 runtime 問題
+- **監控 network activity**：追蹤導頁後的請求，包含 server actions
+- **擷取視覺資訊**：拍截圖或記錄 loading filmstrip
+
+### 如何開始使用
+
+你可以把它安裝成一個 [skill](https://skills.sh)（給 AI agent 重複使用的能力模組）：
+
+```bash title="terminal"
+npx skills add vercel-labs/next-browser
+```
+
+接著在 Claude Code、Cursor，或任何支援 skills 的 AI agent 裡輸入 `/next-browser`。
+
+CLI 會自動啟動一個已經預載 React DevTools 的 Chromium 實例，不需要額外手動設定瀏覽器。
+
+### 實例：讓 static shell 變大
+
+在使用 [Partial Prerendering (PPR)](/docs/app/getting-started/cache-components) 時，Next.js 可以先從 edge 立即送出 [static shell](/docs/app/glossary#static-shell) —— 也就是那些不依賴 request-time data 的頁面部分 —— 然後再把剩下的內容以 stream 的方式補上。
+
+**能放進 static shell 的內容越多，使用者就越快看到有意義的畫面。**
+
+但在實務上，一個 request-time fetch 很容易不小心讓整頁都變成 dynamic。舉例來說，這是一篇帶有訪客計數器的 blog post：
+
+```tsx title="app/blog/[slug]/page.tsx"
+export async function generateStaticParams() {
+    const posts = await getAllPosts();
+    return posts.map((post) => ({ slug: post.slug }));
+}
+
+export default async function BlogPost({ params }) {
+    const post = await getPost(params.slug);
+    const views = await getVisitorCount(params.slug); // 每次 request 都會執行
+
+    return (
+        <article>
+            <h1>{post.title}</h1>
+            <span>{views} views</span>
+            <div>{post.content}</div>
+        </article>
+    );
+}
+```
+
+由於所有 slug 都已經在 `generateStaticParams` 裡列出，理論上文章內容本來可以在 build time 就先 prerender。
+
+但 `getVisitorCount` 會在每次 request 時執行，而且它又放在元件最上層，結果就讓**整頁**都變成 dynamic。
+
+最後的結果是：整個頁面都卡在 loading skeleton 後面，而不是能夠逐步 streaming 出來。
+
+agent 可以透過 `next-browser` 診斷這個問題。當它鎖定 PPR 模式時，畫面只會顯示 static shell —— 在這個例子裡，實際上你只會看到 `app/blog/[slug]/loading.tsx` 的 skeleton，因為沒有任何內容成功進入 shell。
+
+```bash title="terminal"
+next-browser ppr lock          # 進入 PPR 模式
+next-browser goto /blog/hello  # 整頁只剩 loading skeleton
+```
+
+接著 agent 會執行 `ppr unlock` 來找出原因：
+
+```bash title="terminal"
+next-browser ppr unlock
+```
+
+```bash title="terminal"
+# PPR Shell Analysis
+# 1 dynamic hole, 1 static
+
+blocked by:
+  - getVisitorCount (server-fetch)
+    owner: BlogPost at app/blog/[slug]/page.tsx:5
+    next step: Push the fetch into a smaller Suspense leaf
+```
+
+這份報告會很直接地告訴 agent：
+
+- 問題出在 `getVisitorCount`
+- 它位於 `BlogPost`
+- 修正方式是把這個 fetch 推進更小的 [Suspense boundary](/docs/app/glossary#suspense-boundary)
+
+所以 agent 只把 visitor counter 包進自己的 Suspense：
+
+```tsx title="app/blog/[slug]/page.tsx"
+export default async function BlogPost({ params }) {
+    const post = await getPost(params.slug);
+
+    return (
+        <article>
+            <h1>{post.title}</h1>
+            <Suspense fallback={<span>— views</span>}>
+                <VisitorCount slug={params.slug} />
+            </Suspense>
+            <div>{post.content}</div>
+        </article>
+    );
+}
+```
+
+再重新執行 `ppr lock` 後，就能確認 static shell 變大了：文章內容現在可以立刻 prerender 出來，只有 visitor count 會顯示 fallback。
+
+雖然 `next-browser` 還在持續演進中，但它已經很明確地指向一個方向：**未來 agent 可以用接近真人開發者的可視能力，來除錯與優化應用程式。**
+
+## 回饋與社群
+
+如果你想提供回饋，或參與 Next.js 未來的發展，可以到以下地方：
+
+- [GitHub Discussions](https://github.com/vercel/next.js/discussions)
+- [GitHub Issues](https://github.com/vercel/next.js/issues)
+- [Discord Community](https://nextjs.org/discord)
