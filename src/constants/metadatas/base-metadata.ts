@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import { DOMAIN } from '@/constants/site';
 
+const baseDescription =
+    "Hi, I'm Gary Lin, a frontend developer specializing in React.js, Next.js, and modern web technologies.";
+
 /**
  * 基礎元數據配置。
  *
@@ -11,7 +14,7 @@ export const baseMetadata: Metadata = {
         default: 'Gary Lin',
         template: '%s | Gary Lin',
     },
-    description: '嗨，我是 Gary Lin，專精於 React.js、Next.js 和現代網頁技術的前端工程師。',
+    description: baseDescription,
     keywords: [
         'Gary Lin',
         'Frontend Developer',
@@ -38,7 +41,7 @@ export const baseMetadata: Metadata = {
     },
     openGraph: {
         title: 'Gary Lin',
-        description: '嗨，我是 Gary Lin，專精於 React.js、Next.js 和現代網頁技術的前端工程師。',
+        description: baseDescription,
         url: DOMAIN,
         siteName: 'Gary Lin',
         locale: 'zh_TW',
@@ -55,7 +58,7 @@ export const baseMetadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Gary Lin',
-        description: '嗨，我是 Gary Lin，專精於 React.js、Next.js 和現代網頁技術的前端工程師。',
+        description: baseDescription,
         images: ['/favicons/android-chrome-512x512.png'],
         creator: '@garylin_dev',
     },
