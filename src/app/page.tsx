@@ -1,16 +1,17 @@
-import { home } from '@velite';
+import HomeHero from '@/components/molecules/home-hero';
 import MDXContent from '@/components/molecules/mdx-content';
+import { getHomePagePost } from '@/utils/home';
 
 /**
  * 首頁元件。
  *
- * 顯示網站的首頁內容。
+ * 顯示網站的首頁內容，包含 Hero 區塊與 MDX 內文。
  */
 const HomePage = () => {
     // 取得首頁內容
-    const homePage = home[0];
+    const homePagePost = getHomePagePost();
 
-    if (!homePage) {
+    if (!homePagePost) {
         return (
             <div className="mx-auto flex min-h-[50vh] w-full max-w-3xl items-center justify-center px-6 py-16">
                 <div className="space-y-3 text-center">
@@ -23,16 +24,11 @@ const HomePage = () => {
 
     return (
         <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center gap-8 px-6">
-            <section className="space-y-4">
-                <p className="text-muted-foreground text-sm font-medium tracking-[0.3em] uppercase">Home</p>
-                <div className="space-y-3">
-                    <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{homePage.title}</h1>
-                    <p className="text-muted-foreground text-lg">{homePage.description}</p>
-                </div>
-            </section>
-
+            {/* Hero 區塊 */}
+            <HomeHero label="Home" title={homePagePost?.title} description={homePagePost?.description} />
+            {/* MDX 內文 */}
             <section className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
-                <MDXContent code={homePage.code} />
+                <MDXContent code={homePagePost?.code} />
             </section>
         </div>
     );
