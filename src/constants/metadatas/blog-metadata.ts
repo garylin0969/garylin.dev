@@ -14,7 +14,7 @@ export const generateBlogMetadata = (): Metadata => {
             canonical: `${DOMAIN}/blog`,
         },
         openGraph: {
-            title: 'Blog | GaryLin Dev',
+            title: 'Blog | Gary Lin',
             description: '瀏覽 Gary Lin 的文章，涵蓋前端開發、React.js、Next.js 等主題',
             url: `${DOMAIN}/blog`,
             locale: 'zh_TW',
@@ -24,12 +24,12 @@ export const generateBlogMetadata = (): Metadata => {
                     url: '/favicons/android-chrome-512x512.png',
                     width: 512,
                     height: 512,
-                    alt: 'GaryLin Dev',
+                    alt: 'Gary Lin',
                 },
             ],
         },
         twitter: {
-            title: 'Blog | GaryLin Dev',
+            title: 'Blog | Gary Lin',
             description: '瀏覽 Gary Lin 的文章，涵蓋前端開發、React.js、Next.js 等主題',
             images: ['/favicons/android-chrome-512x512.png'],
         },

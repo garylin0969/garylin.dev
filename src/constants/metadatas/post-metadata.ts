@@ -43,7 +43,7 @@ export const generatePostMetadata = (post: Post): Metadata => {
               url: '/favicons/android-chrome-512x512.png',
               width: 512,
               height: 512,
-              alt: 'GaryLin Dev',
+              alt: 'Gary Lin',
           };
 
     return {
@@ -53,7 +53,7 @@ export const generatePostMetadata = (post: Post): Metadata => {
             canonical: `${DOMAIN}${post.permalink}`,
         },
         openGraph: {
-            title: `${post.title} | GaryLin Dev`,
+            title: `${post.title} | Gary Lin`,
             description: post.description || post.title,
             url: `${DOMAIN}${post.permalink}`,
             locale: 'zh_TW',
@@ -65,7 +65,7 @@ export const generatePostMetadata = (post: Post): Metadata => {
         },
         twitter: {
             card: 'summary_large_image',
-            title: `${post.title} | GaryLin Dev`,
+            title: `${post.title} | Gary Lin`,
             description: post.description || post.title,
             images: [ogImage],
         },
