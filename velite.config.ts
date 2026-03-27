@@ -39,6 +39,16 @@ export default defineConfig({
 
     // 定義collections
     collections: {
+        home: {
+            name: 'Home',
+            pattern: 'home/index.mdx',
+            schema: s.object({
+                title: s.string(),
+                description: s.string(),
+                intro: s.array(s.string()),
+                code: s.mdx(),
+            }),
+        },
         posts: {
             name: 'Post',
             pattern: 'posts/**/*.{md,mdx}',

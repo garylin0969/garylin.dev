@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Gary Lin",
+    "description": "Frontend Developer focused on building fast, maintainable web experiences with Next.js and React.",
+    "intro": [
+      "A Frontend Developer",
+      "Building with Next.js, React, and TypeScript"
+    ],
+    "code": "const{Fragment:n,jsx:e,jsxs:t}=arguments[0];function _createMdxContent(r){const c={p:\"p\",...r.components};return t(n,{children:[e(c.p,{children:\"歡迎來到我的網站。\"}),\"\\n\",e(c.p,{children:\"這裡會持續整理我的文章、作品與技術筆記。\"})]})}return{default:function(n={}){const{wrapper:t}=n.components||{};return t?e(t,{...n,children:e(_createMdxContent,{...n})}):_createMdxContent(n)}};"
+  }
+]
