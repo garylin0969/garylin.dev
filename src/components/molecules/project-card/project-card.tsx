@@ -16,7 +16,7 @@ interface ProjectCardProps {
     imageLoading?: 'eager' | 'lazy';
     /** 右上角顯示的徽章文字 (可選)。 */
     badge?: string;
-    /** 最多顯示的標籤數量 (可選)。 */
+    /** hover 時最多顯示的標籤數量 (可選)。 */
     maxVisible?: number;
     /** 專案資料物件。 */
     project: (typeof PROJECT_LIST)[number];
@@ -25,31 +25,26 @@ interface ProjectCardProps {
 /**
  * 專案卡片元件。
  *
- * 顯示專案的縮圖、名稱、標籤和連結。
- * 支援限制顯示的標籤數量，超過部分會顯示 "+N more"。
+ * 顯示專案的縮圖、名稱與描述。
+ * 滑鼠懸停時於縮圖上方顯示技術標籤 overlay。
  *
  * @param className - 額外的 CSS 類名 {@link ProjectCardProps.className}。
  * @param imageLoading - 圖片是否延遲載入 {@link ProjectCardProps.imageLoading}。
  * @param badge - 徽章文字 {@link ProjectCardProps.badge}。
- * @param maxVisible - 最多顯示標籤數 {@link ProjectCardProps.maxVisible}。
+ * @param maxVisible - hover 時最多顯示的標籤數 {@link ProjectCardProps.maxVisible}。
  * @param project - 專案資料 {@link ProjectCardProps.project}。
  */
 const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, project }: ProjectCardProps) => {
     return (
-        <a
-            href={project.url}
-            className={cn('group', badge && 'relative', className)}
-            target="_blank"
-            rel="noreferrer noopener"
-        >
+        <a href={project.url} className={cn('group relative', className)} target="_blank" rel="noreferrer noopener">
             {badge && <Badge className="absolute -top-2 -right-2 z-10 px-2 py-1">{badge}</Badge>}
             <Card className="h-full gap-0 p-0">
-                <div className="relative w-full">
-                    {/* 專案標籤 */}
-                    <div className="absolute top-0 left-0 z-10 grid h-full w-full place-items-center bg-black/80 px-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="relative">
+                    {/* 技術標籤 Overlay */}
+                    <div className="absolute inset-0 z-10 grid place-items-center bg-black/80 px-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         <TagList tags={project?.tags} maxVisible={maxVisible} />
                     </div>
-                    <AspectRatio className="overflow-hidden" ratio={16 / 9}>
+                    <AspectRatio ratio={16 / 9} className="overflow-hidden">
                         <Image
                             className="object-cover"
                             src={project.image}
