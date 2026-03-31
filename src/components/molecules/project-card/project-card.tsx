@@ -2,7 +2,7 @@ import Image from 'next/image';
 import TagList from '@/components/atoms/tag-list';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card';
 import { PROJECT_LIST } from '@/constants/project';
 import { cn } from '@/utils/shadcn';
 
@@ -44,10 +44,14 @@ const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, proj
         >
             {badge && <Badge className="absolute -top-2 -right-2 z-10 px-2 py-1">{badge}</Badge>}
             <Card className="h-full gap-0 p-0">
-                <div className="w-full overflow-hidden">
-                    <AspectRatio ratio={16 / 9} className="overflow-hidden">
+                <div className="relative w-full">
+                    {/* 專案標籤 */}
+                    <div className="absolute top-0 left-0 z-10 grid h-full w-full place-items-center bg-black/80 px-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <TagList tags={project?.tags} maxVisible={maxVisible} />
+                    </div>
+                    <AspectRatio className="overflow-hidden" ratio={16 / 9}>
                         <Image
-                            className="object-cover transition-transform duration-300 group-hover:scale-110"
+                            className="object-cover"
                             src={project.image}
                             alt={project.name}
                             loading={imageLoading}
@@ -58,8 +62,8 @@ const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, proj
                 <CardContent className="space-y-6 p-6">
                     {/* 專案標題 */}
                     <CardTitle className="group-hover:text-primary">{project.name}</CardTitle>
-                    {/* 專案標籤 */}
-                    <TagList tags={project?.tags} tagVariant="secondary" maxVisible={maxVisible} />
+                    {/* 專案描述 */}
+                    <CardDescription className="line-clamp-2">{project.description}</CardDescription>
                 </CardContent>
             </Card>
         </a>

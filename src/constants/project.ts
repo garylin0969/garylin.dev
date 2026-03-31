@@ -9,21 +9,15 @@ export const PROJECT_LIST = [
         image: '/projects/taipei-beef-noodles-rank.jpg',
         url: 'https://taipei-beef-noodles-rank.garylin.dev',
         name: '北市牛肉麵排行榜',
-        tags: [
-            '2025',
-            'Google Places API(New)',
-            'React.js',
-            'TypeScript',
-            'Tailwind CSS',
-            'Shadcn UI',
-            'TanStack Query',
-        ],
+        description: '整合 Google Places API 與評分資訊，快速瀏覽台北牛肉麵店家排名與熱門名單。',
+        tags: ['2025', 'Google Places API', 'React.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'TanStack Query'],
     },
     {
         id: 'hot-now',
         image: '/projects/hot-now.jpg',
         url: 'https://hotnow.garylin.dev',
         name: 'Hot Now｜熱門話題一把抓',
+        description: '聚合 YouTube、PTT、BBC、Google 等來源，集中查看當下最熱門的話題與內容。',
         tags: [
             '2025',
             'Next.js',
@@ -44,6 +38,7 @@ export const PROJECT_LIST = [
         image: '/projects/gary-line-bot.jpg',
         url: 'https://github.com/garylin0969/gary-line-bot',
         name: 'LINE機器人 - 蓋瑞爸爸大俠',
+        description: '部署在 Cloudflare Workers 的 LINE Bot，提供遊戲、星座運勢、圖片與文案等互動功能。',
         tags: ['2025', 'TypeScript', 'LINE', 'Wrangler', 'OpenCC'],
     },
     {
@@ -51,6 +46,7 @@ export const PROJECT_LIST = [
         image: '/projects/life-restart.jpg',
         url: 'https://life-restart.garylin.dev',
         name: '人生重來 - Life Restart',
+        description: '受投胎抽卡機啟發的轉生模擬網站，透過隨機條件體驗不同人生開局與發展結果。',
         tags: ['2025', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'next-intl', 'next-themes'],
     },
     {
@@ -58,6 +54,7 @@ export const PROJECT_LIST = [
         image: '/projects/perplexity-concat.jpg',
         url: 'https://perplexity-concat.garylin.dev',
         name: 'AI 串接測試工具 - Perplexity AI Concat',
+        description: '用來測試與比對 Perplexity API 回應的串接工具，方便快速檢查請求與結果內容。',
         tags: [
             '2025',
             'Perplexity API',
@@ -73,6 +70,7 @@ export const PROJECT_LIST = [
         image: '/projects/gemini-tester.jpg',
         url: 'https://gemini-tester.garylin.dev',
         name: 'AI 串接測試工具 - Gemini API Tester',
+        description: '提供輸入 token 與即時送出訊息的 Gemini API 測試介面，方便驗證模型回應流程。',
         tags: ['2025', 'Gemini', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'React Query'],
     },
     {
@@ -80,6 +78,7 @@ export const PROJECT_LIST = [
         image: '/projects/garylin-dev.jpg',
         url: 'https://github.com/garylin0969/garylin.dev',
         name: 'personal website - garylin.dev',
+        description: '個人網站與技術部落格原始碼，整合文章內容、作品展示與版本發布流程。',
         tags: ['2024', 'Next.js', 'TypeScript', 'Google Analytics', 'Velite', 'Tailwind CSS', 'next-themes', 'Giscus'],
     },
     {
@@ -87,6 +86,7 @@ export const PROJECT_LIST = [
         image: '/projects/chinese-number-format.avif',
         url: 'https://www.npmjs.com/package/chinese-number-format',
         name: 'NPM 套件 - chinese-number-format',
+        description: '將數字轉為中文數字格式的 NPM 套件，適合金額或中文化數值顯示情境。',
         tags: ['2024', 'TypeScript', 'Jest', 'NPM'],
     },
     {
@@ -94,6 +94,7 @@ export const PROJECT_LIST = [
         image: '/projects/imdb-clone.avif',
         url: 'https://imdb-clone.garylin.dev',
         name: 'Clone - IMDb',
+        description: '仿 IMDb 的電影資訊網站，練習電影列表、搜尋瀏覽與主題切換等前端體驗。',
         tags: ['2023', 'Next.js', 'TypeScript', 'React Hook Form', 'SWR', 'Tailwind CSS', 'next-themes'],
     },
     {
@@ -101,6 +102,7 @@ export const PROJECT_LIST = [
         image: '/projects/google-clone.avif',
         url: 'https://google-clone.garylin.dev',
         name: 'Clone - Google',
+        description: '模擬 Google 首頁搜尋體驗的練習作品，包含搜尋入口、結果頁與基本互動流程。',
         tags: ['2023', 'Next.js', 'TypeScript', 'React Hook Form', 'SWR', 'Tailwind CSS'],
     },
     {
@@ -108,6 +110,7 @@ export const PROJECT_LIST = [
         image: '/projects/akatsuki.avif',
         url: 'https://akatsuki.garylin.dev',
         name: '火影忍者 - 曉組織成員介紹',
+        description: '以火影忍者曉組織為主題的角色介紹網站，展示成員資訊與視覺化內容編排。',
         tags: ['2023', 'React.js', 'Redux', 'TypeScript', 'Styled Components'],
     },
     {
@@ -115,6 +118,7 @@ export const PROJECT_LIST = [
         image: '/projects/ispan-project.jpg',
         url: 'https://github.com/garylin0969/react-ispan-project',
         name: 'iSpan 資策會 - 專題',
+        description: '六人電商協作專題，負責會員系統、聊天室、後台管理與登入驗證等前後端功能。',
         tags: ['2022', 'React.js', 'JavaScript', 'Socket.IO', 'Bootstrap', 'GSAP'],
     },
 ];
