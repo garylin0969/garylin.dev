@@ -1,5 +1,5 @@
 import { PostMeta } from '@/components/atoms/post-meta/post-meta';
-import { TagList } from '@/components/atoms/tag-list';
+import TagList from '@/components/atoms/tag-list';
 import { cn } from '@/utils/shadcn';
 
 interface BlogPostHeaderProps {
@@ -34,7 +34,7 @@ const BlogPostHeader = ({ className, title, date, updateDate, category, tags }: 
         <header className={cn('space-y-3 border-b pb-4', className)}>
             <h1 className="text-4xl font-bold">{title}</h1>
             <PostMeta date={date} updateDate={updateDate} category={category} />
-            <TagList tags={tags} />
+            <TagList tags={tags} maxVisible={3} tagVariant="secondary" />
         </header>
     );
 };

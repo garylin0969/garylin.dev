@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import TagList from '@/components/atoms/tag-list';
 import {
     Command,
     CommandDialog,
@@ -125,6 +126,7 @@ const CommandSearch = ({ open, onOpenChange }: CommandSearchProps) => {
                                     <div className="flex w-full flex-col gap-1">
                                         <div className="line-clamp-1 font-medium">{post?.title}</div>
                                         <div className="line-clamp-2 text-sm opacity-70">{post?.description}</div>
+                                        <TagList tags={post?.tags} tagVariant="secondary" className="mt-1" />
                                     </div>
                                 </CommandItem>
                             ))}
