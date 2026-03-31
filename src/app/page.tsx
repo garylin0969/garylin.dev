@@ -26,7 +26,7 @@ const HomePage = () => {
     return (
         <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center gap-8 px-6">
             {/* Hero 區塊 */}
-            <HomeHero label="Home" title={homePagePost?.title} description={homePagePost?.description} />
+            <HomeHero title={homePagePost?.title} description={homePagePost?.description} />
             {/* MDX 內文 */}
             <section className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
                 <MDXContent code={homePagePost?.code} />
@@ -34,7 +34,7 @@ const HomePage = () => {
             {/* 社交連結 */}
             <div>
                 <p className="mb-4">Find me on</p>
-                <SocialLinks iconClassName="size-5" />
+                <SocialLinks />
             </div>
         </div>
     );

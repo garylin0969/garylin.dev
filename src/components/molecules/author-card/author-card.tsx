@@ -48,7 +48,7 @@ const AuthorCard = ({ className }: AuthorCardProps) => {
                         </a>
                     </li>
                 </ul>
-                <SocialLinks className="flex items-center justify-center gap-x-2" iconClassName="size-6" />
+                <SocialLinks className="flex items-center justify-center" />
             </CardContent>
         </Card>
     );
