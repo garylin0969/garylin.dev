@@ -22,7 +22,7 @@ const MobileNavigation = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="flex items-center gap-x-2 md:hidden">
+        <div className="flex items-center md:hidden">
             {/* 搜尋按鈕 */}
             <CommandSearchButton />
             {/* 主題切換 */}
@@ -30,11 +30,16 @@ const MobileNavigation = () => {
             {/* 選單 */}
             <Sheet open={open} onOpenChange={setOpen}>
                 {/* 選單觸發器 */}
-                <SheetTrigger aria-label="open menu">
-                    <MenuIcon className="size-4" />
+                <SheetTrigger className="px-2.5" aria-label="open menu">
+                    <MenuIcon className="size-5" />
                 </SheetTrigger>
                 {/* 選單內容 */}
-                <SheetContent side="right" closeButtonClassName="size-8" closeIconClassName="size-8">
+                <SheetContent
+                    side="top"
+                    className="min-h-full min-w-full"
+                    closeButtonClassName="size-8"
+                    closeIconClassName="size-8"
+                >
                     <SheetHeader>
                         <SheetTitle>
                             <Logo imageLoading="lazy" />
@@ -46,7 +51,7 @@ const MobileNavigation = () => {
                         <Navigation
                             menuClassName="block flex-none max-w-full"
                             listClassName="block space-y-4"
-                            linkClassName="w-full justify-start text-xl!"
+                            linkClassName="w-full text-xl!"
                             onNavigate={() => setOpen(false)}
                         />
                         {/* 社交連結 */}

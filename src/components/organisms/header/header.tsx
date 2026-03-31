@@ -24,13 +24,12 @@ const Header = () => {
                     {/* 搜尋按鈕 */}
                     <CommandSearchButton />
                     {/* 導航 */}
-                    <Navigation />
+                    <Navigation linkClassName="text-base" />
                     {/* 社交連結 */}
                     <SocialLinks />
                     {/* 主題切換 */}
                     <ThemeToggle />
                 </div>
-
                 {/* 手機版導航 */}
                 <MobileNavigation />
             </div>

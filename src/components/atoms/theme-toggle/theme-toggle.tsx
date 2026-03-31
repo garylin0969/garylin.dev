@@ -20,21 +20,16 @@ const ThemeToggle = () => {
 
     if (!isMounted) {
         return (
-            <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
-                <Skeleton className="h-4 w-4 rounded-full" />
+            <Button variant="ghost" size="default">
+                <Skeleton className="h-5 w-5 rounded-full" />
                 <span className="sr-only">切換主題</span>
             </Button>
         );
     }
 
     return (
-        <Button
-            variant="ghost"
-            size="sm"
-            className="h-9 w-9 p-0"
-            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-        >
-            {resolvedTheme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />}
+        <Button variant="ghost" size="default" onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
+            {resolvedTheme === 'dark' ? <Sun className="size-5" /> : <Moon className="size-5" />}
             <span className="sr-only">切換主題</span>
         </Button>
     );

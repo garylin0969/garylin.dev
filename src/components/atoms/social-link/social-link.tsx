@@ -31,7 +31,7 @@ interface SocialLinkProps {
 const SocialLink = ({ href, target, icon: IconComponent, label, className }: SocialLinkProps) => {
     return (
         <a href={href} target={target} rel="noopener noreferrer" aria-label={label}>
-            <IconComponent className={cn('size-4', className)} />
+            <IconComponent className={cn('size-5', className)} />
         </a>
     );
 };

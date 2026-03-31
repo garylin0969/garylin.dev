@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { LOGO_IMAGE_PATH } from '@/constants/site';
+import { LOGO_IMAGE_PATH, WEBSITE_TITLE } from '@/constants/site';
 import { cn } from '@/utils/shadcn';
 
 /**
@@ -21,6 +21,8 @@ interface LogoProps {
     imageLoading?: 'eager' | 'lazy';
     /** 圖片替代文字。 */
     imageAlt?: string;
+    /** 是否顯示標題文字 */
+    showTitle?: boolean;
     /** 標題文字的 CSS 類名。 */
     titleClassName?: string;
 }
@@ -40,7 +42,8 @@ const Logo = ({
     imageHeight = 32,
     imageLoading = 'eager',
     imageAlt = 'website logo',
-    // titleClassName,
+    showTitle = true,
+    titleClassName,
 }: LogoProps) => {
     return (
         <Link href={href} className={cn('flex items-center gap-x-2', className)}>
@@ -52,7 +55,7 @@ const Logo = ({
                 loading={imageLoading}
                 alt={imageAlt}
             />
-            {/* <span className={cn('font-bold', titleClassName)}>{WEBSITE_TITLE}</span> */}
+            {showTitle && <span className={cn('text-2xl font-bold', titleClassName)}>{WEBSITE_TITLE}</span>}
         </Link>
     );
 };
