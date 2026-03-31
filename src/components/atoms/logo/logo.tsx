@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { LOGO_IMAGE_PATH, WEBSITE_TITLE } from '@/constants/site';
+import { LOGO_IMAGE_PATH } from '@/constants/site';
 import { cn } from '@/utils/shadcn';
 
 /**
@@ -40,7 +40,7 @@ const Logo = ({
     imageHeight = 32,
     imageLoading = 'eager',
     imageAlt = 'website logo',
-    titleClassName,
+    // titleClassName,
 }: LogoProps) => {
     return (
         <Link href={href} className={cn('flex items-center gap-x-2', className)}>
@@ -52,7 +52,7 @@ const Logo = ({
                 loading={imageLoading}
                 alt={imageAlt}
             />
-            <span className={cn('font-bold', titleClassName)}>{WEBSITE_TITLE}</span>
+            {/* <span className={cn('font-bold', titleClassName)}>{WEBSITE_TITLE}</span> */}
         </Link>
     );
 };

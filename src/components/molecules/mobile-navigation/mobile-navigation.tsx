@@ -34,23 +34,27 @@ const MobileNavigation = () => {
                     <MenuIcon className="size-4" />
                 </SheetTrigger>
                 {/* 選單內容 */}
-                <SheetContent side="right">
+                <SheetContent side="right" closeButtonClassName="size-8" closeIconClassName="size-8">
                     <SheetHeader>
                         <SheetTitle>
-                            {/* 網站標題 */}
                             <Logo imageLoading="lazy" />
                         </SheetTitle>
                         <SheetDescription className="sr-only">Mobile Navigation</SheetDescription>
                     </SheetHeader>
-                    {/* 導航 */}
-                    <Navigation
-                        menuClassName="block flex-none max-w-full"
-                        linkClassName="w-full"
-                        listClassName="block mx-auto"
-                        onNavigate={() => setOpen(false)}
-                    />
-                    {/* 社交連結 */}
-                    <SocialLinks className="flex items-center justify-center gap-x-3.5" iconClassName="size-6" />
+                    <div className="mx-auto">
+                        {/* 導航 */}
+                        <Navigation
+                            menuClassName="block flex-none max-w-full"
+                            listClassName="block space-y-4"
+                            linkClassName="w-full text-2xl!"
+                            onNavigate={() => setOpen(false)}
+                        />
+                        {/* 社交連結 */}
+                        <SocialLinks
+                            className="mt-8 flex items-center justify-center gap-x-3.5"
+                            iconClassName="size-8"
+                        />
+                    </div>
                 </SheetContent>
             </Sheet>
         </div>
