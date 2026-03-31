@@ -46,7 +46,7 @@ const MobileNavigation = () => {
                         <Navigation
                             menuClassName="block flex-none max-w-full"
                             listClassName="block space-y-4"
-                            linkClassName="w-full text-2xl!"
+                            linkClassName="w-full justify-start text-xl!"
                             onNavigate={() => setOpen(false)}
                         />
                         {/* 社交連結 */}
