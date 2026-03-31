@@ -1,10 +1,13 @@
 'use client';
 
 import { SearchIcon } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import { useCallback } from 'react';
-import CommandSearch from '@/components/molecules/command-search';
 import { Button } from '@/components/ui/button';
 import { useCommandSearch } from '@/hooks';
+
+// 動態載入搜尋元件，避免影響效能
+const CommandSearch = dynamic(() => import('@/components/molecules/command-search'));
 
 interface CommandSearchButtonProps {
     className?: string;
@@ -36,7 +39,7 @@ const CommandSearchButton = ({ className }: CommandSearchButtonProps) => {
             >
                 <SearchIcon className="size-5" />
             </Button>
-            <CommandSearch open={open} onOpenChange={setOpen} />
+            {open ? <CommandSearch open={open} onOpenChange={setOpen} /> : null}
         </div>
     );
 };
