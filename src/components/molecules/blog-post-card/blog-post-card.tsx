@@ -25,32 +25,28 @@ interface BlogPostCardProps {
  */
 const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
     return (
-        <Link href={post?.permalink} className="group">
-            <article className={cn('border-b py-3 md:py-4', className)}>
+        <article className={cn('rounded-md border p-4', className)}>
+            <Link href={post?.permalink} className="group">
                 <div className="flex items-center gap-x-8">
                     {/* 內容區域 */}
                     <div className="min-h-19.25 flex-1">
                         <PostMeta className="mb-3" date={post?.date} category={post?.category} useLink={false} />
-
-                        <h2 className="group-hover:text-primary line-clamp-2 text-[18px] leading-tight font-bold md:text-xl">
-                            {post?.title}
-                        </h2>
+                        <div className="space-y-2">
+                            <h2 className="group-hover:text-primary line-clamp-2 text-[18px] font-bold md:text-xl">
+                                {post?.title}
+                            </h2>
+                            <p className="line-clamp-2 text-sm dark:text-[#d1d5dc]">{post?.description}</p>
+                        </div>
                     </div>
-
                     {/* 圖片區域 */}
                     {post?.image && (
-                        <div className="relative hidden h-28 w-28 shrink-0 overflow-hidden sm:block">
-                            <Image
-                                src={post?.image}
-                                alt={post?.title}
-                                fill
-                                className="object-contain transition-transform duration-300 group-hover:scale-110"
-                            />
+                        <div className="relative hidden h-28 w-28 shrink-0 overflow-hidden md:block">
+                            <Image src={post?.image} alt={post?.title} fill className="object-cover" />
                         </div>
                     )}
                 </div>
-            </article>
-        </Link>
+            </Link>
+        </article>
     );
 };
 

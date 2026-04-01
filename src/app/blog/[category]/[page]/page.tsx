@@ -108,12 +108,11 @@ const BlogPage = async ({ params }: BlogPageProps) => {
             {/* 分類標籤 */}
             <BlogCategoryTabs currentCategory={category} />
             {/* 文章列表 */}
-            <div>
+            <div className="space-y-2">
                 {posts.map((post) => (
                     <BlogPostCard key={post?.slug} post={post} />
                 ))}
             </div>
-
             {/* 分頁控制器 */}
             <PaginationControls paginationState={paginationState} getPageUrl={getPageUrl} />
         </div>
