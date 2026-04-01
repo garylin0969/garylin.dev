@@ -55,8 +55,8 @@ export default defineConfig({
             schema: s
                 .object({
                     title: s.string(),
-                    date: s.isodate(),
-                    updateDate: s.isodate().optional(),
+                    createdAt: s.isodate(),
+                    updatedAt: s.isodate().optional(),
                     description: s.string().optional(),
                     rawContent: s.raw(),
                     category: s.string().optional(),

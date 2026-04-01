@@ -77,7 +77,7 @@ const PostPage = async ({ params }: PostPageProps) => {
                 <BlogPostHeader
                     className="mb-4"
                     title={post?.title}
-                    date={post?.date}
+                    createdAt={post?.createdAt}
                     category={post?.category}
                     tags={post?.tags ?? []}
                 />

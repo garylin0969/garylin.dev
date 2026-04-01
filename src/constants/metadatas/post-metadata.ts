@@ -10,7 +10,7 @@ interface Post {
     /** 文章描述。 */
     description?: string;
     /** 文章發布日期。 */
-    date: string;
+    createdAt: string;
     /** 文章 Slug。 */
     slug: string;
     /** 文章封面圖片 URL。 */
@@ -61,7 +61,7 @@ export const generatePostMetadata = (post: Post): Metadata => {
             url: canonicalUrl,
             locale: 'zh_TW',
             type: 'article',
-            publishedTime: post.date,
+            publishedTime: post.createdAt,
             authors: ['Gary Lin'],
             tags: post.tags,
             images: [ogImage],

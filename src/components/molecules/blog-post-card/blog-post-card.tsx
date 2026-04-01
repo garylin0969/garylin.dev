@@ -30,7 +30,12 @@ const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
                 <div className="flex items-center gap-x-8">
                     {/* 內容區域 */}
                     <div className="min-h-19.25 flex-1">
-                        <PostMeta className="mb-3" date={post?.date} category={post?.category} useLink={false} />
+                        <PostMeta
+                            className="mb-3"
+                            createdAt={post?.createdAt}
+                            category={post?.category}
+                            useLink={false}
+                        />
                         <div className="space-y-2">
                             <h2 className="group-hover:text-primary line-clamp-2 text-[18px] font-bold md:text-xl">
                                 {post?.title}

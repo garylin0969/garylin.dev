@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // 使用最新內容時間作為列表型頁面的 lastModified
     const latestContentDate =
-        posts?.length > 0 ? new Date(posts[0]?.updateDate || posts[0]?.date || SITE_LAUNCHED_AT) : SITE_LAUNCHED_AT;
+        posts?.length > 0 ? new Date(posts[0]?.updatedAt || posts[0]?.createdAt || SITE_LAUNCHED_AT) : SITE_LAUNCHED_AT;
 
     // 預計算每個分類的文章數量，避免重複篩選
     const categoryPostCounts = new Map<string, number>([
@@ -71,7 +71,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const postRoutes: SitemapEntry[] = posts.map(
         (post): SitemapEntry => ({
             url: `${DOMAIN}${post?.permalink}`,
-            lastModified: new Date(post?.updateDate || post?.date || SITE_LAUNCHED_AT),
+            lastModified: new Date(post?.updatedAt || post?.createdAt || SITE_LAUNCHED_AT),
             changeFrequency: 'weekly',
             priority: 0.7,
         })

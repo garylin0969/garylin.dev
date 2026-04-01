@@ -21,9 +21,9 @@ interface Options {
 export const sortPosts = (posts: Post[], sort: 'asc' | 'desc' = 'desc') => {
     return [...posts].sort((a, b) => {
         if (sort === 'asc') {
-            return new Date(a.date).getTime() - new Date(b.date).getTime();
+            return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
         }
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
+        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
     });
 };
 
