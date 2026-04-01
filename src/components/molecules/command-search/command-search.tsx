@@ -124,8 +124,13 @@ const CommandSearch = ({ open, onOpenChange }: CommandSearchProps) => {
                                     className="p-4 hover:cursor-pointer"
                                 >
                                     <div className="flex w-full flex-col gap-1">
-                                        <div className="line-clamp-1 font-medium">{post?.title}</div>
-                                        <div className="line-clamp-2 text-sm/[1.75] opacity-70">
+                                        <div className="line-clamp-1 font-medium" title={post?.title}>
+                                            {post?.title}
+                                        </div>
+                                        <div
+                                            className="line-clamp-2 text-sm/[1.75] opacity-70"
+                                            title={post?.description}
+                                        >
                                             {post?.description}
                                         </div>
                                         <TagList tags={post?.tags} className="mt-1" />

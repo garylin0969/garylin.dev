@@ -65,6 +65,28 @@ export const getPostBySlug = (slug: string) => {
 };
 
 /**
+ * 獲取指定文章的相鄰文章（上一篇與下一篇）。
+ *
+ * 文章按發布日期降序排列，因此「上一篇」為較新的文章，「下一篇」為較舊的文章。
+ *
+ * @param slug - 當前文章的 Slug。
+ * @returns 包含上一篇和下一篇文章的物件，若不存在則為 undefined。
+ */
+export const getAdjacentPosts = (slug: string) => {
+    const publishedPosts = getPublishedPosts();
+    const currentIndex = publishedPosts.findIndex((post) => post?.slug === slug);
+
+    if (currentIndex === -1) {
+        return { previousPost: undefined, nextPost: undefined };
+    }
+
+    const previousPost = currentIndex > 0 ? publishedPosts[currentIndex - 1] : undefined;
+    const nextPost = currentIndex < publishedPosts.length - 1 ? publishedPosts[currentIndex + 1] : undefined;
+
+    return { previousPost, nextPost };
+};
+
+/**
  * 根據分類獲取文章。
  *
  * @param category - 分類名稱。

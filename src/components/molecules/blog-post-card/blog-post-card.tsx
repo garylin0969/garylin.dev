@@ -37,10 +37,15 @@ const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
                             useLink={false}
                         />
                         <div className="space-y-2">
-                            <h2 className="group-hover:text-primary line-clamp-2 text-[18px] font-bold md:text-xl">
+                            <h2
+                                className="group-hover:text-primary line-clamp-2 text-[18px] font-bold md:text-xl"
+                                title={post?.title}
+                            >
                                 {post?.title}
                             </h2>
-                            <p className="line-clamp-2 text-sm dark:text-[#d1d5dc]">{post?.description}</p>
+                            <p className="line-clamp-2 text-sm dark:text-[#d1d5dc]" title={post?.description}>
+                                {post?.description}
+                            </p>
                         </div>
                     </div>
                     {/* 圖片區域 */}

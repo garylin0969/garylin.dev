@@ -2,11 +2,13 @@ import { notFound } from 'next/navigation';
 import Comments from '@/components/molecules/comments';
 import MDXContent from '@/components/molecules/mdx-content';
 import MobileTableOfContents from '@/components/molecules/mobile-table-of-contents';
+import PostNavigation from '@/components/molecules/post-navigation';
 import TableOfContents from '@/components/molecules/table-of-contents';
 import BlogPostHeader from '@/components/organisms/blog-post-header';
+import { Separator } from '@/components/ui/separator';
 import { generatePostMetadata, generatePostNotFoundMetadata } from '@/constants/metadatas';
 import { NOTICE_BAR_MESSAGE } from '@/constants/site';
-import { getPostBySlug, getPublishedPosts } from '@/utils/post';
+import { getAdjacentPosts, getPostBySlug, getPublishedPosts } from '@/utils/post';
 import { cn } from '@/utils/shadcn';
 
 /**
@@ -69,6 +71,8 @@ const PostPage = async ({ params }: PostPageProps) => {
         notFound();
     }
 
+    const { previousPost, nextPost } = getAdjacentPosts(slug);
+
     return (
         <div className="mx-auto grid max-w-3xl grid-cols-4 lg:max-w-5xl">
             {/* 文章 */}
@@ -87,10 +91,12 @@ const PostPage = async ({ params }: PostPageProps) => {
                 <div className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
                     <MDXContent code={post?.code} />
                 </div>
+                <Separator className="my-4" />
+                {/* 上一篇、下一篇文章 */}
+                <PostNavigation previousPost={previousPost} nextPost={nextPost} />
+                <Separator className="my-4" />
                 {/* 評論 */}
-                <div className="mt-10">
-                    <Comments />
-                </div>
+                <Comments />
             </article>
             {/* 目錄 */}
             <aside
