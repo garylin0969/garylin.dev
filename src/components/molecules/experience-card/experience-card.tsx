@@ -42,7 +42,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => (
                         <Button className="w-full">View Details</Button>
                     </AccordionTrigger>
                     <AccordionContent className="p-0">
-                        <ul className="list-inside list-disc space-y-2 p-3 text-base">
+                        <ul className="text-muted-foreground list-inside list-disc space-y-5 p-3 text-base/[1.75] dark:text-[#d1d5dc]">
                             {experience.details.map((detail, detailIndex) => (
                                 <li key={detailIndex}>{detail}</li>
                             ))}
