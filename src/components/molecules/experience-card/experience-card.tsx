@@ -29,8 +29,8 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => (
             </div>
             <div className="space-y-1">
                 <CardTitle>{experience.title}</CardTitle>
-                <CardDescription className="dark:text-white">{experience.company}</CardDescription>
-                <CardDescription className="dark:text-white">
+                <CardDescription className="dark:text-[#d1d5dc]">{experience.company}</CardDescription>
+                <CardDescription className="dark:text-[#d1d5dc]">
                     {experience.startDate} - {experience.endDate}
                 </CardDescription>
             </div>
