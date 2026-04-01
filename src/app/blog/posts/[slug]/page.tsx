@@ -79,7 +79,7 @@ const PostPage = async ({ params }: PostPageProps) => {
             <article className="col-span-4 lg:col-span-3 lg:px-4">
                 {/* 標題與元數據 */}
                 <BlogPostHeader
-                    className="mb-4"
+                    className="mb-6"
                     title={post?.title}
                     createdAt={post?.createdAt}
                     category={post?.category}
@@ -91,10 +91,10 @@ const PostPage = async ({ params }: PostPageProps) => {
                 <div className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
                     <MDXContent code={post?.code} />
                 </div>
-                <Separator className="my-4" />
+                <Separator className="my-6" />
                 {/* 上一篇、下一篇文章 */}
                 <PostNavigation previousPost={previousPost} nextPost={nextPost} />
-                <Separator className="my-4" />
+                <Separator className="my-6" />
                 {/* 評論 */}
                 <Comments />
             </article>
