@@ -21,8 +21,8 @@ const MobileTableOfContents = ({ className, headings }: MobileTableOfContentsPro
     return (
         <Accordion type="single" collapsible className={cn(className)}>
             <AccordionItem value="table-of-contents">
-                <AccordionTrigger className="bg-primary/10 text-primary items-center rounded-xs p-1 text-lg font-semibold">
-                    目錄
+                <AccordionTrigger className="bg-primary/10 text-primary items-center rounded-xs px-2 text-lg font-semibold no-underline!">
+                    Table of contents
                 </AccordionTrigger>
                 <AccordionContent className="p-4">
                     <TableOfContents headings={headings} />

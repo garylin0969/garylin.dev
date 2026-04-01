@@ -70,9 +70,9 @@ const PostPage = async ({ params }: PostPageProps) => {
     }
 
     return (
-        <div className="mx-auto grid max-w-6xl grid-cols-4">
+        <div className="mx-auto grid max-w-5xl grid-cols-4">
             {/* 文章 */}
-            <article className="col-span-4 lg:col-span-3 lg:px-8">
+            <article className="col-span-4 lg:col-span-3 lg:px-4">
                 {/* 標題與元數據 */}
                 <BlogPostHeader
                     className="mb-4"

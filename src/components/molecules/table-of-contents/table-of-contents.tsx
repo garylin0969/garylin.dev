@@ -56,7 +56,7 @@ const TableOfContents = ({ headings, className }: TableOfContentsProps) => {
                                     heading?.level === 4 && 'pl-16',
                                     heading?.level === 5 && 'pl-20',
                                     heading?.level === 6 && 'pl-24',
-                                    isActive && 'bg-muted text-foreground'
+                                    isActive && 'bg-muted text-foreground font-medium'
                                 )}
                             >
                                 {heading?.text}
