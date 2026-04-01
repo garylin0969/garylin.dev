@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { DOMAIN } from '@/constants/site';
+import { DEFAULT_OPEN_GRAPH_IMAGE, DOMAIN } from '@/constants/site';
 
 const baseDescription =
     "Hi, I'm Gary Lin, a frontend developer specializing in React.js, Next.js, and modern web technologies.";
@@ -12,7 +12,7 @@ const baseDescription =
 export const baseMetadata: Metadata = {
     title: {
         default: 'Gary Lin',
-        template: '%s | Gary Lin',
+        template: '%s - Gary Lin',
     },
     description: baseDescription,
     keywords: [
@@ -48,9 +48,9 @@ export const baseMetadata: Metadata = {
         type: 'website',
         images: [
             {
-                url: '/favicons/android-chrome-512x512.png',
-                width: 512,
-                height: 512,
+                url: DEFAULT_OPEN_GRAPH_IMAGE,
+                width: 1200,
+                height: 630,
                 alt: 'Gary Lin',
             },
         ],
@@ -59,8 +59,7 @@ export const baseMetadata: Metadata = {
         card: 'summary_large_image',
         title: 'Gary Lin',
         description: baseDescription,
-        images: ['/favicons/android-chrome-512x512.png'],
-        creator: '@garylin_dev',
+        images: [DEFAULT_OPEN_GRAPH_IMAGE],
     },
     robots: {
         index: true,

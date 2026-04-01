@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DOMAIN } from '@/constants/site';
+import { DEFAULT_OPEN_GRAPH_IMAGE, DOMAIN } from '@/constants/site';
 
 interface GenerateBlogMetadataOptions {
     category?: string;
@@ -26,7 +26,7 @@ export const generateBlogMetadata = ({ category = 'all', page = 1 }: GenerateBlo
         titleParts.push(`Page ${page}`);
     }
 
-    const title = titleParts.join(' | ');
+    const title = titleParts.join(' - ');
     const path = `/blog/${normalizedCategory}/${page}`;
     const description = isAllCategory
         ? "Read Gary Lin's blog about frontend development, React.js, Next.js, and related topics"
@@ -39,24 +39,24 @@ export const generateBlogMetadata = ({ category = 'all', page = 1 }: GenerateBlo
             canonical: `${DOMAIN}${path}`,
         },
         openGraph: {
-            title: `${title} | Gary Lin`,
+            title: `${title} - Gary Lin`,
             description,
             url: `${DOMAIN}${path}`,
             locale: 'zh_TW',
             type: 'website',
             images: [
                 {
-                    url: '/favicons/android-chrome-512x512.png',
-                    width: 512,
-                    height: 512,
+                    url: DEFAULT_OPEN_GRAPH_IMAGE,
+                    width: 1200,
+                    height: 630,
                     alt: 'Gary Lin',
                 },
             ],
         },
         twitter: {
-            title: `${title} | Gary Lin`,
+            title: `${title} - Gary Lin`,
             description,
-            images: ['/favicons/android-chrome-512x512.png'],
+            images: [DEFAULT_OPEN_GRAPH_IMAGE],
         },
     };
 };

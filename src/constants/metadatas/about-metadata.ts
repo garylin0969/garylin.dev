@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DOMAIN } from '@/constants/site';
+import { DEFAULT_OPEN_GRAPH_IMAGE, DOMAIN } from '@/constants/site';
 
 /**
  * 生成關於頁面的元數據。
@@ -15,24 +15,24 @@ export const generateAboutMetadata = (): Metadata => {
             canonical: `${DOMAIN}/about`,
         },
         openGraph: {
-            title: 'About | Gary Lin',
+            title: 'About - Gary Lin',
             description,
             url: `${DOMAIN}/about`,
             locale: 'zh_TW',
             type: 'website',
             images: [
                 {
-                    url: '/favicons/android-chrome-512x512.png',
-                    width: 512,
-                    height: 512,
+                    url: DEFAULT_OPEN_GRAPH_IMAGE,
+                    width: 1200,
+                    height: 630,
                     alt: 'Gary Lin',
                 },
             ],
         },
         twitter: {
-            title: 'About | Gary Lin',
+            title: 'About - Gary Lin',
             description,
-            images: ['/favicons/android-chrome-512x512.png'],
+            images: [DEFAULT_OPEN_GRAPH_IMAGE],
         },
     };
 };

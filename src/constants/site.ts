@@ -10,6 +10,9 @@ export const WEBSITE_TITLE = 'garylin.dev';
 /** 預設圖片路徑 (當圖片找不到時顯示)。 */
 export const DEFAULT_IMAGE_NOT_FOUND = '/image-not-found.png';
 
+/** 預設 Open Graph 分享圖片。 */
+export const DEFAULT_OPEN_GRAPH_IMAGE = '/default-open-graph.png';
+
 /** Google Analytics ID。 */
 export const GA_ID = 'G-F0MRGZ2J39';
 
