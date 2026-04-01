@@ -24,7 +24,7 @@ const AboutPage = () => {
                 {/* 作者卡片 */}
                 <AuthorCard className="mx-auto" />
                 {/* 簡短介紹卡片 */}
-                <IntroCard className="mx-auto my-6 max-w-3xl md:my-0" list={ABOUT_INTRO_LIST} />
+                <IntroCard className="mx-auto my-6 max-w-3xl px-4 md:my-0" list={ABOUT_INTRO_LIST} />
             </section>
             <section className="space-y-4 md:space-y-8">
                 <SectionTitle id="experience" className="text-center">

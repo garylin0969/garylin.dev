@@ -23,15 +23,12 @@ interface IntroCardProps {
  */
 const IntroCard = ({ className, list, listClassName }: IntroCardProps) => {
     return (
-        <div className={cn('relative p-4', className)}>
-            <div className="absolute -inset-0.5 rounded-2xl bg-linear-to-r from-sky-500 to-purple-500 opacity-20 blur transition duration-300" />
-            <div className="font-semibold">
-                {list?.map((text) => (
-                    <p key={text} className={listClassName}>
-                        {text}
-                    </p>
-                ))}
-            </div>
+        <div className={cn('leading-[1.75] font-semibold', className)}>
+            {list?.map((text) => (
+                <p key={text} className={listClassName}>
+                    {text}
+                </p>
+            ))}
         </div>
     );
 };
