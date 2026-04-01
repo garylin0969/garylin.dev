@@ -2,15 +2,15 @@
 category: Code
 title: Git Commit Message 規範
 date: 2024-11-22
-description: 剛開始寫程式的時候，我的 commit 訊息都很隨便，直到工作才知道原來有規範。這篇整理了 Git Commit Message 寫法。
+description: 剛開始寫程式時，我對 commit message 沒有太多概念，直到進入團隊合作後才意識到格式的重要性。這篇整理我目前使用的寫法。
 tags: ['Git']
 image: /blog/posts/2024/11/git-commit-message.png
 slug: git-commit-message
 ---
 
-說實話，剛開始寫程式的時候，我的 commit 訊息都很隨便，什麼 "fix bug"、"update"、"test" 這種毫無意義的訊息滿天飛。
+剛開始寫程式的時候，我的 commit 訊息其實很隨意，常常只寫成 "fix bug"、"update" 或 "test" 這類資訊量很低的內容。
 
-經過幾個月的實際使用，我整理了這套規範，現在團隊合作時大家都能清楚知道每次 commit 到底改了什麼。
+後來進入團隊開發後，我才慢慢意識到 commit message 不只是給自己看，也是讓其他人快速理解改動內容的重要線索。這篇文章整理的是我目前比較常用的一套寫法。
 
 ## 基本格式
 
@@ -26,7 +26,7 @@ slug: git-commit-message
 
 讓人清楚得知道該次改動針對了什麼樣的特點做了變化，統一的格式也方便多人協作時閱讀。
 
-Commit message 其實就三個部分：
+Commit message 大致可以拆成三個部分：
 
 1. **標題（header）** - 快速說明這次改了什麼
 2. **正文（body）** - 詳細解釋為什麼要改

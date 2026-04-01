@@ -2,7 +2,7 @@
 category: Code
 title: 多國語言支持指南 - 使用 next-intl 在 Next.js 中實現國際化
 date: 2025-02-12
-description: 之前看到一個關於投胎的趣味網站，可以看要投胎幾次才到台灣，其中又有幾次會投胎到中國，我覺得蠻好玩的，所以參照他做了一個支援繁體中文、簡體中文、英文的版本。
+description: 我在做一個多語言 side project 時，順手研究了 Next.js App Router 下的國際化做法，最後選擇使用 next-intl。這篇整理從路由、訊息檔到語言切換的實作流程。
 tags: ['Next.js', 'i18n', 'next-intl']
 image: /blog/posts/2025/02/next-intl.png
 slug: nextjs-internationalization-guide-next-intl
@@ -10,14 +10,14 @@ slug: nextjs-internationalization-guide-next-intl
 
 ## 為什麼我需要做國際化？
 
-純粹是看到一個叫 [投胎抽卡機](https://dweam.xyz/luck) 的網站很有趣，它的功能是可以重複投胎讓你看看投胎了幾次才能到台灣，其中又有幾次會是中國，我覺得很有趣，所以就參照它的功能做了一個多國語言版本的，同時增加了印度的次數，畢竟印度跟中國都是人口大國阿哈哈，成品在這 [Life Restart](https://life-restart.garylin.dev/zh-TW)。
+一開始是因為看到 [投胎抽卡機](https://dweam.xyz/luck) 這個有趣的網站，讓我想試著做一個帶有多語言版本的 side project。後來我參考這個概念，做了一個支援繁體中文、簡體中文與英文的版本，成品放在這裡：[Life Restart](https://life-restart.garylin.dev/zh-TW)。
 
-結果一研究才發現，國際化(i18n)要考慮的東西超多：
+實際開始做之後，我才發現國際化（i18n）牽涉的範圍比原本想像得更多：
 
 - 文字翻譯當然是基本的
 - URL 路由要支援語言切換
-- 日期時間格式不同國家不一樣 (但我這次要做的專案不需要擔心XD)
-- 數字顯示格式也有差異 (我這次也沒特別針對這個進行就是了)
+- 日期時間格式在不同地區會有差異（這次專案沒有特別處理到這一塊）
+- 數字顯示格式也可能不同（這次也沒有深入處理）
 - 甚至連文字方向都可能不同
 
 試了幾個方案後，發現 **next-intl** 最適合 Next.js 的 App Router，設定簡單又功能完整。
@@ -29,11 +29,11 @@ slug: nextjs-internationalization-guide-next-intl
 **為什麼選擇它？**
 
 - **無縫整合**：跟 Next.js 配合得天衣無縫
-- **效能優秀**：支援 SSG 和 SSR，不影響載入速度 (官方說法，我覺得其實有變慢)
+- **效能表現不錯**：支援 SSG 和 SSR，並能配合 App Router 的 rendering 模式
 - **路由靈活**：可以用 /en/about 或 en.example.com 這種方式
 - **功能豐富**：不只翻譯，連日期、數字格式化都內建
 
-最重要的是我覺得對於開發多國語言功能的新手也很容易上手啦！
+以我自己的使用經驗來說，對第一次在 Next.js 專案裡做多語言的人來說，`next-intl` 算是相對容易上手的方案。
 
 ## 開始設定 next-intl
 

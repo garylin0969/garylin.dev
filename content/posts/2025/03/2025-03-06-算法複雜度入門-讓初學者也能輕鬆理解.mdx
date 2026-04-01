@@ -2,7 +2,7 @@
 category: LeetCode
 title: 算法複雜度入門 - 讓新手也能了解 Big O
 date: 2025-03-06
-description: 本文旨在系統性地介紹算法複雜度概念，透過實際例子和ss程式碼範例，幫助初學者理解Big O記法。內容涵蓋常見的時間複雜度類型、實際應用場景以及優化技巧，適合作為學習LeetCode的基礎知識筆記。
+description: 這篇文章整理了演算法複雜度的基本觀念，透過實際例子和程式碼範例幫助初學者理解 Big O。內容涵蓋常見的時間複雜度類型、實際應用情境與一些基礎優化思路。
 tags: ['LeetCode', 'Big O']
 image: /blog/posts/2025/03/algorithm-complexity.png
 slug: algorithm-complexity-beginner-guide
@@ -208,7 +208,7 @@ function findCommonElements(arr1, arr2) {
 // 優化實現 - O(n + m)複雜度
 function findCommonElements(arr1, arr2) {
     const set2 = new Set(arr2);
-    return arr1.filter(item => set2.has(item));
+    return arr1.filter((item) => set2.has(item));
 }
 ```
 

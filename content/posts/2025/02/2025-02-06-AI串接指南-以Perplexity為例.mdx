@@ -2,7 +2,7 @@
 category: Code
 title: AI 串接指南 - 以 Perplexity 為例
 date: 2025-02-06
-description: 最近 AI 工具越來越火，我也想在專案裡串接看看。試了幾個 API 後發現 Perplexity 在串接體驗上蠻不錯的，還可以設定要從哪些網站抓取資料為主。分享一下我的串接經驗。
+description: 我在專案中評估幾個 AI API 之後，最後選擇先從 Perplexity 開始嘗試。這篇整理它的基本串接方式，以及我在實際使用時觀察到的幾個重點。
 tags: ['AI', 'Perplexity', 'ChatBot']
 image: /blog/posts/2025/02/perplexity.jpeg
 slug: ai-integration-guide-perplexity-api
@@ -10,7 +10,7 @@ slug: ai-integration-guide-perplexity-api
 
 ## 為什麼我選擇 Perplexity？
 
-最近 AI 工具真的很火，就試試了幾個當下最熱門的，其中 Perplexity 在官網上就有 JavaScript 的串接範例，尤其我當時有個需求是希望回答的資料來源以我指定得網站為主。
+前陣子我陸續試了幾個常見的 AI API，最後先選擇從 Perplexity 開始研究。除了官方文件提供了 JavaScript 範例之外，更重要的是它能針對資料來源做一定程度的限制，這點剛好符合我當時的需求。
 
 ## 什麼是 Perplexity？
 
@@ -21,7 +21,7 @@ slug: ai-integration-guide-perplexity-api
 - **對話式**：可以連續對話，有上下文理解
 - **多語言**：支援中文等多種語言
 
-對開發者來說，最吸引我的是它的 API 設定很好用跟方便。
+對我來說，Perplexity 最有吸引力的地方，是它在 API 設定和實際串接流程上都相對直覺。
 
 ## 開始前的準備工作
 
@@ -31,7 +31,7 @@ slug: ai-integration-guide-perplexity-api
 
 ### 2. 綁定信用卡
 
-這步驟不會馬上扣款，只是為了之後使用 API。我試用了一陣子，花費其實不多。
+這個步驟不會立刻扣款，主要是為了後續啟用 API。以我當時的測試量來看，整體花費還算可控。
 
 ### 3. 生成 API Key
 
@@ -67,7 +67,7 @@ console.log(data.choices[0].message.content);
 
 ### React 元件範例
 
-我做了一個簡單的搜尋元件：
+我先做了一個簡單的搜尋元件來驗證串接流程：
 
 ```jsx
 import { useState } from 'react';
@@ -164,7 +164,7 @@ export default async function handler(req, res) {
 
 ## 參數調整技巧
 
-我花了不少時間調整這些參數，分享一下心得：
+我花了一些時間調整這些參數，下面整理幾個比較有感的觀察：
 
 ### temperature (創造性)
 
@@ -187,7 +187,7 @@ export default async function handler(req, res) {
 
 ## 我做的測試工具
 
-為了方便測試不同參數，我做了一個簡單的測試工具：
+為了方便測試不同參數，我另外做了一個簡單的測試工具：
 [Perplexity API 參數測試工具](https://perplexity-concat.garylin.dev/)
 
-可以即時調整參數看效果，對新手很有幫助。
+可以即時調整參數觀察效果，拿來熟悉 API 行為很方便。
