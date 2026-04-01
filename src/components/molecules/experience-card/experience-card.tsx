@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => (
         <CardHeader className="flex items-center gap-x-2 p-0">
             {/* 使用相對定位容器來保持圖片長寬比 */}
             <div className="relative h-16 w-16 overflow-hidden rounded-md bg-white">
-                <Image src={experience.image} fill alt={experience.company} className="object-contain" />
+                <Image className="object-contain" src={experience.image} fill alt={experience.company} />
             </div>
             <div className="space-y-1">
                 <CardTitle>{experience.title}</CardTitle>

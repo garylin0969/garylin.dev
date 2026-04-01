@@ -2,13 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {
-    NavigationMenu,
-    NavigationMenuList,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
 import { NAVIGATION_ROUTES } from '@/constants/navigation';
 import { cn } from '@/utils/shadcn';
 
@@ -16,12 +9,8 @@ import { cn } from '@/utils/shadcn';
  * 導航元件的屬性介面。
  */
 interface NavigationProps {
-    /** 導航選單容器的 CSS 類名。 */
-    menuClassName?: string;
     /** 導航列表的 CSS 類名。 */
     listClassName?: string;
-    /** 導航項目的 CSS 類名。 */
-    itemClassName?: string;
     /** 導航連結的 CSS 類名。 */
     linkClassName?: string;
     /** 點擊導航連結時觸發。 */
@@ -35,50 +24,52 @@ interface NavigationProps {
  * 支援自定義樣式，並會自動標記當前頁面為活動狀態。
  *
  */
-const Navigation = ({ menuClassName, listClassName, itemClassName, linkClassName, onNavigate }: NavigationProps) => {
-    const pathname = usePathname();
+const Navigation = ({ listClassName, linkClassName, onNavigate }: NavigationProps) => {
+    const currentPath = usePathname();
 
     // 判斷是否為當前頁面
     const isActive = (href: string) => {
         // 根目錄直接比較
         if (href === '/') {
-            return pathname === '/';
+            return currentPath === '/';
         }
 
         // 比較第一個路徑段
-        const currentSection = pathname?.split('/')[1];
+        const currentSection = currentPath?.split('/')[1];
         const targetSection = href?.split('/')[1];
 
         return currentSection === targetSection;
     };
 
     return (
-        <NavigationMenu className={menuClassName}>
-            <NavigationMenuList className={listClassName}>
-                {NAVIGATION_ROUTES.map((route) => (
-                    <NavigationMenuItem key={route.href} className={itemClassName}>
-                        <NavigationMenuLink asChild>
+        // 這裡不再使用較重的 `NavigationMenu` 元件。
+        // 目前需求其實只有「渲染幾個固定連結 + 標示目前所在區段」，
+        // 用單純的 Link 結構即可達成，同時能降低 Header 這條共享路徑的 client 成本。
+        <nav aria-label="Primary">
+            <ul className={cn('flex items-center gap-1', listClassName)}>
+                {NAVIGATION_ROUTES.map((route) => {
+                    const active = isActive(route.href);
+
+                    return (
+                        <li key={route.href}>
                             <Link
                                 href={route.href}
                                 onClick={() => onNavigate?.(route.href)}
                                 className={cn(
-                                    navigationMenuTriggerStyle(),
-                                    'bg-transparent font-bold',
-                                    'hover:text-primary hover:bg-transparent',
-                                    'focus:bg-transparent',
-                                    'data-[active=true]:text-primary data-[active=true]:bg-transparent data-[active=true]:hover:bg-transparent data-[active=true]:focus:bg-transparent',
+                                    'inline-flex h-8 items-center justify-center rounded-md px-3 text-sm font-bold transition-colors',
+                                    'hover:text-primary focus-visible:border-ring focus-visible:ring-ring/50 outline-none focus-visible:ring-3',
+                                    active ? 'text-primary' : 'text-foreground',
                                     linkClassName
                                 )}
-                                aria-current={isActive(route.href) ? 'page' : undefined}
-                                data-active={isActive(route.href)}
+                                aria-current={active ? 'page' : undefined}
                             >
                                 {route.label}
                             </Link>
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                ))}
-            </NavigationMenuList>
-        </NavigationMenu>
+                        </li>
+                    );
+                })}
+            </ul>
+        </nav>
     );
 };
 

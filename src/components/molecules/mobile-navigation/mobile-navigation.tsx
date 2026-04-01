@@ -48,7 +48,6 @@ const MobileNavigation = () => {
                     <div className="mx-auto">
                         {/* 導航 */}
                         <Navigation
-                            menuClassName="block flex-none max-w-full"
                             listClassName="block space-y-4"
                             linkClassName="w-full text-xl!"
                             onNavigate={() => setOpen(false)}
