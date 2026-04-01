@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
 import { formatDate } from '@/utils/date';
 import { cn } from '@/utils/shadcn';
 
@@ -35,7 +36,7 @@ export const PostMeta = ({ className, createdAt, category, useLink = true }: Pos
         <div className={cn('text-muted-foreground flex items-center justify-between text-sm', className)}>
             <div className="flex items-center gap-x-2">
                 <time dateTime={createdAt}>{formattedDate}</time>
-                <span>•</span>
+                <Separator orientation="vertical" />
                 {category && (
                     <>
                         {useLink ? (

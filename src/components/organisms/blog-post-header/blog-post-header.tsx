@@ -1,5 +1,6 @@
 import { PostMeta } from '@/components/atoms/post-meta/post-meta';
 import TagList from '@/components/atoms/tag-list';
+import { Separator } from '@/components/ui/separator';
 import { cn } from '@/utils/shadcn';
 
 interface BlogPostHeaderProps {
@@ -28,10 +29,11 @@ interface BlogPostHeaderProps {
  */
 const BlogPostHeader = ({ className, title, createdAt, category, tags }: BlogPostHeaderProps) => {
     return (
-        <header className={cn('space-y-3 border-b pb-4', className)}>
+        <header className={cn('space-y-3', className)}>
             <h1 className="text-3xl font-bold">{title}</h1>
             <PostMeta createdAt={createdAt} category={category} />
             <TagList tags={tags} />
+            <Separator />
         </header>
     );
 };

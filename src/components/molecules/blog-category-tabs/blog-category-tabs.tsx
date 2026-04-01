@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Separator } from '@/components/ui/separator';
 import { getAllCategories } from '@/utils/post';
 import { cn } from '@/utils/shadcn';
 
@@ -28,7 +29,7 @@ const BlogCategoryTabs = ({ className, currentCategory }: BlogCategoryTabsProps)
 
     return (
         <div className={cn('w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden', className)}>
-            <nav aria-label="Blog categories" className="border-border border-b">
+            <nav aria-label="Blog categories">
                 <ul className="inline-flex items-center gap-1">
                     {tabs?.map((tab) => {
                         // 檢查當前分類是否為該分頁的分類
@@ -51,6 +52,7 @@ const BlogCategoryTabs = ({ className, currentCategory }: BlogCategoryTabsProps)
                         );
                     })}
                 </ul>
+                <Separator />
             </nav>
         </div>
     );
