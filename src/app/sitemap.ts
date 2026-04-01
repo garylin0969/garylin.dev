@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { DOMAIN, POSTS_PER_PAGE } from '@/constants/site';
-import { getAllCategories, getAllPosts } from '@/utils/post';
+import { getAllCategories, getPublishedPosts } from '@/utils/post';
 
 type SitemapEntry = MetadataRoute.Sitemap[0];
 
@@ -14,7 +14,9 @@ const SITE_LAUNCHED_AT = new Date('2024-10-01T00:00:00.000Z');
  *
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const posts = getAllPosts();
+    // sitemap 是提供搜尋引擎抓取用的清單，
+    // 這裡必須只輸出已發布文章，否則草稿 permalink 也可能被索引出去。
+    const posts = getPublishedPosts();
     const categories = getAllCategories();
 
     // 使用最新內容時間作為列表型頁面的 lastModified

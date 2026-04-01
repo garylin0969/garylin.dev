@@ -8,7 +8,7 @@ import BlogPostHeader from '@/components/organisms/blog-post-header';
 import { Separator } from '@/components/ui/separator';
 import { generatePostMetadata, generatePostNotFoundMetadata } from '@/constants/metadatas';
 import { NOTICE_BAR_MESSAGE } from '@/constants/site';
-import { getAdjacentPosts, getPostBySlug, getPublishedPosts } from '@/utils/post';
+import { getAdjacentPosts, getAnyPostBySlug, getPostBySlug, getPublishedPosts } from '@/utils/post';
 import { cn } from '@/utils/shadcn';
 
 /**
@@ -46,6 +46,13 @@ export async function generateMetadata({ params }: PostPageProps) {
     const post = getPostBySlug(slug);
 
     if (!post) {
+        // `getPostBySlug` 現在只會回已發布文章。
+        // 若這個 slug 其實存在於草稿中，這裡仍然只回傳 not found metadata，
+        // 避免透過猜 slug 的方式把未發布內容暴露到前台或搜尋引擎。
+        if (getAnyPostBySlug(slug)) {
+            return generatePostNotFoundMetadata();
+        }
+
         return generatePostNotFoundMetadata();
     }
 

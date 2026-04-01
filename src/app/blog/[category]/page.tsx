@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { getAllCategories, isCategoryExists } from '@/utils/post';
 
 /**
@@ -34,7 +34,9 @@ const page = async ({ params }: { params: Promise<{ category: string }> }) => {
         notFound();
     }
 
-    redirect(`/blog/${category}/1`);
+    // `/blog/[category]` 與 `/blog/[category]/1` 實際上代表同一份列表內容。
+    // 統一永久導向到第一頁，可以避免分類首頁與第一頁同時存在造成重複內容。
+    permanentRedirect(`/blog/${category}/1`);
 };
 
 export default page;

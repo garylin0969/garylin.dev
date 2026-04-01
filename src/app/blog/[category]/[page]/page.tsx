@@ -42,8 +42,16 @@ export async function generateStaticParams() {
  * 生成頁面元數據。
  *
  */
-export async function generateMetadata(): Promise<Metadata> {
-    return generateBlogMetadata();
+export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
+    const { category, page } = await params;
+    const validPage = validatePageNumber(page);
+
+    // 這裡直接使用當前的 `category` 與 `page` 生成 metadata，
+    // 讓 `/blog/all/1`、`/blog/react/2` 這種分頁各自擁有正確的 canonical、title 與 OG URL。
+    return generateBlogMetadata({
+        category,
+        page: validPage ?? 1,
+    });
 }
 
 /**

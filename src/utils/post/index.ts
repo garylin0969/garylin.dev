@@ -11,16 +11,84 @@ interface Options {
     draft?: boolean;
 }
 
+type CategoryStats = {
+    category: string;
+    count: number;
+};
+
+// `posts` 是建置時產出的靜態資料，但原本每次呼叫 helper 都會重複：
+// 1. 把字串日期轉成 Date
+// 2. 重跑排序
+// 3. 再做 filter / find
+// 這裡先把常用的時間戳與排序結果預算好，讓後續查詢可以直接重用。
+const createdAtMap = new Map(posts.map((post) => [post.slug, new Date(post.createdAt).getTime()]));
+
+const sortedPosts = [...posts].sort((a, b) => (createdAtMap.get(b.slug) ?? 0) - (createdAtMap.get(a.slug) ?? 0));
+
+// 先依發布狀態拆成 published / draft，原因有兩個：
+// 1. 前台絕大多數查詢都只應該讀到已發布文章
+// 2. sitemap、slug 查詢、分類頁都能直接走已整理好的索引，避免混入草稿
+const publishedPosts = sortedPosts.filter((post) => !post?.draft);
+const draftPosts = sortedPosts.filter((post) => !!post?.draft);
+
+// 建立 slug -> post 的 Map，讓 slug 查詢可以 O(1) 取得文章。
+// 分別建立 publishedPostsBySlug 與 allPostsBySlug，
+// 讓需要「只看已發布文章」與「可包含草稿」的場景可以明確切換。
+const publishedPostsBySlug = new Map(publishedPosts.map((post) => [post.slug, post]));
+const allPostsBySlug = new Map(sortedPosts.map((post) => [post.slug, post]));
+
+// 建立 category -> post[] 的 Map，讓分類查詢可以 O(1) 取得文章陣列。
+// 分別建立 publishedCategoryMap 與 draftCategoryMap，
+// 讓需要「只看已發布文章」與「可包含草稿」的場景可以明確切換。
+const buildCategoryMap = (items: Post[]) => {
+    return items.reduce((map, post) => {
+        const category = post?.category;
+
+        if (!category) {
+            return map;
+        }
+
+        const key = category.toLowerCase();
+        const bucket = map.get(key);
+
+        if (bucket) {
+            bucket.push(post);
+            return map;
+        }
+
+        map.set(key, [post]);
+        return map;
+    }, new Map<string, Post[]>());
+};
+
+const publishedCategoryMap = buildCategoryMap(publishedPosts);
+const draftCategoryMap = buildCategoryMap(draftPosts);
+
+// 分類統計也一併預算好，讓 sitemap、分類頁、分類 tabs 等場景
+// 不必每次重新掃完整份文章陣列再計數。
+const buildCategoryStats = (items: Map<string, Post[]>): CategoryStats[] => {
+    return Array.from(items.entries()).map(([category, categoryPosts]) => ({
+        category: categoryPosts[0]?.category ?? category,
+        count: categoryPosts.length,
+    }));
+};
+
+const publishedCategoryStats = buildCategoryStats(publishedCategoryMap);
+const draftCategoryStats = buildCategoryStats(draftCategoryMap);
+
 /**
  * 對文章列表進行排序。
  *
  */
 export const sortPosts = (posts: Post[], sort: 'asc' | 'desc' = 'desc') => {
     return [...posts].sort((a, b) => {
+        const aCreatedAt = createdAtMap.get(a.slug) ?? 0;
+        const bCreatedAt = createdAtMap.get(b.slug) ?? 0;
+
         if (sort === 'asc') {
-            return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+            return aCreatedAt - bCreatedAt;
         }
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        return bCreatedAt - aCreatedAt;
     });
 };
 
@@ -29,7 +97,7 @@ export const sortPosts = (posts: Post[], sort: 'asc' | 'desc' = 'desc') => {
  *
  */
 export const getAllPosts = () => {
-    return sortPosts(posts);
+    return sortedPosts;
 };
 
 /**
@@ -37,7 +105,7 @@ export const getAllPosts = () => {
  *
  */
 export const getPublishedPosts = () => {
-    return sortPosts(posts.filter((post) => !post?.draft));
+    return publishedPosts;
 };
 
 /**
@@ -45,7 +113,7 @@ export const getPublishedPosts = () => {
  *
  */
 export const getDraftPosts = () => {
-    return sortPosts(posts.filter((post) => post?.draft));
+    return draftPosts;
 };
 
 /**
@@ -53,7 +121,15 @@ export const getDraftPosts = () => {
  *
  */
 export const getPostBySlug = (slug: string) => {
-    return sortPosts(posts).find((post) => post?.slug === slug);
+    return publishedPostsBySlug.get(slug);
+};
+
+/**
+ * 根據 Slug 獲取任意文章（包含草稿）。
+ *
+ */
+export const getAnyPostBySlug = (slug: string) => {
+    return allPostsBySlug.get(slug);
 };
 
 /**
@@ -81,10 +157,10 @@ export const getAdjacentPosts = (slug: string) => {
  *
  */
 export const getPostByCategory = (category: string, options: Options = { sort: 'desc', draft: false }) => {
-    const filteredPosts = posts.filter(
-        (post) => post?.category?.toLowerCase() === category?.toLowerCase() && !!post?.draft === options.draft
-    );
-    return sortPosts(filteredPosts, options.sort);
+    // 每個分類的文章在建立索引時就已經依日期降序排列，
+    // 因此這裡若需要升序，只要反轉陣列即可，不需要重新排序整份資料。
+    const categoryPosts = (options.draft ? draftCategoryMap : publishedCategoryMap).get(category.toLowerCase()) ?? [];
+    return options.sort === 'asc' ? [...categoryPosts].reverse() : categoryPosts;
 };
 
 /**
@@ -92,7 +168,7 @@ export const getPostByCategory = (category: string, options: Options = { sort: '
  *
  */
 export const getPostByTag = (tag: string) => {
-    return sortPosts(posts).filter((post) => post?.tags?.includes(tag));
+    return publishedPosts.filter((post) => post?.tags?.includes(tag));
 };
 
 /**
@@ -100,8 +176,8 @@ export const getPostByTag = (tag: string) => {
  *
  */
 export const getAllCategories = (options: Options = { sort: 'desc', draft: false }) => {
-    const filteredPosts = posts.filter((post) => !!post?.draft === options.draft);
-    return [...new Set(filteredPosts.map((post) => post?.category).filter(Boolean))];
+    const stats = options.draft ? draftCategoryStats : publishedCategoryStats;
+    return stats.map((item) => item.category);
 };
 
 /**
@@ -109,7 +185,7 @@ export const getAllCategories = (options: Options = { sort: 'desc', draft: false
  *
  */
 export const getAllTags = (options: Options = { sort: 'desc', draft: false }) => {
-    const filteredPosts = posts.filter((post) => !!post?.draft === options.draft);
+    const filteredPosts = options.draft ? draftPosts : publishedPosts;
     return [...new Set(filteredPosts.flatMap((post) => post?.tags).filter(Boolean))];
 };
 
@@ -118,7 +194,7 @@ export const getAllTags = (options: Options = { sort: 'desc', draft: false }) =>
  *
  */
 export const getLatestPosts = (limit: number = 5) => {
-    return sortPosts(posts).slice(0, limit);
+    return publishedPosts.slice(0, limit);
 };
 
 /**
@@ -142,21 +218,7 @@ export const isCategoryExists = (category: string): boolean => {
  *
  */
 export const getCategoryStats = (options: Options = { sort: 'desc', draft: false }) => {
-    // 獲取所有分類
-    const categories = getAllCategories(options);
-
-    // 如果沒有分類，返回空陣列
-    if (categories?.length < 1) {
-        return [];
-    }
-
-    // 獲取所有分類的統計資料
-    return categories
-        ?.map((category) => ({
-            category,
-            count: getPostByCategory(category ?? '', options)?.length,
-        }))
-        ?.filter((category) => category.count > 0);
+    return options.draft ? draftCategoryStats : publishedCategoryStats;
 };
 
 /**
