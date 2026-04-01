@@ -1,6 +1,5 @@
 import HomeHero from '@/components/molecules/home-hero';
 import MDXContent from '@/components/molecules/mdx-content';
-import SocialLinks from '@/components/molecules/social-links';
 import { getHomePagePost } from '@/utils/home';
 
 /**
@@ -31,11 +30,6 @@ const HomePage = () => {
             <section className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
                 <MDXContent code={homePagePost?.code} />
             </section>
-            {/* 社交連結 */}
-            <div>
-                <p className="mb-4">Find me on</p>
-                <SocialLinks />
-            </div>
         </div>
     );
 };
