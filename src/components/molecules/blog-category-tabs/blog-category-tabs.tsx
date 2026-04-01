@@ -28,11 +28,11 @@ const BlogCategoryTabs = ({ className, currentCategory }: BlogCategoryTabsProps)
 
     return (
         <div className={cn('w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden', className)}>
-            <nav aria-label="Blog categories">
-                <ul className="border-border inline-flex min-w-max items-center gap-1 border-b">
+            <nav aria-label="Blog categories" className="border-border border-b">
+                <ul className="inline-flex items-center gap-1">
                     {tabs?.map((tab) => {
+                        // 檢查當前分類是否為該分頁的分類
                         const isActive = currentCategory === tab?.value;
-
                         return (
                             <li key={tab?.value}>
                                 <Link
