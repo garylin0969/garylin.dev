@@ -34,7 +34,7 @@ const BlogPostHeader = ({ className, title, date, updateDate, category, tags }: 
         <header className={cn('space-y-3 border-b pb-4', className)}>
             <h1 className="text-4xl font-bold">{title}</h1>
             <PostMeta date={date} updateDate={updateDate} category={category} />
-            <TagList tags={tags} maxVisible={3} tagVariant="secondary" />
+            <TagList tags={tags} />
         </header>
     );
 };

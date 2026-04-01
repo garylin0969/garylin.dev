@@ -128,7 +128,7 @@ const CommandSearch = ({ open, onOpenChange }: CommandSearchProps) => {
                                         <div className="line-clamp-2 text-sm/[1.75] opacity-70">
                                             {post?.description}
                                         </div>
-                                        <TagList tags={post?.tags} tagVariant="secondary" className="mt-1" />
+                                        <TagList tags={post?.tags} className="mt-1" />
                                     </div>
                                 </CommandItem>
                             ))}
