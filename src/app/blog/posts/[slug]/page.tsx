@@ -72,7 +72,7 @@ const PostPage = async ({ params }: PostPageProps) => {
     return (
         <div className="mx-auto grid max-w-6xl grid-cols-4">
             {/* 文章 */}
-            <article className="col-span-4 lg:px-8 xl:col-span-3">
+            <article className="col-span-4 lg:col-span-3 lg:px-8">
                 {/* 標題與元數據 */}
                 <BlogPostHeader
                     className="mb-4"
@@ -82,7 +82,7 @@ const PostPage = async ({ params }: PostPageProps) => {
                     tags={post?.tags ?? []}
                 />
                 {/* 行動版目錄 */}
-                <MobileTableOfContents className="mb-4 xl:hidden" headings={post?.headings ?? []} />
+                <MobileTableOfContents className="mb-4 lg:hidden" headings={post?.headings ?? []} />
                 {/* MDX 內容 */}
                 <div className="prose prose-figcaption:mt-0 prose-figure:m-0 dark:prose-invert max-w-none">
                     <MDXContent code={post?.code} />
@@ -95,7 +95,7 @@ const PostPage = async ({ params }: PostPageProps) => {
             {/* 目錄 */}
             <aside
                 className={cn(
-                    'sticky hidden shrink-0 self-start xl:col-span-1 xl:block',
+                    'sticky hidden shrink-0 self-start lg:block xl:col-span-1',
                     NOTICE_BAR_MESSAGE ? 'top-30.5' : 'top-22.5'
                 )}
             >
