@@ -27,9 +27,6 @@ interface PaginationControlsProps {
  * 負責渲染分頁導航元素，包括上一頁、下一頁、頁碼和省略號。
  * 如果總頁數小於等於 1，則不顯示任何內容。
  *
- * @param paginationState - 分頁狀態 {@link PaginationControlsProps.paginationState}。
- * @param getPageUrl - 獲取頁碼連結的函數 {@link PaginationControlsProps.getPageUrl}。
- * @param className - 額外的 CSS 類名 {@link PaginationControlsProps.className}。
  */
 export const PaginationControls = ({ paginationState, getPageUrl, className }: PaginationControlsProps) => {
     const {

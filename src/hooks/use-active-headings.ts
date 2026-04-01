@@ -7,8 +7,6 @@ import { createHeadingId } from '@/utils/heading';
  *
  * 使用 Intersection Observer API 來提升效能，避免頻繁的 scroll 事件監聽。
  *
- * @param headings - 標題列表，包含層級和文字內容。
- * @returns 當前在視窗可見範圍內的標題文字陣列。
  */
 const useActiveHeadings = (headings: { level: number; text: string; id?: string }[]) => {
     const [activeHeadings, setActiveHeadings] = useState<string[]>([]);

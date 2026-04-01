@@ -30,8 +30,6 @@ interface CommandSearchProps {
  * 提供全站文章搜尋功能，支援標題、描述、分類、標籤和標題內容的搜尋。
  * 搜尋結果會根據分類進行分組顯示。
  *
- * @param open - 對話框是否開啟 {@link CommandSearchProps.open}。
- * @param onOpenChange - 狀態改變回調 {@link CommandSearchProps.onOpenChange}。
  */
 const CommandSearch = ({ open, onOpenChange }: CommandSearchProps) => {
     const router = useRouter();

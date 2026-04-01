@@ -20,8 +20,6 @@ interface CopyButtonProps {
  * 點擊後將指定內容複製到剪貼簿，並顯示複製成功的狀態圖示。
  * 狀態圖示會在 1.5 秒後自動恢復。
  *
- * @param className - 額外的 CSS 類名 {@link CopyButtonProps.className}。
- * @param content - 要複製的內容 {@link CopyButtonProps.content}。
  */
 const CopyButton = ({ className, content }: CopyButtonProps) => {
     const [copied, setCopied] = useState(false);

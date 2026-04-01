@@ -21,11 +21,6 @@ interface BlogPostHeaderProps {
  *
  * 顯示文章的標題、元數據（日期、分類）與標籤列表。
  *
- * @param className - 額外 CSS 類別 {@link BlogPostHeaderProps.className}。
- * @param title - 文章標題 {@link BlogPostHeaderProps.title}。
- * @param createdAt - 文章日期 {@link BlogPostHeaderProps.createdAt}。
- * @param category - 文章分類 {@link BlogPostHeaderProps.category}。
- * @param tags - 文章標籤 {@link BlogPostHeaderProps.tags}。
  */
 const BlogPostHeader = ({ className, title, createdAt, category, tags }: BlogPostHeaderProps) => {
     return (

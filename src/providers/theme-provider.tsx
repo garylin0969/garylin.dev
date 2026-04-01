@@ -13,8 +13,6 @@ type ThemeProviderProps = ComponentProps<typeof NextThemesProvider>;
  *
  * 封裝 next-themes 的 ThemeProvider，用於管理應用程式的主題（深色/淺色模式）。
  *
- * @param children - 子元件 {@link ThemeProviderProps.children}。
- * @param props - 其他 ThemeProvider 屬性 {@link ThemeProviderProps}。
  */
 const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
     return <NextThemesProvider {...props}>{children}</NextThemesProvider>;

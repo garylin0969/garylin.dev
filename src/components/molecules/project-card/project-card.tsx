@@ -28,11 +28,6 @@ interface ProjectCardProps {
  * 顯示專案的縮圖、名稱與描述。
  * 滑鼠懸停時於縮圖上方顯示技術標籤 overlay。
  *
- * @param className - 額外的 CSS 類名 {@link ProjectCardProps.className}。
- * @param imageLoading - 圖片是否延遲載入 {@link ProjectCardProps.imageLoading}。
- * @param badge - 徽章文字 {@link ProjectCardProps.badge}。
- * @param maxVisible - hover 時最多顯示的標籤數 {@link ProjectCardProps.maxVisible}。
- * @param project - 專案資料 {@link ProjectCardProps.project}。
  */
 const ProjectCard = ({ className, imageLoading = 'lazy', badge, maxVisible, project }: ProjectCardProps) => {
     return (

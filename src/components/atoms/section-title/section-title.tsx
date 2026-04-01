@@ -22,10 +22,6 @@ interface SectionTitleProps {
  *
  * 用於頁面各個區塊的標題，支援自定義標籤和井號前綴。
  *
- * @param className - 額外的 CSS 類名 {@link SectionTitleProps.className}。
- * @param as - 渲染標籤 {@link SectionTitleProps.as}。
- * @param isHash - 是否顯示井號 {@link SectionTitleProps.isHash}。
- * @param children - 標題內容 {@link SectionTitleProps.children}。
  */
 const SectionTitle = ({ id, className, as: Component = 'h2', isHash = true, children }: SectionTitleProps) => {
     const LinkComponent = id ? 'a' : Fragment;
@@ -38,7 +34,13 @@ const SectionTitle = ({ id, className, as: Component = 'h2', isHash = true, chil
 
     return (
         <LinkComponent {...(id ? linkProps : {})}>
-            <Component id={id} className={cn('scroll-margin-top text-primary text-3xl font-bold tracking-tight lg:text-4xl', className)}>
+            <Component
+                id={id}
+                className={cn(
+                    'scroll-margin-top text-primary text-3xl font-bold tracking-tight lg:text-4xl',
+                    className
+                )}
+            >
                 {isHash && <span className="mr-1">#</span>}
                 {children}
             </Component>

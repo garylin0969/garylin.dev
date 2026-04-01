@@ -8,8 +8,6 @@ import { Badge } from '@/components/ui/badge';
 /**
  * 從 MDX 子元素中提取程式碼區塊的屬性。
  *
- * @param children - MDX 子元素。
- * @returns 包含標題、語言和複製內容的物件。
  */
 const extractCodeBlockProps = (children: any) => {
     const hasTitle = Array.isArray(children); // 判斷是否有標題
@@ -81,8 +79,6 @@ const sharedComponents: Record<string, ComponentType<any>> = {
 /**
  * 將 Velite 生成的 MDX 代碼解析為 React 元件。
  *
- * @param code - MDX 代碼字串。
- * @returns React 元件。
  */
 const mdxCache = new Map<string, ComponentType<any>>();
 
@@ -90,8 +86,6 @@ const mdxCache = new Map<string, ComponentType<any>>();
  * 將 Velite 生成的 MDX 代碼解析為 React 元件。
  * 加入全域 Cache 避免 React 19 嚴格模式下報錯 "Cannot create components during render"
  *
- * @param code - MDX 代碼字串。
- * @returns React 元件。
  */
 const getMDXComponent = (code: string) => {
     // 1. 如果已經解析過這個字串，直接拿快取裡的 Component 給它
@@ -118,8 +112,6 @@ interface MDXProps {
  *
  * 用於渲染由 Velite 處理後的 MDX 內容，並注入自定義元件。
  *
- * @param code - MDX 代碼字串 {@link MDXProps.code}。
- * @param components - 自定義元件映射表 {@link MDXProps.components}。
  */
 const MDXContent = ({ code, components, ...props }: MDXProps) => {
     const Component = useMemo(() => getMDXComponent(code), [code]);

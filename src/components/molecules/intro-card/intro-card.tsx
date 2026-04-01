@@ -17,9 +17,6 @@ interface IntroCardProps {
  *
  * 顯示帶有漸層背景效果的文字列表卡片。
  *
- * @param className - 額外的 CSS 類名 {@link IntroCardProps.className}。
- * @param list - 文字列表 {@link IntroCardProps.list}。
- * @param listClassName - 列表項目樣式 {@link IntroCardProps.listClassName}。
  */
 const IntroCard = ({ className, list, listClassName }: IntroCardProps) => {
     return (

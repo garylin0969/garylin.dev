@@ -18,7 +18,6 @@ interface ExperienceCardProps {
  * 顯示單個工作經歷或學歷的詳細資訊。
  * 包含公司/學校 Logo、職稱、時間和詳細說明 (可展開)。
  *
- * @param experience - 經歷資料 {@link ExperienceCardProps.experience}。
  */
 const ExperienceCard = ({ experience }: ExperienceCardProps) => (
     <Card className="gap-y-2 p-2.5">

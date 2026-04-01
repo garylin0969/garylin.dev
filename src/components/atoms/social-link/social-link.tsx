@@ -22,11 +22,6 @@ interface SocialLinkProps {
  *
  * 顯示單個社交媒體連結圖示。
  *
- * @param href - 連結 URL {@link SocialLinkProps.href}。
- * @param target - 開啟方式 {@link SocialLinkProps.target}。
- * @param icon - 圖示元件 {@link SocialLinkProps.icon}。
- * @param label - 連結標籤 {@link SocialLinkProps.label}。
- * @param className - 額外的 CSS 類名 {@link SocialLinkProps.className}。
  */
 const SocialLink = ({ href, target, icon: IconComponent, label, className }: SocialLinkProps) => {
     return (

@@ -27,8 +27,6 @@ interface Post {
  * 根據文章內容動態生成元數據，包含 OpenGraph 和 Twitter 卡片。
  * 如果文章有封面圖片則使用，否則使用網站預設圖示。
  *
- * @param post - 文章資料 {@link Post}。
- * @returns 文章頁面元數據物件。
  */
 export const generatePostMetadata = (post: Post): Metadata => {
     const description = post.description || post.title;
@@ -78,7 +76,6 @@ export const generatePostMetadata = (post: Post): Metadata => {
 /**
  * 生成文章未找到頁面的元數據。
  *
- * @returns 404 頁面元數據物件。
  */
 export const generatePostNotFoundMetadata = (): Metadata => {
     return {

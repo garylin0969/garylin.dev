@@ -15,7 +15,6 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
  * 在移動設備上顯示的導航欄，包含搜尋按鈕、主題切換和漢堡選單。
  * 點擊漢堡選單會開啟側邊欄導航。
  *
- * @returns 手機版導航元件。
  */
 const MobileNavigation = () => {
     // 側邊欄開關狀態

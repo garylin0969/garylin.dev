@@ -18,12 +18,7 @@ const Giscus = dynamic(() => import('@giscus/react'), {
 const Comments = () => {
     const { resolvedTheme } = useTheme();
 
-    return (
-        <Giscus
-            {...GISCUS_CONFIG}
-            theme={resolvedTheme === 'dark' ? GISCUS_DARK_THEME : GISCUS_LIGHT_THEME}
-        />
-    );
+    return <Giscus {...GISCUS_CONFIG} theme={resolvedTheme === 'dark' ? GISCUS_DARK_THEME : GISCUS_LIGHT_THEME} />;
 };
 
 export default Comments;

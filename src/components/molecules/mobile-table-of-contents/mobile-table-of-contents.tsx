@@ -14,8 +14,6 @@ interface MobileTableOfContentsProps {
  *
  * 以手風琴形式顯示文章目錄。
  *
- * @param className - 額外 CSS 類別 {@link MobileTableOfContentsProps.className}。
- * @param headings - 文章標題列表 {@link MobileTableOfContentsProps.headings}。
  */
 const MobileTableOfContents = ({ className, headings }: MobileTableOfContentsProps) => {
     return (

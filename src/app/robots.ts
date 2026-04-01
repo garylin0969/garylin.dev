@@ -6,7 +6,6 @@ import { DOMAIN } from '@/constants/site';
  *
  * 定義搜尋引擎爬蟲的訪問規則和 sitemap 位置。
  *
- * @returns Robots 配置物件。
  */
 export default function robots(): MetadataRoute.Robots {
     return {

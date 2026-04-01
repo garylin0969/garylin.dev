@@ -17,8 +17,6 @@ interface SocialLinksProps {
  *
  * 顯示一組社交媒體連結圖示。
  *
- * @param className - 額外的 CSS 類名 {@link SocialLinksProps.className}。
- * @param iconClassName - 圖示樣式 {@link SocialLinksProps.iconClassName}。
  */
 const SocialLinks = ({ className, iconClassName }: SocialLinksProps) => {
     return (

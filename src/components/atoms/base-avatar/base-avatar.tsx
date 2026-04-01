@@ -20,10 +20,6 @@ interface BaseAvatarProps {
  *
  * 封裝了 Shadcn UI 的 Avatar 元件，提供統一的圖片和後備內容處理。
  *
- * @param className - 額外的 CSS 類名 {@link BaseAvatarProps.className}。
- * @param src - 圖片來源 {@link BaseAvatarProps.src}。
- * @param alt - 替代文字 {@link BaseAvatarProps.alt}。
- * @param fallback - 後備內容 {@link BaseAvatarProps.fallback}。
  */
 const BaseAvatar = ({ className, src, alt, fallback = 'avatar' }: BaseAvatarProps) => {
     return (

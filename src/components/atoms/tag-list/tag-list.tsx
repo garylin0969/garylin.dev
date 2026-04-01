@@ -22,8 +22,6 @@ interface TagListProps {
  *
  * 顯示一組標籤，支援限制顯示數量。
  *
- * @param tags - 標籤陣列 {@link TagListProps.tags}。
- * @param maxVisible - 最多顯示數量 {@link TagListProps.maxVisible}。
  */
 const TagList = ({ tags, className, tagVariant = 'default', maxVisible, tagClassName }: TagListProps) => {
     if (!tags || tags?.length === 0) {

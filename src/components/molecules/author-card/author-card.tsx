@@ -17,7 +17,6 @@ interface AuthorCardProps {
  *
  * 顯示作者的頭像、名稱、位置、電子郵件和社交連結。
  *
- * @param className - 額外的 CSS 類名 {@link AuthorCardProps.className}。
  */
 const AuthorCard = ({ className }: AuthorCardProps) => {
     return (

@@ -23,10 +23,6 @@ interface PostMetaProps {
  *
  * 顯示文章的發布日期和分類。
  *
- * @param className - 額外的 CSS 類名 {@link PostMetaProps.className}。
- * @param createdAt - 文章日期 {@link PostMetaProps.createdAt}。
- * @param category - 文章分類 {@link PostMetaProps.category}。
- * @param useLink - 是否使用連結 {@link PostMetaProps.useLink}。
  */
 export const PostMeta = ({ className, createdAt, category, useLink = true }: PostMetaProps) => {
     // 格式化日期

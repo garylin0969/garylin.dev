@@ -12,7 +12,6 @@ import { useIsMounted } from '@/hooks';
  * 用於切換網站的深色/淺色模式。
  * 包含載入狀態處理以避免水合不匹配。
  *
- * @returns 主題切換按鈕。
  */
 const ThemeToggle = () => {
     const { resolvedTheme, setTheme } = useTheme();

@@ -14,7 +14,6 @@ import { getAllCategories, getPaginatedPosts, getPublishedPosts, isCategoryExist
  * 預先計算所有分類的分頁路徑，用於靜態生成 (SSG)。
  * 包含 'all' 分類和各個具體分類的分頁。
  *
- * @returns 靜態參數陣列。
  */
 export async function generateStaticParams() {
     const allPosts = getPublishedPosts();
@@ -42,7 +41,6 @@ export async function generateStaticParams() {
 /**
  * 生成頁面元數據。
  *
- * @returns 頁面元數據物件。
  */
 export async function generateMetadata(): Promise<Metadata> {
     return generateBlogMetadata();
@@ -67,7 +65,6 @@ interface BlogPageProps {
  * 顯示指定分類和頁碼的文章列表。
  * 包含分頁控制器和文章卡片。
  *
- * @param params - 路由參數 {@link BlogPageProps.params}。
  */
 const BlogPage = async ({ params }: BlogPageProps) => {
     const { category, page } = await params;

@@ -12,7 +12,6 @@ const SITE_LAUNCHED_AT = new Date('2024-10-01T00:00:00.000Z');
  * 包含靜態頁面、分類頁面和文章頁面的路由資訊。
  * 用於幫助搜尋引擎索引網站內容。
  *
- * @returns Sitemap 配置陣列。
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const posts = getAllPosts();

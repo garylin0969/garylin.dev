@@ -18,7 +18,6 @@ interface CommandSearchButtonProps {
  *
  * 點擊後開啟搜尋對話框。
  *
- * @param className - 額外的 CSS 類名 {@link CommandSearchButtonProps.className}。
  */
 const CommandSearchButton = ({ className }: CommandSearchButtonProps) => {
     const { open, setOpen } = useCommandSearch();

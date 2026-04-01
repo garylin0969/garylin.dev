@@ -20,8 +20,6 @@ interface BlogPostCardProps {
  * 顯示文章的標題、描述、日期、分類、標籤和縮圖。
  * 點擊卡片可跳轉至文章詳情頁面。
  *
- * @param className - 額外的 CSS 類名 {@link BlogPostCardProps.className}。
- * @param post - 文章資料 {@link BlogPostCardProps.post}。
  */
 const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
     return (

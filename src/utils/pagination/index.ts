@@ -43,10 +43,6 @@ export interface PaginationState {
 /**
  * 生成要顯示的頁碼陣列。
  *
- * @param currentPage - 當前頁碼。
- * @param totalPages - 總頁數。
- * @param maxPagesToShow - 最多顯示的頁碼數量，預設為 5。
- * @returns 頁碼陣列。
  */
 export const generatePageNumbers = (currentPage: number, totalPages: number, maxPagesToShow: number = 5): number[] => {
     const pages: number[] = [];
@@ -80,8 +76,6 @@ export const generatePageNumbers = (currentPage: number, totalPages: number, max
 /**
  * 計算分頁狀態。
  *
- * @param config - 分頁配置 {@link PaginationConfig}。
- * @returns 分頁狀態 {@link PaginationState}。
  */
 export const calculatePaginationState = (config: PaginationConfig): PaginationState => {
     const { currentPage, totalPages, maxPagesToShow = 5 } = config;
@@ -106,8 +100,6 @@ export const calculatePaginationState = (config: PaginationConfig): PaginationSt
 /**
  * 驗證頁碼是否有效。
  *
- * @param page - 要驗證的頁碼，可以是字串或數字。
- * @returns 有效的頁碼數字，如果無效則返回 null。
  */
 export const validatePageNumber = (page: string | number): number | null => {
     const pageNumber = typeof page === 'string' ? Number(page) : page;

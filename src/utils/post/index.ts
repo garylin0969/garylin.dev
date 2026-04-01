@@ -14,9 +14,6 @@ interface Options {
 /**
  * 對文章列表進行排序。
  *
- * @param posts - 要排序的文章列表。
- * @param sort - 排序方式，預設為 'desc' (降序)。
- * @returns 排序後的文章列表。
  */
 export const sortPosts = (posts: Post[], sort: 'asc' | 'desc' = 'desc') => {
     return [...posts].sort((a, b) => {
@@ -30,7 +27,6 @@ export const sortPosts = (posts: Post[], sort: 'asc' | 'desc' = 'desc') => {
 /**
  * 獲取所有文章。
  *
- * @returns 所有文章的列表 (已排序)。
  */
 export const getAllPosts = () => {
     return sortPosts(posts);
@@ -39,7 +35,6 @@ export const getAllPosts = () => {
 /**
  * 獲取所有已發布的文章 (不包含草稿)。
  *
- * @returns 已發布文章的列表 (已排序)。
  */
 export const getPublishedPosts = () => {
     return sortPosts(posts.filter((post) => !post?.draft));
@@ -48,7 +43,6 @@ export const getPublishedPosts = () => {
 /**
  * 獲取所有草稿文章。
  *
- * @returns 草稿文章的列表 (已排序)。
  */
 export const getDraftPosts = () => {
     return sortPosts(posts.filter((post) => post?.draft));
@@ -57,8 +51,6 @@ export const getDraftPosts = () => {
 /**
  * 根據 Slug 獲取特定文章。
  *
- * @param slug - 文章的 Slug。
- * @returns 對應的文章物件，若找不到則返回 undefined。
  */
 export const getPostBySlug = (slug: string) => {
     return sortPosts(posts).find((post) => post?.slug === slug);
@@ -69,8 +61,6 @@ export const getPostBySlug = (slug: string) => {
  *
  * 文章按發布日期降序排列，因此「上一篇」為較新的文章，「下一篇」為較舊的文章。
  *
- * @param slug - 當前文章的 Slug。
- * @returns 包含上一篇和下一篇文章的物件，若不存在則為 undefined。
  */
 export const getAdjacentPosts = (slug: string) => {
     const publishedPosts = getPublishedPosts();
@@ -89,9 +79,6 @@ export const getAdjacentPosts = (slug: string) => {
 /**
  * 根據分類獲取文章。
  *
- * @param category - 分類名稱。
- * @param options - 查詢選項 {@link Options}。
- * @returns 符合分類的文章列表。
  */
 export const getPostByCategory = (category: string, options: Options = { sort: 'desc', draft: false }) => {
     const filteredPosts = posts.filter(
@@ -103,8 +90,6 @@ export const getPostByCategory = (category: string, options: Options = { sort: '
 /**
  * 根據標籤獲取文章。
  *
- * @param tag - 標籤名稱。
- * @returns 符合標籤的文章列表。
  */
 export const getPostByTag = (tag: string) => {
     return sortPosts(posts).filter((post) => post?.tags?.includes(tag));
@@ -113,8 +98,6 @@ export const getPostByTag = (tag: string) => {
 /**
  * 獲取所有不重複的分類。
  *
- * @param options - 查詢選項 {@link Options}。
- * @returns 分類名稱列表。
  */
 export const getAllCategories = (options: Options = { sort: 'desc', draft: false }) => {
     const filteredPosts = posts.filter((post) => !!post?.draft === options.draft);
@@ -124,8 +107,6 @@ export const getAllCategories = (options: Options = { sort: 'desc', draft: false
 /**
  * 獲取所有不重複的標籤。
  *
- * @param options - 查詢選項 {@link Options}。
- * @returns 標籤名稱列表。
  */
 export const getAllTags = (options: Options = { sort: 'desc', draft: false }) => {
     const filteredPosts = posts.filter((post) => !!post?.draft === options.draft);
@@ -135,8 +116,6 @@ export const getAllTags = (options: Options = { sort: 'desc', draft: false }) =>
 /**
  * 獲取最新文章。
  *
- * @param limit - 要獲取的文章數量，預設為 5。
- * @returns 最新文章列表。
  */
 export const getLatestPosts = (limit: number = 5) => {
     return sortPosts(posts).slice(0, limit);
@@ -145,8 +124,6 @@ export const getLatestPosts = (limit: number = 5) => {
 /**
  * 檢查分類是否存在。
  *
- * @param category - 要檢查的分類名稱。
- * @returns 如果分類存在則返回 true，否則返回 false。
  */
 export const isCategoryExists = (category: string): boolean => {
     if (category === 'all') {
@@ -163,8 +140,6 @@ export const isCategoryExists = (category: string): boolean => {
 /**
  * 獲取所有分類的統計資料 (包含文章數量)。
  *
- * @param options - 查詢選項 {@link Options}。
- * @returns 分類統計資料列表，包含分類名稱和文章數量。
  */
 export const getCategoryStats = (options: Options = { sort: 'desc', draft: false }) => {
     // 獲取所有分類
@@ -187,11 +162,6 @@ export const getCategoryStats = (options: Options = { sort: 'desc', draft: false
 /**
  * 獲取分頁後的文章列表。
  *
- * @param category - 分類名稱，'all' 表示所有分類。
- * @param page - 當前頁碼。
- * @param limit - 每頁文章數量。
- * @param options - 查詢選項 {@link Options}。
- * @returns 分頁結果，包含文章列表、總頁數、當前頁碼等資訊。
  */
 export const getPaginatedPosts = (
     category: string,

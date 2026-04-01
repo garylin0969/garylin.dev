@@ -18,18 +18,11 @@ interface HomeHeroProps {
  * 首頁 Hero 區塊元件。
  *
  * 顯示頁面標籤、主標題與副標題描述。
- *
- * @param className - 額外 CSS 類別 {@link HomeHeroProps.className}。
- * @param label - 頁面標籤文字 {@link HomeHeroProps.label}。
- * @param title - 主標題 {@link HomeHeroProps.title}。
- * @param description - 副標題描述 {@link HomeHeroProps.description}。
  */
 const HomeHero = ({ className, label, title, description }: HomeHeroProps) => {
     return (
         <section className={cn('space-y-4', className)}>
-            {label && (
-                <p className="text-muted-foreground text-sm font-medium tracking-[0.3em] uppercase">{label}</p>
-            )}
+            {label && <p className="text-muted-foreground text-sm font-medium tracking-[0.3em] uppercase">{label}</p>}
             <div className="space-y-3">
                 <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{title}</h1>
                 <p className="text-muted-foreground text-lg">{description}</p>

@@ -18,8 +18,6 @@ const emptySubscribe = () => () => {};
  * 使用 useSyncExternalStore 以符合 React 19 的最佳實踐，
  * 避免在 useEffect 中直接呼叫 setState。
  *
- * @returns 若已在客戶端掛載則返回 true，否則返回 false
- *
  * @example
  * const isMounted = useIsMounted();
  * if (!isMounted) return <Skeleton />;

@@ -24,11 +24,7 @@ export interface DateFormatOptions {
 /**
  * 將 Date 物件轉換為各種格式的字串。
  *
- * @param date - 要格式化的日期，可以是 Date 物件、時間戳記或日期字串。
- * @param format - 輸出的格式類型或自定義格式字串。預設為 'local'。
- *                 支援的格式：'iso', 'local', 'relative', 'short', 'long', 'time', 'date', 'datetime', 'custom'。
- * @param options - 格式化選項 {@link DateFormatOptions}。
- * @returns 格式化後的日期字串。
+ * 支援的格式：'iso', 'local', 'relative', 'short', 'long', 'time', 'date', 'datetime', 'custom'。
  * @throws {Error} 如果提供的日期無效。
  */
 export const formatDate = (
@@ -137,8 +133,6 @@ export const formatDate = (
 /**
  * 獲取相對時間描述（例如：2 小時前、3 天前）。
  *
- * @param date - 要計算相對時間的日期物件。
- * @returns 相對時間的描述字串。
  */
 const getRelativeTime = (date: Date): string => {
     const now = new Date();
@@ -171,9 +165,6 @@ const getRelativeTime = (date: Date): string => {
 /**
  * 使用自定義選項格式化日期。
  *
- * @param date - 要格式化的日期物件。
- * @param options - 格式化選項。
- * @returns 格式化後的日期字串。
  */
 const formatCustomDate = (date: Date, options: DateFormatOptions): string => {
     const { locale = 'zh-TW', timeZone = 'Asia/Taipei' } = options;
@@ -194,9 +185,6 @@ const formatCustomDate = (date: Date, options: DateFormatOptions): string => {
 /**
  * 使用模式字串格式化日期。
  *
- * @param date - 要格式化的日期物件。
- * @param pattern - 格式化模式字串 (例如：'YYYY-MM-DD HH:mm:ss')。
- * @returns 格式化後的日期字串。
  */
 const formatWithPattern = (date: Date, pattern: string): string => {
     const year = date.getFullYear();

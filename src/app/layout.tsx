@@ -36,7 +36,6 @@ export { viewport };
  *
  * 定義應用程式的全域結構，包含 HTML、Body、字型、主題提供者、頁首、頁尾和 Google Analytics。
  *
- * @param children - 子元件 (頁面內容)。
  */
 export default function RootLayout({
     children,

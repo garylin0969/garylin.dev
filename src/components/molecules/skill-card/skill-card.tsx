@@ -18,9 +18,6 @@ interface SkillCardProps {
  *
  * 顯示特定類別的技能列表。
  *
- * @param className - 額外的 CSS 類名 {@link SkillCardProps.className}。
- * @param title - 標題 {@link SkillCardProps.title}。
- * @param skills - 技能列表 {@link SkillCardProps.skills}。
  */
 const SkillCard = ({ title, skills, className }: SkillCardProps) => {
     return (

@@ -21,8 +21,6 @@ interface DocsHeadingProps {
 /**
  * 從 MDX 標題節點中提取可用於錨點與 title 屬性的純文字。
  *
- * @param node - 標題內容節點。
- * @returns 轉換後的純文字內容。
  */
 const extractHeadingText = (node: ReactNode): string => {
     if (typeof node === 'string' || typeof node === 'number') {
@@ -47,10 +45,6 @@ const extractHeadingText = (node: ReactNode): string => {
  * 用於渲染文件中的標題，自動生成錨點連結。
  * 滑鼠懸停時會顯示連結圖示。
  *
- * @param className - 額外的 CSS 類名 {@link DocsHeadingProps.className}。
- * @param iconClassName - 圖示樣式 {@link DocsHeadingProps.iconClassName}。
- * @param as - 標題層級 {@link DocsHeadingProps.as}。
- * @param title - 標題文字 {@link DocsHeadingProps.title}。
  */
 const DocsHeading = ({ className, iconClassName, as, title }: DocsHeadingProps) => {
     const Component = as;

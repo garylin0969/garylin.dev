@@ -4,7 +4,6 @@ import { DOMAIN } from '@/constants/site';
 /**
  * 生成關於頁面的元數據。
  *
- * @returns 關於頁面元數據物件。
  */
 export const generateAboutMetadata = (): Metadata => {
     const description = "Learn more about Gary Lin's background, work experience, skills, and projects";

@@ -25,8 +25,6 @@ interface TableOfContentsProps {
  * 顯示文章的目錄結構，並根據滾動位置高亮當前標題。
  * 支援多層級縮排顯示。
  *
- * @param className - 額外的 CSS 類名 {@link TableOfContentsProps.className}。
- * @param headings - 標題列表 {@link TableOfContentsProps.headings}。
  */
 const TableOfContents = ({ headings, className }: TableOfContentsProps) => {
     const activeHeadings = useActiveHeadings(headings ?? []);

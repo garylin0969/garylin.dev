@@ -32,7 +32,6 @@ interface LogoProps {
  *
  * 顯示網站 Logo 和標題，並連結到首頁。
  *
- * @param props - 元件屬性 {@link LogoProps}。
  */
 const Logo = ({
     href = '/',

@@ -34,7 +34,6 @@ interface NavigationProps {
  * 顯示網站的主要導航連結。
  * 支援自定義樣式，並會自動標記當前頁面為活動狀態。
  *
- * @param props - 元件屬性 {@link NavigationProps}。
  */
 const Navigation = ({ menuClassName, listClassName, itemClassName, linkClassName, onNavigate }: NavigationProps) => {
     const pathname = usePathname();

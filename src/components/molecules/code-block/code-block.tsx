@@ -20,10 +20,6 @@ interface CodeBlockProps {
  *
  * 用於顯示程式碼片段，包含標題、語言標籤和複製按鈕。
  *
- * @param title - 標題 {@link CodeBlockProps.title}。
- * @param language - 語言 {@link CodeBlockProps.language}。
- * @param copyContent - 複製內容 {@link CodeBlockProps.copyContent}。
- * @param children - 子元素 {@link CodeBlockProps.children}。
  */
 const CodeBlock = ({ title = '', language = '', copyContent = '', children }: CodeBlockProps) => {
     return (

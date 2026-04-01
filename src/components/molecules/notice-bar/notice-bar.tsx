@@ -24,9 +24,6 @@ interface NoticeBarProps {
  * 顯示一條公告訊息，可選擇性地包含連結。
  * 若未提供訊息，則不渲染任何內容。
  *
- * @param className - 額外的 CSS 類名 {@link NoticeBarProps.className}。
- * @param message - 公告訊息 {@link NoticeBarProps.message}。
- * @param link - 公告連結 {@link NoticeBarProps.link}。
  */
 const NoticeBar = ({ className, message, link }: NoticeBarProps) => {
     if (!message) return null;

@@ -22,7 +22,6 @@ interface PostNavigationProps {
  *
  * 用於在文章詳情頁底部顯示「上一篇」與「下一篇」的連結。
  *
- * @param props - 導覽列屬性 {@link PostNavigationProps}
  */
 const PostNavigation = ({ previousPost, nextPost }: PostNavigationProps) => {
     // 若沒有上一篇及下一篇，則不顯示導覽列
