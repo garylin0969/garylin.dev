@@ -1,13 +1,9 @@
 'use client';
 
 import { SearchIcon } from 'lucide-react';
-import dynamic from 'next/dynamic';
 import { useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { useCommandSearch } from '@/hooks';
-
-// 動態載入搜尋元件，避免影響效能
-const CommandSearch = dynamic(() => import('@/components/molecules/command-search'));
+import { useCommandSearch } from '@/providers';
 
 interface CommandSearchButtonProps {
     className?: string;
@@ -20,9 +16,12 @@ interface CommandSearchButtonProps {
  *
  */
 const CommandSearchButton = ({ className }: CommandSearchButtonProps) => {
-    const { open, setOpen } = useCommandSearch();
+    const { setOpen } = useCommandSearch();
 
-    // 使用 useCallback 優化 onClick 函數
+    // 搜尋按鈕本身只負責切換全域搜尋狀態。
+    // 真正的對話框由 layout 裡的單一實例負責渲染，
+    // 這樣桌機版與手機版可以共用同一套狀態與同一個 dialog，
+    // 不會因為畫面上有兩顆搜尋按鈕就同時掛出兩份搜尋元件。
     const handleOpenSearch = useCallback(() => {
         setOpen(true);
     }, [setOpen]);
@@ -38,7 +37,6 @@ const CommandSearchButton = ({ className }: CommandSearchButtonProps) => {
             >
                 <SearchIcon className="size-5" />
             </Button>
-            {open ? <CommandSearch open={open} onOpenChange={setOpen} /> : null}
         </div>
     );
 };

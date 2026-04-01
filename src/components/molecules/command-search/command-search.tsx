@@ -12,7 +12,16 @@ import {
     CommandItem,
     CommandList,
 } from '@/components/ui/command';
-import { getPublishedPosts } from '@/utils/post';
+
+interface SearchPost {
+    slug: string;
+    permalink: string;
+    title: string;
+    description: string;
+    category: string;
+    tags: string[];
+    headings: string[];
+}
 
 /**
  * 搜尋對話框元件的屬性介面。
@@ -34,9 +43,36 @@ interface CommandSearchProps {
 const CommandSearch = ({ open, onOpenChange }: CommandSearchProps) => {
     const router = useRouter();
     const [searchValue, setSearchValue] = useState('');
+    const [posts, setPosts] = useState<SearchPost[]>([]);
 
-    // 使用 useMemo 緩存文章數據，避免每次渲染時重新獲取
-    const posts = useMemo(() => getPublishedPosts(), []);
+    useEffect(() => {
+        // 搜尋資料改成在使用者真的打開 command palette 時才抓取。
+        // 這樣平常瀏覽頁面時，Header 不需要先把所有文章索引塞進 client bundle。
+        // `posts.length > 0` 代表資料已抓過一次，後續重新開啟時直接重用記憶體中的索引，
+        // 避免每次開關搜尋視窗都重打 `/api/post-search`。
+        if (!open || posts.length > 0) {
+            return;
+        }
+
+        let active = true;
+
+        const loadPosts = async () => {
+            const response = await fetch('/api/post-search');
+
+            if (!response.ok || !active) {
+                return;
+            }
+
+            const data = (await response.json()) as SearchPost[];
+            setPosts(data);
+        };
+
+        void loadPosts();
+
+        return () => {
+            active = false;
+        };
+    }, [open, posts.length]);
 
     // 使用 useMemo 緩存搜尋結果
     const filteredPosts = useMemo(() => {
@@ -48,7 +84,7 @@ const CommandSearch = ({ open, onOpenChange }: CommandSearchProps) => {
             const descriptionMatch = post?.description?.toLowerCase().includes(searchLower);
             const categoryMatch = post?.category?.toLowerCase().includes(searchLower);
             const tagsMatch = post?.tags?.some((tag) => tag.toLowerCase().includes(searchLower));
-            const headingMatch = post?.headings?.some((heading) => heading?.text?.toLowerCase()?.includes(searchLower));
+            const headingMatch = post?.headings?.some((heading) => heading?.toLowerCase()?.includes(searchLower));
 
             return titleMatch || descriptionMatch || categoryMatch || tagsMatch || headingMatch;
         });
@@ -58,6 +94,8 @@ const CommandSearch = ({ open, onOpenChange }: CommandSearchProps) => {
     const groupedPosts = useMemo(() => {
         return filteredPosts?.reduce(
             (acc, post) => {
+                // 搜尋結果仍依分類分組，讓使用者可以延續原本 command palette
+                // 先看分類、再選文章的瀏覽方式，而不是全部混在單一清單裡。
                 const category = post?.category || '其他';
                 if (!acc[category]) {
                     acc[category] = [];
