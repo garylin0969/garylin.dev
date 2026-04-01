@@ -68,7 +68,7 @@ const sharedComponents: Record<string, ComponentType<any>> = {
 
         if (isInline) {
             return (
-                <Badge className="dark:bg-primary/50 h-6 rounded-md text-base" variant="secondary" {...props}>
+                <Badge className="dark:bg-primary/50 rounded-md p-2.5 text-base" variant="secondary" {...props}>
                     {children}
                 </Badge>
             );

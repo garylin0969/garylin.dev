@@ -9,8 +9,6 @@ interface BlogPostHeaderProps {
     title: string;
     /** 文章日期 (ISO 格式)。 */
     date: string;
-    /** 文章更新日期 (ISO 格式)。 */
-    updateDate?: string;
     /** 文章分類。 */
     category?: string;
     /** 文章標籤。 */
@@ -25,15 +23,14 @@ interface BlogPostHeaderProps {
  * @param className - 額外 CSS 類別 {@link BlogPostHeaderProps.className}。
  * @param title - 文章標題 {@link BlogPostHeaderProps.title}。
  * @param date - 文章日期 {@link BlogPostHeaderProps.date}。
- * @param updateDate - 文章更新日期 {@link BlogPostHeaderProps.updateDate}。
  * @param category - 文章分類 {@link BlogPostHeaderProps.category}。
  * @param tags - 文章標籤 {@link BlogPostHeaderProps.tags}。
  */
-const BlogPostHeader = ({ className, title, date, updateDate, category, tags }: BlogPostHeaderProps) => {
+const BlogPostHeader = ({ className, title, date, category, tags }: BlogPostHeaderProps) => {
     return (
         <header className={cn('space-y-3 border-b pb-4', className)}>
             <h1 className="text-4xl font-bold">{title}</h1>
-            <PostMeta date={date} updateDate={updateDate} category={category} />
+            <PostMeta date={date} category={category} />
             <TagList tags={tags} />
         </header>
     );

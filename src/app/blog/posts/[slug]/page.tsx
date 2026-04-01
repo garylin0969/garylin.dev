@@ -78,7 +78,6 @@ const PostPage = async ({ params }: PostPageProps) => {
                     className="mb-4"
                     title={post?.title}
                     date={post?.date}
-                    updateDate={post?.updateDate}
                     category={post?.category}
                     tags={post?.tags ?? []}
                 />

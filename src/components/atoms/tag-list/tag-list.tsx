@@ -38,7 +38,7 @@ const TagList = ({ tags, className, tagVariant = 'default', maxVisible, tagClass
             {/* 顯示標籤 */}
             {visibleTags?.map((tag) => {
                 return (
-                    <Badge key={tag} variant={tagVariant} className={cn('px-2 py-2 text-xs', tagClassName)}>
+                    <Badge key={tag} variant={tagVariant} className={cn('p-2 text-xs', tagClassName)}>
                         {tag}
                     </Badge>
                 );
