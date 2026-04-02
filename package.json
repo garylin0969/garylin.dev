@@ -1,10 +1,11 @@
 {
     "name": "garylin.dev",
-    "version": "4.2.1",
+    "version": "4.2.2",
     "private": true,
     "scripts": {
+        "predev": "velite build && node scripts/generate-search-index.mjs",
         "dev": "next dev",
-        "build": "velite build && next build",
+        "build": "velite build && node scripts/generate-search-index.mjs && next build",
         "velite": "velite build",
         "start": "next start",
         "lint": "eslint"

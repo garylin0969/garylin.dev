@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
     /* config options here */
     reactCompiler: true,
     // 啟用 Cache Components
-    cacheComponents: true,
+    cacheComponents: false,
     logging: {
         browserToTerminal: true,
         // 'error' — errors only (default)
