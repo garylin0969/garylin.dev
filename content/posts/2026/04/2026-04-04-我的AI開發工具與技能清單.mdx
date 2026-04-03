@@ -1,0 +1,207 @@
+---
+category: Code
+title: 我的 AI 開發工具與技能清單
+createdAt: 2026-04-04
+description: 記錄我目前使用的 AI 開發工具、MCP 伺服器、Skills 與 Plugins，方便換電腦時快速恢復開發環境。
+tags: ['AI', 'Claude', 'VSCode', 'MCP']
+slug: my-ai-development-tools-and-skills
+---
+
+## 前言
+
+每次換電腦或重灌系統，總是要花時間回想自己裝了哪些 AI 工具和設定。這篇文章記錄我目前的 AI 開發環境全貌，方便未來快速恢復。
+
+---
+
+## 工具總覽
+
+我目前使用的 AI 開發工具：
+
+| 工具                        | 說明                                                  |
+| --------------------------- | ----------------------------------------------------- |
+| **VSCode + GitHub Copilot** | 主要的程式碼編輯器，搭配 Copilot 進行 AI 輔助開發     |
+| **Claude Code**             | Anthropic 的 CLI 工具，在終端機中使用 Claude 進行開發 |
+| **Claude Desktop**          | Claude 桌面應用程式，可使用 MCP 連接外部工具          |
+
+> **釐清：Claude Code 與 Claude Desktop 的關係**
+>
+> - **Claude Code**（`claude` CLI 指令）和 **Claude Desktop**（桌面應用程式）是兩個不同的產品
+> - 兩者共用 `~/.claude/` 目錄下的設定，所以 **Plugins 和 Skills 是共用的**（在 Claude CLI 安裝的 Plugin，會自動出現在 Claude Desktop 的 Customize → Code → Personal plugins）
+> - 但 **MCP 伺服器設定是各自獨立的**（Claude Code 透過 `settings.json`，Claude Desktop 透過 `claude_desktop_config.json`）
+> - 透過 claude.ai 帳號連線的雲端整合（如 Notion、Vercel）則是登入即可使用，不需本地安裝
+
+---
+
+## 哪些需要重裝？哪些登入就有？
+
+### 登入即可使用（雲端同步）
+
+這些是透過 claude.ai 帳號綁定的，**換電腦只要登入就能用**：
+
+- **GitHub Integration** — GitHub 整合，存取 repo、issues、pull requests
+- **Google Drive** — 連接 Google Drive，存取文件與檔案
+- **Notion MCP** — 連接 Notion 工作區，可搜尋、建立、更新頁面
+- **Vercel MCP** — 管理部署、查看 logs、搜尋 Vercel 文件
+- **MCP Registry** — 搜尋和探索可用的 MCP 伺服器
+- **Scheduled Tasks** — 排程遠端代理任務
+- **Claude Preview** — 預覽網頁、截圖、檢查元素
+
+### 需要重新授權或設定
+
+- **VSCode 的 MCP 伺服器** — 如果有開啟 Settings Sync，設定檔會透過帳號同步過來，不需要重新安裝。但需要注意：
+    - **HTTP 類型**（Notion、GitHub）— 設定會同步，可能只需**重新授權**
+    - **stdio 類型**（Chrome DevTools、Playwright）— 設定會同步，但第一次執行時 npx 會自動下載套件，前提是新電腦要有 **Node.js**
+- **Claude Desktop 的 MCP 伺服器**（存在 `%APPDATA%/Claude/claude_desktop_config.json`）— 需手動設定（Claude in Chrome 為內建，不需額外設定）
+- **Claude Code 的 Plugins**（存在 `~/.claude/plugins/`）— 需重新安裝一次，裝完後 Claude Code 和 Claude Desktop 會自動共用
+- **Node.js / npx** — 許多 MCP 伺服器依賴 npx 執行
+
+---
+
+## VSCode — MCP 伺服器
+
+設定檔位置：`%APPDATA%/Code/User/mcp.json`
+
+| MCP 伺服器                                                           | 類型  | 說明                                                          |
+| -------------------------------------------------------------------- | ----- | ------------------------------------------------------------- |
+| **Notion** (`makenotion/notion-mcp-server`)                          | HTTP  | 連接 Notion，URL: `https://mcp.notion.com/sse`                |
+| **GitHub** (`io.github.github/github-mcp-server`)                    | HTTP  | GitHub Copilot MCP，URL: `https://api.githubcopilot.com/mcp/` |
+| **Chrome DevTools** (`io.github.ChromeDevTools/chrome-devtools-mcp`) | stdio | 透過 `npx chrome-devtools-mcp@0.21.0` 執行                    |
+| **Playwright** (`microsoft/playwright-mcp`)                          | stdio | 透過 `npx @playwright/mcp@latest` 執行                        |
+
+另外在 VSCode 設定中有啟用 `chat.mcp.gallery.enabled: true`，可以從 MCP Gallery 直接瀏覽和安裝 MCP 伺服器。
+
+---
+
+## Claude Code — Plugins 與 Skills
+
+設定檔位置：`~/.claude/settings.json`
+
+### 已安裝的 Plugins
+
+| Plugin              | 來源                      | 說明                 |
+| ------------------- | ------------------------- | -------------------- |
+| **superpowers**     | `claude-plugins-official` | 提供多種開發流程技能 |
+| **frontend-design** | `claude-plugins-official` | 前端設計輔助         |
+
+### superpowers 提供的 Skills
+
+這些 Skills 在 Claude Code 和 Claude Desktop 中都可以使用：
+
+| Skill                                        | 用途                             |
+| -------------------------------------------- | -------------------------------- |
+| `superpowers:brainstorming`                  | 腦力激盪，在實作前探索需求與設計 |
+| `superpowers:writing-plans`                  | 撰寫實作計畫                     |
+| `superpowers:executing-plans`                | 執行實作計畫                     |
+| `superpowers:test-driven-development`        | 測試驅動開發                     |
+| `superpowers:systematic-debugging`           | 系統化除錯                       |
+| `superpowers:dispatching-parallel-agents`    | 平行派遣子代理                   |
+| `superpowers:subagent-driven-development`    | 子代理驅動開發                   |
+| `superpowers:using-git-worktrees`            | Git worktree 隔離開發            |
+| `superpowers:finishing-a-development-branch` | 完成開發分支的收尾               |
+| `superpowers:requesting-code-review`         | 請求程式碼審查                   |
+| `superpowers:receiving-code-review`          | 接收程式碼審查回饋               |
+| `superpowers:verification-before-completion` | 完成前驗證                       |
+| `superpowers:writing-skills`                 | 撰寫新技能                       |
+
+### frontend-design 提供的 Skills
+
+| Skill                             | 用途                 |
+| --------------------------------- | -------------------- |
+| `frontend-design:frontend-design` | 建立高品質的前端介面 |
+
+### 內建 Skills（不需安裝）
+
+| Skill                            | 用途                |
+| -------------------------------- | ------------------- |
+| `anthropic-skills:pdf`           | PDF 處理            |
+| `anthropic-skills:xlsx`          | Excel 試算表處理    |
+| `anthropic-skills:docx`          | Word 文件處理       |
+| `anthropic-skills:pptx`          | PowerPoint 簡報處理 |
+| `anthropic-skills:skill-creator` | 建立和管理技能      |
+| `anthropic-skills:schedule`      | 排程任務            |
+
+---
+
+## Claude Desktop — MCP 伺服器
+
+設定檔位置：`%APPDATA%/Claude/claude_desktop_config.json`
+
+| MCP 伺服器            | 類型      | 說明                                                 |
+| --------------------- | --------- | ---------------------------------------------------- |
+| **Claude in Chrome**  | INCLUDED  | 內建於 Claude Desktop，可操作 Chrome 瀏覽器          |
+| **Desktop Commander** | 本地安裝  | 系統指令執行、檔案操作等桌面自動化功能               |
+| **Playwright**        | LOCAL DEV | 透過 `npx @playwright/mcp@latest` 執行，瀏覽器自動化 |
+
+> Claude in Chrome 為內建功能，不需額外設定。其他如 Notion、Vercel、GitHub、Google Drive 等是透過雲端帳號同步的。
+
+---
+
+## 專案層級的 Skills
+
+我另外建立了一個 GitHub Repo 來管理專案層級的 Skills：
+
+**Repo：[garylin0969/ai-skills](https://github.com/garylin0969/ai-skills)**
+
+這些 Skills 放在 `.claude/skills/` 目錄下，需要的專案可以直接引用。目前包含：
+
+| Skill                          | 說明                   |
+| ------------------------------ | ---------------------- |
+| `component-structure`          | 元件架構規範           |
+| `file-naming-convention`       | 檔案命名規則           |
+| `jsdoc-convention`             | JSDoc 文件規範         |
+| `next-best-practices`          | Next.js 最佳實踐       |
+| `next-cache-components`        | Next.js 快取與元件模式 |
+| `shadcn`                       | shadcn/ui 使用指南     |
+| `traditional-chinese-language` | 繁體中文語言設定       |
+| `vercel-composition-patterns`  | Vercel 組合模式        |
+| `vercel-react-best-practices`  | Vercel/React 最佳實踐  |
+| `web-design-guidelines`        | 網頁設計準則           |
+
+> 這些 Skills 遵循 `.claude/skills/` 目錄標準，是 Anthropic 開發的跨平台開放標準，相容於 VS Code、Claude Code、Goose、JetBrains 等工具。
+> Repo 中也有部分 Skills 的繁體中文翻譯版本，放在 `中文版/skills/` 目錄下。
+
+---
+
+## 換電腦快速設定 Checklist
+
+1. **安裝基本工具**
+    - Node.js（npx 依賴）
+    - VSCode
+    - Claude Desktop
+    - Claude Code
+
+2. **登入帳號**（雲端同步會自動生效）
+    - claude.ai 帳號 → GitHub、Google Drive、Notion、Vercel、Preview 等自動可用
+    - GitHub 帳號 → Copilot 功能啟用
+
+3. **VSCode MCP**（有開啟 Settings Sync 的話）
+    - 設定會自動同步，HTTP 類型的 MCP 只需重新授權
+    - stdio 類型的 MCP（Chrome DevTools、Playwright）首次執行時 npx 會自動下載
+
+4. **設定 Claude Desktop MCP**
+    - 編輯 `%APPDATA%/Claude/claude_desktop_config.json`
+    - 加入 Playwright、Desktop Commander 等本地 MCP
+    - Claude in Chrome 為內建，不需額外設定
+
+5. **安裝 Claude Code Plugins**（只需裝一次，Claude Desktop 會自動共用）
+
+    ```bash
+    claude plugins install superpowers@claude-plugins-official
+    claude plugins install frontend-design@claude-plugins-official
+    ```
+
+6. **專案層級 Skills**
+    - Clone [ai-skills](https://github.com/garylin0969/ai-skills) repo
+    - 在需要的專案中引用對應的 Skills
+
+---
+
+## 總結
+
+| 類別                                                          | 換電腦需要？                     | 備註                                                              |
+| ------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------- |
+| claude.ai 帳號整合（GitHub、Google Drive、Notion、Vercel 等） | 登入即可                         | 雲端同步                                                          |
+| Claude Code Plugins & Skills                                  | 需重新安裝一次                   | 存在 `~/.claude/`，Claude Code 與 Claude Desktop 共用             |
+| VSCode MCP 伺服器                                             | Settings Sync 同步，重新授權即可 | 存在 `%APPDATA%/Code/User/mcp.json`                               |
+| Claude Desktop MCP 伺服器                                     | 需重新設定                       | 存在 `%APPDATA%/Claude/`                                          |
+| 專案層級 Skills                                               | Clone repo 即可                  | [garylin0969/ai-skills](https://github.com/garylin0969/ai-skills) |
