@@ -23,7 +23,7 @@ interface BlogPostCardProps {
  */
 const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
     return (
-        <article className={cn('rounded-md border p-4', className)}>
+        <article className={cn('hover:bg-muted/50 rounded-lg px-3 py-4 transition-colors', className)}>
             <Link href={post?.permalink} className="group">
                 <div className="flex items-center gap-x-8">
                     {/* 內容區域 */}
@@ -48,7 +48,7 @@ const BlogPostCard = ({ className, post }: BlogPostCardProps) => {
                     </div>
                     {/* 圖片區域 */}
                     {post?.image && (
-                        <div className="relative hidden h-28 w-28 shrink-0 overflow-hidden md:block">
+                        <div className="relative hidden h-28 w-28 shrink-0 overflow-hidden rounded-lg md:block">
                             <Image src={post?.image} alt={post?.title} fill className="object-cover" />
                         </div>
                     )}

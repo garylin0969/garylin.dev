@@ -113,7 +113,7 @@ const BlogPage = async ({ params }: BlogPageProps) => {
             {/* 分類標籤 */}
             <BlogCategoryTabs currentCategory={category} />
             {/* 文章列表 */}
-            <div className="space-y-4">
+            <div className="divide-border/30 divide-y">
                 {posts.map((post) => (
                     <BlogPostCard key={post?.slug} post={post} />
                 ))}

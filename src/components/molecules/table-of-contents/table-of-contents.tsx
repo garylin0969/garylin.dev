@@ -35,26 +35,34 @@ const TableOfContents = ({ headings, className }: TableOfContentsProps) => {
 
     return (
         <nav className={cn(className)}>
+            <div className="text-muted-foreground mb-3 text-xs font-semibold uppercase tracking-widest">
+                On This Page
+            </div>
             <ul>
                 {headings?.map((heading, index) => {
                     const headingId = heading?.id ?? createHeadingId(heading?.text);
                     const isActive = activeHeadings?.includes(headingId);
 
                     return (
-                        <li key={index} className={cn('border-l pl-px', isActive && 'border-primary border-l-2 pl-0')}>
+                        <li
+                            key={index}
+                            className={cn(
+                                'border-l border-border/30 pl-px',
+                                isActive && 'border-primary border-l-2 pl-0'
+                            )}
+                        >
                             <Link
                                 title={heading?.text}
                                 href={`#${headingId}`}
                                 className={cn(
-                                    'hover:bg-muted hover:text-foreground text-muted-foreground block rounded px-2 py-1 text-sm no-underline! transition-all duration-200',
-                                    // 根據標題層級調整縮排
+                                    'text-muted-foreground/60 hover:bg-muted hover:text-foreground block rounded px-2 py-1 text-sm no-underline! transition-all duration-200',
                                     heading?.level === 1 && 'pl-4',
                                     heading?.level === 2 && 'pl-8',
                                     heading?.level === 3 && 'pl-12',
                                     heading?.level === 4 && 'pl-16',
                                     heading?.level === 5 && 'pl-20',
                                     heading?.level === 6 && 'pl-24',
-                                    isActive && 'bg-muted text-foreground font-medium'
+                                    isActive && 'text-foreground font-medium'
                                 )}
                             >
                                 {heading?.text}

@@ -1,6 +1,7 @@
-import { MapPinIcon, MailIcon } from 'lucide-react';
+import { MailIcon } from 'lucide-react';
 import BaseAvatar from '@/components/atoms/base-avatar';
 import SocialLinks from '@/components/molecules/social-links';
+import { Separator } from '@/components/ui/separator';
 import { AUTHOR_INFO } from '@/constants/author-info';
 import { cn } from '@/utils/shadcn';
 
@@ -20,33 +21,31 @@ interface AuthorCardProps {
  */
 const AuthorCard = ({ className }: AuthorCardProps) => {
     return (
-        <div className={cn('w-74', className)}>
-            <div className="space-y-3">
+        <div className={cn('flex items-center justify-center', className)}>
+            <div className="items-center gap-x-6 md:flex">
                 <BaseAvatar
-                    className="mx-auto size-33"
+                    className="mx-auto mb-1.5 size-32 shrink-0 md:mb-0"
                     src={AUTHOR_INFO.avatar}
                     alt={AUTHOR_INFO.name}
                     fallback="author"
                 />
-                <div className="text-center text-2xl font-bold">{AUTHOR_INFO.name}</div>
-                <ul className="flex flex-col items-center gap-y-2 text-sm">
-                    <li className="flex items-center gap-x-2">
-                        <MapPinIcon className="size-5" />
-                        <span>{AUTHOR_INFO.location}</span>
-                    </li>
-                    <li className="flex items-center gap-x-2">
-                        <MailIcon className="size-5" />
+                <div className="space-y-1.5 text-center md:text-start">
+                    <div className="text-2xl font-bold">{AUTHOR_INFO.name}</div>
+                    <div className="text-muted-foreground text-sm">Frontend Developer · {AUTHOR_INFO.location}</div>
+                    <div className="text-muted-foreground flex items-center gap-x-3 text-sm">
                         <a
-                            className="hover:text-primary"
+                            className="hover:text-primary flex items-center gap-x-1.5"
                             href={`mailto:${AUTHOR_INFO.email}`}
                             target="_blank"
                             rel="noreferrer noopener"
                         >
+                            <MailIcon className="size-4" />
                             <span>{AUTHOR_INFO.email}</span>
                         </a>
-                    </li>
-                </ul>
-                <SocialLinks className="flex items-center justify-center" />
+                        <Separator orientation="vertical" />
+                        <SocialLinks />
+                    </div>
+                </div>
             </div>
         </div>
     );

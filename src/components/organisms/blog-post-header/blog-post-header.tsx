@@ -24,9 +24,9 @@ interface BlogPostHeaderProps {
  */
 const BlogPostHeader = ({ className, title, createdAt, category, tags }: BlogPostHeaderProps) => {
     return (
-        <header className={cn('space-y-3', className)}>
-            <h1 className="text-3xl font-bold">{title}</h1>
+        <header className={cn('space-y-4', className)}>
             <PostMeta createdAt={createdAt} category={category} />
+            <h1 className="text-3xl font-bold">{title}</h1>
             <TagList tags={tags} />
             <Separator />
         </header>

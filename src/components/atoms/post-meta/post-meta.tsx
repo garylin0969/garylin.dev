@@ -26,12 +26,14 @@ interface PostMetaProps {
  */
 export const PostMeta = ({ className, createdAt, category, useLink = true }: PostMetaProps) => {
     // 格式化日期
-    const formattedDate = formatDate(createdAt, 'YYYY/MM/DD');
+    const formattedDate = formatDate(createdAt, 'short', { locale: 'en-US' });
 
     return (
-        <div className={cn('text-muted-foreground flex items-center justify-between text-sm', className)}>
+        <div className={cn('flex items-center justify-between text-sm', className)}>
             <div className="flex items-center gap-x-2">
-                <time dateTime={createdAt}>{formattedDate}</time>
+                <time className="opacity-50" dateTime={createdAt}>
+                    {formattedDate}
+                </time>
                 <Separator orientation="vertical" />
                 {category && (
                     <>
