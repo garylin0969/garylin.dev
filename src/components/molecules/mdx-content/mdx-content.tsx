@@ -66,13 +66,27 @@ const sharedComponents: Record<string, ComponentType<any>> = {
 
         if (isInline) {
             return (
-                <Badge className="dark:bg-primary/50 rounded-md p-2.5 text-base" variant="secondary" {...props}>
+                <Badge
+                    className="dark:bg-primary/50 h-auto max-w-full rounded-md px-2.5 py-1 text-base break-all whitespace-normal"
+                    variant="secondary"
+                    {...props}
+                >
                     {children}
                 </Badge>
             );
         }
 
         return <code {...props}>{children}</code>;
+    },
+
+    table: ({ children, ...props }) => {
+        return (
+            <div className="my-6 w-full overflow-x-auto">
+                <table className="w-full min-w-max" {...props}>
+                    {children}
+                </table>
+            </div>
+        );
     },
 };
 

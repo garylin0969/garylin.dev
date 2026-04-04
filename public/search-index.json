@@ -229,5 +229,36 @@
       "回饋與社群"
     ],
     "searchableText": "next.js 16.2：ai 開發體驗改進 next.js 16.2 帶來多項與 ai 輔助開發相關的更新，包含 create-next-app 內建 agents.md、瀏覽器日誌轉送、開發伺服器鎖定檔，以及 next-browser 除錯工具。 tech-update next.js 原文資訊 這次更新包含什麼？ 可直接給 agent 使用的 `create-next-app` 在 16.2 或更新版本上 在較舊版本上 瀏覽器日誌轉送到終端機 開發伺服器鎖定檔 實驗性 agent devtools 目前能做到什麼？ 如何開始使用 實例：讓 static shell 變大 回饋與社群"
+  },
+  {
+    "slug": "my-ai-development-tools-and-skills",
+    "permalink": "/blog/posts/my-ai-development-tools-and-skills",
+    "title": "我的 AI 開發工具與技能清單",
+    "description": "記錄我目前使用的 AI 開發工具、MCP 伺服器、Skills 與 Plugins，方便換電腦時快速恢復開發環境。",
+    "category": "Code",
+    "tags": [
+      "AI",
+      "Claude",
+      "VSCode",
+      "MCP"
+    ],
+    "headings": [
+      "前言",
+      "工具總覽",
+      "哪些需要重裝？哪些登入就有？",
+      "登入即可使用（雲端同步）",
+      "需要重新授權或設定",
+      "VSCode — MCP 伺服器",
+      "Claude Code — Plugins 與 Skills",
+      "已安裝的 Plugins",
+      "superpowers 提供的 Skills",
+      "frontend-design 提供的 Skills",
+      "內建 Skills（不需安裝）",
+      "Claude Desktop — MCP 伺服器",
+      "專案層級的 Skills",
+      "換電腦快速設定 Checklist",
+      "總結"
+    ],
+    "searchableText": "我的 ai 開發工具與技能清單 記錄我目前使用的 ai 開發工具、mcp 伺服器、skills 與 plugins，方便換電腦時快速恢復開發環境。 code ai claude vscode mcp 前言 工具總覽 哪些需要重裝？哪些登入就有？ 登入即可使用（雲端同步） 需要重新授權或設定 vscode — mcp 伺服器 claude code — plugins 與 skills 已安裝的 plugins superpowers 提供的 skills frontend-design 提供的 skills 內建 skills（不需安裝） claude desktop — mcp 伺服器 專案層級的 skills 換電腦快速設定 checklist 總結"
   }
 ]
