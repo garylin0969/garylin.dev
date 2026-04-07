@@ -61,76 +61,6 @@
     "searchableText": "如何發布 npm 套件？ 第一次發布 npm 套件時，我原本以為流程會很複雜，但實際整理過後發現比想像中清楚許多。這篇分享我從零開始發布套件的完整流程。 code npm node.js javascript package management 為什麼要發布自己的 npm 套件？ 初始化專案 package.json 的關鍵設定 重要欄位說明 使用 typescript 開發 實際開發套件 測試很重要 建置套件 發布前的檢查 1. 測試本地安裝 2. 確認檔案內容 註冊 npm 帳號並發布 1. 註冊帳號 2. 本地登入 3. 發布套件 我踩過的坑 (v2.0 更新版) 1. cjs 與 esm 的地獄 2. 型別定義檔的路徑 3. .gitignore 和 .npmignore 搞混 4. 版本號忘記更新 維護和更新 發布新版本 最佳實踐 推廣你的套件"
   },
   {
-    "slug": "ai-integration-guide-perplexity-api",
-    "permalink": "/blog/posts/ai-integration-guide-perplexity-api",
-    "title": "AI 串接指南 - 以 Perplexity 為例",
-    "description": "我在專案中評估幾個 AI API 之後，最後選擇先從 Perplexity 開始嘗試。這篇整理它的基本串接方式，以及我在實際使用時觀察到的幾個重點。",
-    "category": "Code",
-    "tags": [
-      "AI",
-      "Perplexity",
-      "ChatBot"
-    ],
-    "headings": [
-      "為什麼我選擇 Perplexity？",
-      "什麼是 Perplexity？",
-      "開始前的準備工作",
-      "1. 註冊帳號",
-      "2. 綁定信用卡",
-      "3. 生成 API Key",
-      "API 基本使用",
-      "基本呼叫方式",
-      "實際整合到專案",
-      "React 元件範例",
-      "Next.js API Route",
-      "參數調整技巧",
-      "temperature (創造性)",
-      "max_tokens (回應長度)",
-      "search_recency_filter (時效性)",
-      "我做的測試工具"
-    ],
-    "searchableText": "ai 串接指南 - 以 perplexity 為例 我在專案中評估幾個 ai api 之後，最後選擇先從 perplexity 開始嘗試。這篇整理它的基本串接方式，以及我在實際使用時觀察到的幾個重點。 code ai perplexity chatbot 為什麼我選擇 perplexity？ 什麼是 perplexity？ 開始前的準備工作 1. 註冊帳號 2. 綁定信用卡 3. 生成 api key api 基本使用 基本呼叫方式 實際整合到專案 react 元件範例 next.js api route 參數調整技巧 temperature (創造性) max_tokens (回應長度) search_recency_filter (時效性) 我做的測試工具"
-  },
-  {
-    "slug": "nextjs-internationalization-guide-next-intl",
-    "permalink": "/blog/posts/nextjs-internationalization-guide-next-intl",
-    "title": "多國語言支持指南 - 使用 next-intl 在 Next.js 中實現國際化",
-    "description": "我在做一個多語言 side project 時，順手研究了 Next.js App Router 下的國際化做法，最後選擇使用 next-intl。這篇整理從路由、訊息檔到語言切換的實作流程。",
-    "category": "Code",
-    "tags": [
-      "Next.js",
-      "i18n",
-      "next-intl"
-    ],
-    "headings": [
-      "為什麼我需要做國際化？",
-      "什麼是 next-intl？",
-      "開始設定 next-intl",
-      "1. 安裝套件",
-      "2. 建立檔案結構",
-      "3. 建立翻譯檔案",
-      "4. 設定路由配置",
-      "5. 設定中間件",
-      "6. 設定請求配置",
-      "修改 Next.js 設定",
-      "建立多語言頁面",
-      "Layout 設定",
-      "主頁面",
-      "建立語言切換器",
-      "進階功能",
-      "日期時間格式化",
-      "數字格式化",
-      "帶變數的翻譯",
-      "部署注意事項",
-      "Vercel 部署",
-      "環境變數",
-      "SEO 優化",
-      "維護建議",
-      "翻譯文件管理"
-    ],
-    "searchableText": "多國語言支持指南 - 使用 next-intl 在 next.js 中實現國際化 我在做一個多語言 side project 時，順手研究了 next.js app router 下的國際化做法，最後選擇使用 next-intl。這篇整理從路由、訊息檔到語言切換的實作流程。 code next.js i18n next-intl 為什麼我需要做國際化？ 什麼是 next-intl？ 開始設定 next-intl 1. 安裝套件 2. 建立檔案結構 3. 建立翻譯檔案 4. 設定路由配置 5. 設定中間件 6. 設定請求配置 修改 next.js 設定 建立多語言頁面 layout 設定 主頁面 建立語言切換器 進階功能 日期時間格式化 數字格式化 帶變數的翻譯 部署注意事項 vercel 部署 環境變數 seo 優化 維護建議 翻譯文件管理"
-  },
-  {
     "slug": "react-query-practical-guide-nextjs-reactjs",
     "permalink": "/blog/posts/react-query-practical-guide-nextjs-reactjs",
     "title": "React Query 實用指南：在 Next.js 和 React.js 中的數據獲取",
@@ -204,6 +134,76 @@
       "核心要點總結"
     ],
     "searchableText": "算法複雜度入門 - 讓新手也能了解 big o 這篇文章整理了演算法複雜度的基本觀念，透過實際例子和程式碼範例幫助初學者理解 big o。內容涵蓋常見的時間複雜度類型、實際應用情境與一些基礎優化思路。 leetcode leetcode big o 算法複雜度的重要性 算法複雜度的基本概念 o(1) - 常數時間複雜度 o(n) - 線性時間複雜度 o(n²) - 平方時間複雜度 o(log n) - 對數時間複雜度 實際開發中的應用案例 案例一：用戶搜尋功能優化 案例二：重複資料檢測優化 常見複雜度比較表 空間複雜度考量 算法優化實務技巧 1. 避免巢狀迴圈結構 2. 善用語言內建優化方法 3. 提前終止策略 常見的效能陷阱 1. 字串拼接操作 2. 迴圈中的重複計算 複雜度分析的使用時機 小規模資料（< 1000筆） 大規模資料（> 10000筆） 即時系統應用 學習建議與總結 學習策略 核心要點總結"
+  },
+  {
+    "slug": "ai-integration-guide-perplexity-api",
+    "permalink": "/blog/posts/ai-integration-guide-perplexity-api",
+    "title": "AI 串接指南 - 以 Perplexity 為例",
+    "description": "我在專案中評估幾個 AI API 之後，最後選擇先從 Perplexity 開始嘗試。這篇整理它的基本串接方式，以及我在實際使用時觀察到的幾個重點。",
+    "category": "Code",
+    "tags": [
+      "AI",
+      "Perplexity",
+      "ChatBot"
+    ],
+    "headings": [
+      "為什麼我選擇 Perplexity？",
+      "什麼是 Perplexity？",
+      "開始前的準備工作",
+      "1. 註冊帳號",
+      "2. 綁定信用卡",
+      "3. 生成 API Key",
+      "API 基本使用",
+      "基本呼叫方式",
+      "實際整合到專案",
+      "React 元件範例",
+      "Next.js API Route",
+      "參數調整技巧",
+      "temperature (創造性)",
+      "max_tokens (回應長度)",
+      "search_recency_filter (時效性)",
+      "我做的測試工具"
+    ],
+    "searchableText": "ai 串接指南 - 以 perplexity 為例 我在專案中評估幾個 ai api 之後，最後選擇先從 perplexity 開始嘗試。這篇整理它的基本串接方式，以及我在實際使用時觀察到的幾個重點。 code ai perplexity chatbot 為什麼我選擇 perplexity？ 什麼是 perplexity？ 開始前的準備工作 1. 註冊帳號 2. 綁定信用卡 3. 生成 api key api 基本使用 基本呼叫方式 實際整合到專案 react 元件範例 next.js api route 參數調整技巧 temperature (創造性) max_tokens (回應長度) search_recency_filter (時效性) 我做的測試工具"
+  },
+  {
+    "slug": "nextjs-internationalization-guide-next-intl",
+    "permalink": "/blog/posts/nextjs-internationalization-guide-next-intl",
+    "title": "多國語言支持指南 - 使用 next-intl 在 Next.js 中實現國際化",
+    "description": "我在做一個多語言 side project 時，順手研究了 Next.js App Router 下的國際化做法，最後選擇使用 next-intl。這篇整理從路由、訊息檔到語言切換的實作流程。",
+    "category": "Code",
+    "tags": [
+      "Next.js",
+      "i18n",
+      "next-intl"
+    ],
+    "headings": [
+      "為什麼我需要做國際化？",
+      "什麼是 next-intl？",
+      "開始設定 next-intl",
+      "1. 安裝套件",
+      "2. 建立檔案結構",
+      "3. 建立翻譯檔案",
+      "4. 設定路由配置",
+      "5. 設定中間件",
+      "6. 設定請求配置",
+      "修改 Next.js 設定",
+      "建立多語言頁面",
+      "Layout 設定",
+      "主頁面",
+      "建立語言切換器",
+      "進階功能",
+      "日期時間格式化",
+      "數字格式化",
+      "帶變數的翻譯",
+      "部署注意事項",
+      "Vercel 部署",
+      "環境變數",
+      "SEO 優化",
+      "維護建議",
+      "翻譯文件管理"
+    ],
+    "searchableText": "多國語言支持指南 - 使用 next-intl 在 next.js 中實現國際化 我在做一個多語言 side project 時，順手研究了 next.js app router 下的國際化做法，最後選擇使用 next-intl。這篇整理從路由、訊息檔到語言切換的實作流程。 code next.js i18n next-intl 為什麼我需要做國際化？ 什麼是 next-intl？ 開始設定 next-intl 1. 安裝套件 2. 建立檔案結構 3. 建立翻譯檔案 4. 設定路由配置 5. 設定中間件 6. 設定請求配置 修改 next.js 設定 建立多語言頁面 layout 設定 主頁面 建立語言切換器 進階功能 日期時間格式化 數字格式化 帶變數的翻譯 部署注意事項 vercel 部署 環境變數 seo 優化 維護建議 翻譯文件管理"
   },
   {
     "slug": "nextjs-16-2-ai-improvements",

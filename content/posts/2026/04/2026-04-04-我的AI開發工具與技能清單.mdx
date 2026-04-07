@@ -2,6 +2,7 @@
 category: Code
 title: 我的 AI 開發工具與技能清單
 createdAt: 2026-04-04
+updatedAt: 2026-04-07
 description: 記錄我目前使用的 AI 開發工具、MCP 伺服器、Skills 與 Plugins，方便換電腦時快速恢復開發環境。
 tags: ['AI', 'Claude', 'VSCode', 'MCP']
 slug: my-ai-development-tools-and-skills
@@ -39,6 +40,8 @@ slug: my-ai-development-tools-and-skills
 這些是透過 claude.ai 帳號綁定的，**換電腦只要登入就能用**：
 
 - **GitHub Integration** — GitHub 整合，存取 repo、issues、pull requests
+- **Gmail** — 連接 Gmail，搜尋與讀取信件內容
+- **Google Calendar** — 連接 Google Calendar，查詢行程與活動
 - **Google Drive** — 連接 Google Drive，存取文件與檔案
 - **Notion MCP** — 連接 Notion 工作區，可搜尋、建立、更新頁面
 - **Vercel MCP** — 管理部署、查看 logs、搜尋 Vercel 文件
@@ -132,7 +135,7 @@ slug: my-ai-development-tools-and-skills
 | **Desktop Commander** | 本地安裝  | 系統指令執行、檔案操作等桌面自動化功能               |
 | **Playwright**        | LOCAL DEV | 透過 `npx @playwright/mcp@latest` 執行，瀏覽器自動化 |
 
-> Claude in Chrome 為內建功能，不需額外設定。其他如 Notion、Vercel、GitHub、Google Drive 等是透過雲端帳號同步的。
+> Claude in Chrome 為內建功能，不需額外設定。其他如 Notion、Vercel、GitHub、Gmail、Google Calendar、Google Drive 等是透過雲端帳號同步的。
 
 ---
 
@@ -171,7 +174,7 @@ slug: my-ai-development-tools-and-skills
     - Claude Code
 
 2. **登入帳號**（雲端同步會自動生效）
-    - claude.ai 帳號 → GitHub、Google Drive、Notion、Vercel、Preview 等自動可用
+    - claude.ai 帳號 → GitHub、Gmail、Google Calendar、Google Drive、Notion、Vercel、Preview 等自動可用
     - GitHub 帳號 → Copilot 功能啟用
 
 3. **VSCode MCP**（有開啟 Settings Sync 的話）
@@ -198,10 +201,10 @@ slug: my-ai-development-tools-and-skills
 
 ## 總結
 
-| 類別                                                          | 換電腦需要？                     | 備註                                                              |
-| ------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------- |
-| claude.ai 帳號整合（GitHub、Google Drive、Notion、Vercel 等） | 登入即可                         | 雲端同步                                                          |
-| Claude Code Plugins & Skills                                  | 需重新安裝一次                   | 存在 `~/.claude/`，Claude Code 與 Claude Desktop 共用             |
-| VSCode MCP 伺服器                                             | Settings Sync 同步，重新授權即可 | 存在 `%APPDATA%/Code/User/mcp.json`                               |
-| Claude Desktop MCP 伺服器                                     | 需重新設定                       | 存在 `%APPDATA%/Claude/`                                          |
-| 專案層級 Skills                                               | Clone repo 即可                  | [garylin0969/ai-skills](https://github.com/garylin0969/ai-skills) |
+| 類別                         | 換電腦需要？                     | 備註                                                              |
+| ---------------------------- | -------------------------------- | ----------------------------------------------------------------- |
+| claude.ai 帳號整合           | 登入即可                         | 雲端同步                                                          |
+| Claude Code Plugins & Skills | 需重新安裝一次                   | 存在 `~/.claude/`，Claude Code 與 Claude Desktop 共用             |
+| VSCode MCP 伺服器            | Settings Sync 同步，重新授權即可 | 存在 `%APPDATA%/Code/User/mcp.json`                               |
+| Claude Desktop MCP 伺服器    | 需重新設定                       | 存在 `%APPDATA%/Claude/`                                          |
+| 專案層級 Skills              | Clone repo 即可                  | [garylin0969/ai-skills](https://github.com/garylin0969/ai-skills) |
